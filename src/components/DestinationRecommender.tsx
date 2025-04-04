@@ -23,7 +23,6 @@ import {
   DropdownMenuSeparator, 
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Search, X, Filter, MapPin } from "lucide-react";
 import DestinationCard from "./DestinationCard";
 import { useSearchParams } from "react-router-dom";
@@ -236,20 +235,25 @@ const DestinationRecommender = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
-        <h2 className="text-3xl font-bold text-heading">Find Your Perfect Destination</h2>
+    <div className="container mx-auto px-4 py-0">
+      {/* Hero Banner */}
+      <div className="relative h-[40vh] min-h-[300px] flex items-center justify-center mb-8">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?q=80&w=1500&auto=format&fit=crop"
+            alt="Destination Recommender"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
         
-        {hasActiveFilters() && (
-          <Button 
-            variant="outline" 
-            onClick={clearFilters}
-            className="flex items-center gap-1"
-          >
-            <X className="h-4 w-4" />
-            Clear Filters
-          </Button>
-        )}
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 text-heading">Find Your Perfect Destination</h1>
+          <p className="max-w-2xl mx-auto text-lg text-white">
+            Let us recommend the perfect virtual travel experience based on your preferences,
+            travel style, and location.
+          </p>
+        </div>
       </div>
 
       <div className="bg-white rounded-lg shadow-sm border p-4 mb-8">

@@ -25,6 +25,11 @@ const DestinationCard = ({ destination, className = "", tripLabel }: Destination
               Featured
             </div>
           )}
+          {destination.country && (
+            <div className="absolute bottom-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-full">
+              {destination.country}
+            </div>
+          )}
         </div>
         <CardContent className="pt-4">
           <div className="flex justify-between items-start">

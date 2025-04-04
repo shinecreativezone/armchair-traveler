@@ -17,6 +17,7 @@ export type Destination = {
     climate: string[];
     riskLevel: string;
     accessibility: string[];
+    duration: string[]; // Add duration property to fix type errors
   };
   onsiteDuration?: OnsiteDuration;
 };
@@ -109,16 +110,20 @@ export const countryList = [
   'Uruguay', 'Uzbekistan', 'Vanuatu', 'Venezuela', 'Vietnam', 'Yemen', 'Zambia', 'Zimbabwe'
 ];
 
+// Only define these once, removing duplicate declarations
 export const activityTypes = [
   'Adventure', 'Beach', 'Cultural', 'Culinary', 'Eco-tourism',
   'Family', 'Festival', 'Historical', 'Luxury', 'Nightlife',
   'Relaxation', 'Religious', 'Shopping', 'Sports', 'Urban',
-  'Wellness', 'Wildlife', 'Winter Sports'
+  'Wellness', 'Wildlife', 'Winter Sports',
+  'Foodie', 'Culture', 'Nature', 'History', 'Photography',
+  'Hiking', 'Diving', 'Winter Sports', 'Architecture'
 ];
 
 export const climateTypes = [
   'Tropical', 'Desert', 'Mediterranean', 'Humid Continental',
-  'Oceanic', 'Alpine', 'Subarctic', 'Polar', 'Temperate'
+  'Oceanic', 'Alpine', 'Subarctic', 'Polar', 'Temperate',
+  'Continental', 'Humid', 'Arid', 'Monsoon'
 ];
 
 export const continentsList = [
@@ -128,7 +133,8 @@ export const continentsList = [
 
 export const durationOptions = [
   'Day Trip', 'Weekend', '3-5 Days', '1 Week',
-  '2 Weeks', '1 Month', '1+ Month'
+  '2 Weeks', '1 Month', '1+ Month',
+  'Weekend', '3-5 days', '1 Week', '2 Weeks', '1 Month+'
 ];
 
 export const onsiteDurationOptions: OnsiteDuration[] = [
@@ -141,7 +147,9 @@ export const onsiteDurationOptions: OnsiteDuration[] = [
 
 export const accessibilityOptions = [
   'Wheelchair Friendly', 'Family Friendly', 'Pet Friendly',
-  'Public Transport', 'Easy Walking', 'Remote Location'
+  'Public Transport', 'Easy Walking', 'Remote Location',
+  'Good Public Transport', 'Some Stairs', 'Many Stairs',
+  'Rough Terrain', 'Altitude Challenges', 'Remote Location'
 ];
 
 export const riskLevels = [
@@ -542,81 +550,4 @@ export const countriesList = [
   'Taiwan', 'Tajikistan', 'Tanzania', 'Thailand', 'Togo', 'Tonga', 'Trinidad and Tobago', 'Tunisia', 'Turkey',
   'Turkmenistan', 'Tuvalu', 'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States',
   'Uruguay', 'Uzbekistan', 'Vanuatu', 'Vatican City', 'Venezuela', 'Vietnam', 'Yemen', 'Zambia', 'Zimbabwe'
-];
-
-export const continentsList = [
-  'Africa',
-  'Antarctica',
-  'Asia',
-  'Europe',
-  'North America',
-  'Oceania',
-  'South America'
-];
-
-export const activityTypes = [
-  'Adventure',
-  'Luxury',
-  'Foodie',
-  'Culture',
-  'Beach',
-  'Nature',
-  'History',
-  'Wildlife',
-  'Photography',
-  'Shopping',
-  'Relaxation',
-  'Hiking',
-  'Diving',
-  'Winter Sports',
-  'Architecture'
-];
-
-export const climateTypes = [
-  'Tropical',
-  'Desert',
-  'Mediterranean',
-  'Temperate',
-  'Continental',
-  'Polar',
-  'Alpine',
-  'Humid',
-  'Arid',
-  'Oceanic',
-  'Monsoon'
-];
-
-export const durationOptions = [
-  'Day Trip',
-  'Weekend',
-  '3-5 days',
-  '1 Week',
-  '2 Weeks',
-  '1 Month+'
-];
-
-export const onsiteDurationOptions: OnsiteDuration[] = [
-  'half-day',
-  'full-day',
-  '2-3 days',
-  '4-7 days',
-  '8+ days'
-];
-
-export const accessibilityOptions = [
-  'Wheelchair Friendly',
-  'Good Public Transport',
-  'Some Stairs',
-  'Many Stairs',
-  'Rough Terrain',
-  'Altitude Challenges',
-  'Remote Location'
-];
-
-export const riskLevels = [
-  'Safe',
-  'Low Risk',
-  'Moderate',
-  'Adventure',
-  'High Risk'
 ];

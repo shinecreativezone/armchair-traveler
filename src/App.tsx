@@ -10,7 +10,9 @@ import CountriesPage from "./pages/CountriesPage";
 import CountryPage from "./pages/CountryPage";
 import DestinationPage from "./pages/DestinationPage";
 import NotFound from "./pages/NotFound";
+import BahrainCountry from "./pages/countries/BahrainCountry";
 
+// Create a client
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -24,6 +26,7 @@ const App = () => (
           <Route path="/recommender" element={<RecommenderPage />} />
           <Route path="/countries" element={<CountriesPage />} />
           <Route path="/country/:countrySlug" element={<CountryPage />} />
+          <Route path="/country/bahrain" element={<BahrainCountry />} />
           <Route path="/destination/:destinationSlug" element={<DestinationPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

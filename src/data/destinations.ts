@@ -1,27 +1,153 @@
+import { v4 as uuidv4 } from 'uuid';
+
+export type OnsiteDuration = 'half-day' | 'full-day' | '2-3 days' | '4-7 days' | '8+ days';
 
 export type Destination = {
   id: string;
   name: string;
   slug: string;
-  country: string;
-  region: string;
-  continent: string;
   description: string;
   imageUrl: string;
+  region: string;
+  country: string;
+  continent: string;
+  featured?: boolean;
   tags: {
     activities: string[];
     climate: string[];
-    duration: string[];
-    accessibility: string[];
     riskLevel: string;
+    accessibility: string[];
   };
-  featured?: boolean;
   onsiteDuration?: OnsiteDuration;
 };
 
-export type OnsiteDuration = 'half-day' | 'full-day' | '2-3 days' | '4-7 days' | '8+ days';
+export type Country = {
+  name: string;
+  slug: string;
+  continent: string;
+  capital: string;
+  languageOfficial: string;
+  languagesSpoken: string[];
+  currency: string;
+  population: number;
+  area: number;
+  timeZones: string[];
+  callingCode: string;
+  drivingSide: 'left' | 'right';
+  flagImageUrl: string;
+  description: string;
+  whyVisit: string;
+  bestTimeToVisit: {
+    text: string;
+    months: string[];
+  };
+  weatherInfo: {
+    summer: string;
+    winter: string;
+    spring: string;
+    fall: string;
+  };
+  majorCities: {
+    name: string;
+    description: string;
+  }[];
+  famousFor: string[];
+  topAttractions: {
+    name: string;
+    description: string;
+    imageUrl: string;
+  }[];
+  localCuisine: {
+    description: string;
+    famousDishes: string[];
+  };
+  culturalCustoms: string[];
+  travelTips: string[];
+  safetyInfo: string;
+  sustainableTourism: string;
+  visaRequirements: string;
+  budget: {
+    budget: string;
+    midRange: string;
+    luxury: string;
+  };
+  transportationOptions: string[];
+  neighboringCountries: string[];
+};
 
-// Sample data for some destinations
+export const countryList = [
+  'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda',
+  'Argentina', 'Armenia', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain',
+  'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bhutan', 'Bolivia',
+  'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'Brunei', 'Bulgaria', 'Burkina Faso',
+  'Burundi', 'Cabo Verde', 'Cambodia', 'Cameroon', 'Canada', 'Central African Republic',
+  'Chad', 'Chile', 'China', 'Colombia', 'Comoros', 'Congo (Congo-Brazzaville)',
+  'Costa Rica', 'Croatia', 'Cuba', 'Cyprus', 'Czechia (Czech Republic)',
+  'Democratic Republic of the Congo (Congo-Kinshasa)', 'Denmark', 'Djibouti', 'Dominica',
+  'Dominican Republic', 'East Timor (Timor-Leste)', 'Ecuador', 'Egypt', 'El Salvador',
+  'Equatorial Guinea', 'Eritrea', 'Estonia', 'Eswatini', 'Ethiopia', 'Fiji', 'Finland',
+  'France', 'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece', 'Grenada',
+  'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana', 'Haiti', 'Holy See', 'Honduras',
+  'Hungary', 'Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Israel',
+  'Italy', 'Ivory Coast', 'Jamaica', 'Japan', 'Jordan', 'Kazakhstan', 'Kenya',
+  'Kiribati', 'Kuwait', 'Kyrgyzstan', 'Laos', 'Latvia', 'Lebanon', 'Lesotho',
+  'Liberia', 'Libya', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Madagascar',
+  'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Marshall Islands', 'Mauritania',
+  'Mauritius', 'Mexico', 'Micronesia', 'Moldova', 'Monaco', 'Mongolia', 'Montenegro',
+  'Morocco', 'Mozambique', 'Myanmar (formerly Burma)', 'Namibia', 'Nauru', 'Nepal',
+  'Netherlands', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'North Korea',
+  'North Macedonia', 'Norway', 'Oman', 'Pakistan', 'Palau', 'Palestine State', 'Panama',
+  'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal', 'Qatar',
+  'Romania', 'Russia', 'Rwanda', 'Saint Kitts and Nevis', 'Saint Lucia',
+  'Saint Vincent and the Grenadines', 'Samoa', 'San Marino', 'Sao Tome and Principe',
+  'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore',
+  'Slovakia', 'Slovenia', 'Solomon Islands', 'Somalia', 'South Africa', 'South Korea',
+  'South Sudan', 'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Sweden', 'Switzerland',
+  'Syria', 'Taiwan', 'Tajikistan', 'Tanzania', 'Thailand', 'Togo', 'Tonga',
+  'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan', 'Tuvalu', 'Uganda',
+  'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States of America',
+  'Uruguay', 'Uzbekistan', 'Vanuatu', 'Venezuela', 'Vietnam', 'Yemen', 'Zambia', 'Zimbabwe'
+];
+
+export const activityTypes = [
+  'Adventure', 'Beach', 'Cultural', 'Culinary', 'Eco-tourism',
+  'Family', 'Festival', 'Historical', 'Luxury', 'Nightlife',
+  'Relaxation', 'Religious', 'Shopping', 'Sports', 'Urban',
+  'Wellness', 'Wildlife', 'Winter Sports'
+];
+
+export const climateTypes = [
+  'Tropical', 'Desert', 'Mediterranean', 'Humid Continental',
+  'Oceanic', 'Alpine', 'Subarctic', 'Polar', 'Temperate'
+];
+
+export const continentsList = [
+  'Africa', 'Antarctica', 'Asia', 'Europe',
+  'North America', 'Oceania', 'South America'
+];
+
+export const durationOptions = [
+  'Day Trip', 'Weekend', '3-5 Days', '1 Week',
+  '2 Weeks', '1 Month', '1+ Month'
+];
+
+export const onsiteDurationOptions: OnsiteDuration[] = [
+  'half-day',
+  'full-day',
+  '2-3 days',
+  '4-7 days',
+  '8+ days'
+];
+
+export const accessibilityOptions = [
+  'Wheelchair Friendly', 'Family Friendly', 'Pet Friendly',
+  'Public Transport', 'Easy Walking', 'Remote Location'
+];
+
+export const riskLevels = [
+  'Safe', 'Low Risk', 'Moderate', 'Adventure', 'High Risk'
+];
+
 export const destinations: Destination[] = [
   {
     id: '1',
@@ -118,7 +244,6 @@ export const destinations: Destination[] = [
     onsiteDuration: '4-7 days',
     featured: true
   },
-  // New destinations
   {
     id: '6',
     name: 'Tokyo',
@@ -211,7 +336,6 @@ export const destinations: Destination[] = [
     onsiteDuration: '4-7 days',
     featured: true
   },
-  // Add more from the list
   {
     id: '11',
     name: 'Prague',
@@ -398,8 +522,8 @@ export const countriesList = [
   'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina', 'Armenia',
   'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium',
   'Belize', 'Benin', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'Brunei', 'Bulgaria',
-  'Burkina Faso', 'Burundi', 'Cabo Verde', 'Cambodia', 'Cameroon', 'Canada', 'Central African Republic', 'Chad',
-  'Chile', 'China', 'Colombia', 'Comoros', 'Congo, Democratic Republic of the', 'Congo, Republic of the',
+  'Burkina Faso', 'Burundi', 'Cabo Verde', 'Cambodia', 'Cameroon', 'Canada', 'Central African Republic',
+  'Chad', 'Chile', 'China', 'Colombia', 'Comoros', 'Congo, Democratic Republic of the', 'Congo, Republic of the',
   'Costa Rica', 'Côte d\'Ivoire', 'Croatia', 'Cuba', 'Cyprus', 'Czech Republic', 'Denmark', 'Djibouti',
   'Dominica', 'Dominican Republic', 'East Timor', 'Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea',
   'Eritrea', 'Estonia', 'Eswatini', 'Ethiopia', 'Fiji', 'Finland', 'France', 'Gabon', 'Gambia', 'Georgia',
@@ -471,7 +595,7 @@ export const durationOptions = [
   '1 Month+'
 ];
 
-export const onsiteDurationOptions = [
+export const onsiteDurationOptions: OnsiteDuration[] = [
   'half-day',
   'full-day',
   '2-3 days',

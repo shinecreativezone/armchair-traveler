@@ -5,11 +5,11 @@ import {
   activityTypes, 
   climateTypes, 
   continentsList, 
-  durationOptions, 
   accessibilityOptions, 
   riskLevels,
   onsiteDurationOptions,
-  OnsiteDuration 
+  OnsiteDuration,
+  countryList
 } from "@/data/destinations";
 import { FilterOptions, initialFilterOptions, filterDestinations, sortDestinations } from "@/utils/filterUtils";
 import { Button } from "@/components/ui/button";
@@ -27,74 +27,355 @@ import { Search, X, Filter, MapPin } from "lucide-react";
 import DestinationCard from "./DestinationCard";
 import { useSearchParams } from "react-router-dom";
 
-// Major cities with estimated travel times between them (simplified for demo)
-const TRAVEL_TIMES: Record<string, Record<string, number>> = {
-  'New York': {
-    'London': 7, // hours
-    'Paris': 8,
-    'Tokyo': 14,
-    'Sydney': 22,
-    'Cairo': 12,
-    'Rio': 10,
-    'Bangkok': 20,
+// Comprehensive travel times database between major regions
+// This represents average flight times in hours between global regions
+const TRAVEL_TIMES_BY_REGION: Record<string, Record<string, number>> = {
+  'North America': {
+    'North America': 3,
+    'South America': 8,
+    'Western Europe': 9,
+    'Eastern Europe': 11,
+    'Northern Africa': 12,
+    'Sub-Saharan Africa': 16,
+    'Middle East': 13,
+    'South Asia': 17,
+    'East Asia': 14,
+    'Southeast Asia': 18,
+    'Oceania': 18,
+    'Caribbean': 4,
+    'Central America': 5,
+    'Central Asia': 15
   },
-  'London': {
-    'New York': 7,
-    'Paris': 1,
-    'Tokyo': 12,
-    'Sydney': 22,
-    'Cairo': 5,
-    'Rio': 12,
-    'Bangkok': 12,
+  'South America': {
+    'North America': 8,
+    'South America': 3,
+    'Western Europe': 12,
+    'Eastern Europe': 15,
+    'Northern Africa': 12,
+    'Sub-Saharan Africa': 10,
+    'Middle East': 16,
+    'South Asia': 20,
+    'East Asia': 22,
+    'Southeast Asia': 24,
+    'Oceania': 15,
+    'Caribbean': 6,
+    'Central America': 6,
+    'Central Asia': 20
   },
-  'Tokyo': {
-    'New York': 14,
-    'London': 12,
-    'Paris': 12,
-    'Sydney': 10,
-    'Cairo': 14,
-    'Rio': 24,
-    'Bangkok': 6,
+  'Western Europe': {
+    'North America': 9,
+    'South America': 12,
+    'Western Europe': 2,
+    'Eastern Europe': 3,
+    'Northern Africa': 4,
+    'Sub-Saharan Africa': 8,
+    'Middle East': 5,
+    'South Asia': 9,
+    'East Asia': 12,
+    'Southeast Asia': 12,
+    'Oceania': 22,
+    'Caribbean': 10,
+    'Central America': 11,
+    'Central Asia': 7
   },
-  'Bangkok': {
-    'New York': 20,
-    'London': 12,
-    'Paris': 12,
-    'Tokyo': 6,
-    'Sydney': 9,
-    'Cairo': 10,
-    'Rio': 24,
+  'Eastern Europe': {
+    'North America': 11,
+    'South America': 15,
+    'Western Europe': 3,
+    'Eastern Europe': 2,
+    'Northern Africa': 5,
+    'Sub-Saharan Africa': 10,
+    'Middle East': 4,
+    'South Asia': 8,
+    'East Asia': 10,
+    'Southeast Asia': 11,
+    'Oceania': 20,
+    'Caribbean': 12,
+    'Central America': 14,
+    'Central Asia': 5
   },
-  'Cairo': {
-    'New York': 12,
-    'London': 5,
-    'Paris': 4,
-    'Tokyo': 14,
-    'Sydney': 18,
-    'Rio': 14,
-    'Bangkok': 10,
+  'Northern Africa': {
+    'North America': 12,
+    'South America': 12,
+    'Western Europe': 4,
+    'Eastern Europe': 5,
+    'Northern Africa': 2,
+    'Sub-Saharan Africa': 6,
+    'Middle East': 3,
+    'South Asia': 8,
+    'East Asia': 12,
+    'Southeast Asia': 12,
+    'Oceania': 18,
+    'Caribbean': 14,
+    'Central America': 14,
+    'Central Asia': 8
   },
-  'Sydney': {
-    'New York': 22,
-    'London': 22,
-    'Paris': 22,
-    'Tokyo': 10,
-    'Cairo': 18,
-    'Rio': 18,
-    'Bangkok': 9,
+  'Sub-Saharan Africa': {
+    'North America': 16,
+    'South America': 10,
+    'Western Europe': 8,
+    'Eastern Europe': 10,
+    'Northern Africa': 6,
+    'Sub-Saharan Africa': 3,
+    'Middle East': 7,
+    'South Asia': 9,
+    'East Asia': 14,
+    'Southeast Asia': 12,
+    'Oceania': 15,
+    'Caribbean': 16,
+    'Central America': 16,
+    'Central Asia': 13
   },
-  'Rio': {
-    'New York': 10,
-    'London': 12,
-    'Paris': 11,
-    'Tokyo': 24,
-    'Sydney': 18,
-    'Cairo': 14,
-    'Bangkok': 24,
+  'Middle East': {
+    'North America': 13,
+    'South America': 16,
+    'Western Europe': 5,
+    'Eastern Europe': 4,
+    'Northern Africa': 3,
+    'Sub-Saharan Africa': 7,
+    'Middle East': 2,
+    'South Asia': 5,
+    'East Asia': 9,
+    'Southeast Asia': 10,
+    'Oceania': 16,
+    'Caribbean': 16,
+    'Central America': 17,
+    'Central Asia': 4
+  },
+  'South Asia': {
+    'North America': 17,
+    'South America': 20,
+    'Western Europe': 9,
+    'Eastern Europe': 8,
+    'Northern Africa': 8,
+    'Sub-Saharan Africa': 9,
+    'Middle East': 5,
+    'South Asia': 2,
+    'East Asia': 6,
+    'Southeast Asia': 5,
+    'Oceania': 12,
+    'Caribbean': 20,
+    'Central America': 19,
+    'Central Asia': 5
+  },
+  'East Asia': {
+    'North America': 14,
+    'South America': 22,
+    'Western Europe': 12,
+    'Eastern Europe': 10,
+    'Northern Africa': 12,
+    'Sub-Saharan Africa': 14,
+    'Middle East': 9,
+    'South Asia': 6,
+    'East Asia': 2,
+    'Southeast Asia': 4,
+    'Oceania': 10,
+    'Caribbean': 20,
+    'Central America': 18,
+    'Central Asia': 7
+  },
+  'Southeast Asia': {
+    'North America': 18,
+    'South America': 24,
+    'Western Europe': 12,
+    'Eastern Europe': 11,
+    'Northern Africa': 12,
+    'Sub-Saharan Africa': 12,
+    'Middle East': 10,
+    'South Asia': 5,
+    'East Asia': 4,
+    'Southeast Asia': 2,
+    'Oceania': 8,
+    'Caribbean': 22,
+    'Central America': 20,
+    'Central Asia': 9
+  },
+  'Oceania': {
+    'North America': 18,
+    'South America': 15,
+    'Western Europe': 22,
+    'Eastern Europe': 20,
+    'Northern Africa': 18,
+    'Sub-Saharan Africa': 15,
+    'Middle East': 16,
+    'South Asia': 12,
+    'East Asia': 10,
+    'Southeast Asia': 8,
+    'Oceania': 3,
+    'Caribbean': 22,
+    'Central America': 19,
+    'Central Asia': 16
+  },
+  'Caribbean': {
+    'North America': 4,
+    'South America': 6,
+    'Western Europe': 10,
+    'Eastern Europe': 12,
+    'Northern Africa': 14,
+    'Sub-Saharan Africa': 16,
+    'Middle East': 16,
+    'South Asia': 20,
+    'East Asia': 20,
+    'Southeast Asia': 22,
+    'Oceania': 22,
+    'Caribbean': 1,
+    'Central America': 3,
+    'Central Asia': 18
+  },
+  'Central America': {
+    'North America': 5,
+    'South America': 6,
+    'Western Europe': 11,
+    'Eastern Europe': 14,
+    'Northern Africa': 14,
+    'Sub-Saharan Africa': 16,
+    'Middle East': 17,
+    'South Asia': 19,
+    'East Asia': 18,
+    'Southeast Asia': 20,
+    'Oceania': 19,
+    'Caribbean': 3,
+    'Central America': 2,
+    'Central Asia': 19
+  },
+  'Central Asia': {
+    'North America': 15,
+    'South America': 20,
+    'Western Europe': 7,
+    'Eastern Europe': 5,
+    'Northern Africa': 8,
+    'Sub-Saharan Africa': 13,
+    'Middle East': 4,
+    'South Asia': 5,
+    'East Asia': 7,
+    'Southeast Asia': 9,
+    'Oceania': 16,
+    'Caribbean': 18,
+    'Central America': 19,
+    'Central Asia': 2
   }
 };
 
-const availableDepartureCities = Object.keys(TRAVEL_TIMES);
+// Country to region mapping
+const COUNTRY_TO_REGION: Record<string, string> = {
+  'United States': 'North America',
+  'Canada': 'North America',
+  'Mexico': 'North America',
+  'Brazil': 'South America',
+  'Argentina': 'South America',
+  'Chile': 'South America',
+  'Peru': 'South America',
+  'Colombia': 'South America',
+  'United Kingdom': 'Western Europe',
+  'France': 'Western Europe',
+  'Germany': 'Western Europe',
+  'Italy': 'Western Europe',
+  'Spain': 'Western Europe',
+  'Portugal': 'Western Europe',
+  'Netherlands': 'Western Europe',
+  'Belgium': 'Western Europe',
+  'Switzerland': 'Western Europe',
+  'Austria': 'Western Europe',
+  'Greece': 'Western Europe',
+  'Sweden': 'Western Europe',
+  'Norway': 'Western Europe',
+  'Denmark': 'Western Europe',
+  'Finland': 'Western Europe',
+  'Ireland': 'Western Europe',
+  'Poland': 'Eastern Europe',
+  'Ukraine': 'Eastern Europe',
+  'Romania': 'Eastern Europe',
+  'Czech Republic': 'Eastern Europe',
+  'Hungary': 'Eastern Europe',
+  'Bulgaria': 'Eastern Europe',
+  'Croatia': 'Eastern Europe',
+  'Serbia': 'Eastern Europe',
+  'Russia': 'Eastern Europe',
+  'Egypt': 'Northern Africa',
+  'Morocco': 'Northern Africa',
+  'Tunisia': 'Northern Africa',
+  'Algeria': 'Northern Africa',
+  'Libya': 'Northern Africa',
+  'South Africa': 'Sub-Saharan Africa',
+  'Kenya': 'Sub-Saharan Africa',
+  'Nigeria': 'Sub-Saharan Africa',
+  'Ghana': 'Sub-Saharan Africa',
+  'Ethiopia': 'Sub-Saharan Africa',
+  'Tanzania': 'Sub-Saharan Africa',
+  'Uganda': 'Sub-Saharan Africa',
+  'Saudi Arabia': 'Middle East',
+  'United Arab Emirates': 'Middle East',
+  'Israel': 'Middle East',
+  'Turkey': 'Middle East',
+  'Iran': 'Middle East',
+  'Iraq': 'Middle East',
+  'Qatar': 'Middle East',
+  'Lebanon': 'Middle East',
+  'Jordan': 'Middle East',
+  'Kuwait': 'Middle East',
+  'Bahrain': 'Middle East',
+  'Oman': 'Middle East',
+  'India': 'South Asia',
+  'Pakistan': 'South Asia',
+  'Bangladesh': 'South Asia',
+  'Sri Lanka': 'South Asia',
+  'Nepal': 'South Asia',
+  'China': 'East Asia',
+  'Japan': 'East Asia',
+  'South Korea': 'East Asia',
+  'North Korea': 'East Asia',
+  'Taiwan': 'East Asia',
+  'Mongolia': 'East Asia',
+  'Thailand': 'Southeast Asia',
+  'Vietnam': 'Southeast Asia',
+  'Indonesia': 'Southeast Asia',
+  'Malaysia': 'Southeast Asia',
+  'Philippines': 'Southeast Asia',
+  'Singapore': 'Southeast Asia',
+  'Myanmar': 'Southeast Asia',
+  'Cambodia': 'Southeast Asia',
+  'Laos': 'Southeast Asia',
+  'Australia': 'Oceania',
+  'New Zealand': 'Oceania',
+  'Fiji': 'Oceania',
+  'Papua New Guinea': 'Oceania',
+  'Jamaica': 'Caribbean',
+  'Cuba': 'Caribbean',
+  'Dominican Republic': 'Caribbean',
+  'Puerto Rico': 'Caribbean',
+  'Bahamas': 'Caribbean',
+  'Trinidad and Tobago': 'Caribbean',
+  'Haiti': 'Caribbean',
+  'Guatemala': 'Central America',
+  'Costa Rica': 'Central America',
+  'Panama': 'Central America',
+  'Honduras': 'Central America',
+  'El Salvador': 'Central America',
+  'Nicaragua': 'Central America',
+  'Belize': 'Central America',
+  'Kazakhstan': 'Central Asia',
+  'Uzbekistan': 'Central Asia',
+  'Turkmenistan': 'Central Asia',
+  'Kyrgyzstan': 'Central Asia',
+  'Tajikistan': 'Central Asia',
+  'Azerbaijan': 'Central Asia',
+  'Armenia': 'Central Asia',
+  'Georgia': 'Central Asia'
+};
+
+// For countries not explicitly listed, assign a default region based on continent
+const getRegionForCountry = (country: string): string => {
+  if (COUNTRY_TO_REGION[country]) {
+    return COUNTRY_TO_REGION[country];
+  }
+  
+  // Default mappings based on country name patterns
+  if (country.includes('Island') || country.includes('Pacific')) {
+    return 'Oceania';
+  }
+  
+  return 'Western Europe'; // Default fallback
+};
 
 // Convert onsite duration to hours for calculations
 const onsiteDurationToHours: Record<OnsiteDuration, number> = {
@@ -106,34 +387,15 @@ const onsiteDurationToHours: Record<OnsiteDuration, number> = {
 };
 
 // Calculate appropriate trip label based on travel time and onsite duration
-const getTripLabel = (departureCity: string, destinationRegion: string, onsiteDuration: OnsiteDuration | undefined): string => {
+const getTripLabel = (departureCountry: string, destinationRegion: string, onsiteDuration: OnsiteDuration | undefined): string => {
   if (!onsiteDuration) return "Duration varies";
   
-  // Simplistic mapping of regions to nearest major city
-  const getClosestHub = (region: string): string => {
-    const regionToHub: Record<string, string> = {
-      'Western Europe': 'London',
-      'Eastern Europe': 'London',
-      'Mediterranean': 'Cairo',
-      'North America': 'New York',
-      'South America': 'Rio',
-      'East Asia': 'Tokyo',
-      'Southeast Asia': 'Bangkok',
-      'South Asia': 'Bangkok',
-      'Middle East': 'Cairo',
-      'Africa': 'Cairo',
-      'Oceania': 'Sydney',
-    };
-    
-    return regionToHub[region] || 'London'; // Default to London if not found
-  };
+  // Get region of departure country
+  const departureRegion = getRegionForCountry(departureCountry);
   
-  const destinationHub = getClosestHub(destinationRegion);
-  
-  // Get approximate travel time
-  const travelTimeOneWay = TRAVEL_TIMES[departureCity]?.[destinationHub] || 
-                         TRAVEL_TIMES[destinationHub]?.[departureCity] || 
-                         12; // Default to 12 hours if not found
+  // Get approximate travel time between regions
+  const travelTimeOneWay = TRAVEL_TIMES_BY_REGION[departureRegion]?.[destinationRegion] || 
+                          (TRAVEL_TIMES_BY_REGION[destinationRegion]?.[departureRegion] || 12); // Default to 12 hours if not found
   
   const totalTravelTime = travelTimeOneWay * 2; // Round trip
   const onsiteTime = onsiteDurationToHours[onsiteDuration];
@@ -141,15 +403,15 @@ const getTripLabel = (departureCity: string, destinationRegion: string, onsiteDu
   
   // Determine appropriate label
   if (totalTripTime <= 36) {
-    return `Weekend Trip from ${departureCity}`;
+    return `Weekend Trip from ${departureCountry}`;
   } else if (totalTripTime <= 72) {
-    return `Long Weekend from ${departureCity}`;
+    return `Long Weekend from ${departureCountry}`;
   } else if (totalTripTime <= 168) {
-    return `1-Week Trip from ${departureCity}`;
+    return `1-Week Trip from ${departureCountry}`;
   } else if (totalTripTime <= 336) {
-    return `2-Week Trip from ${departureCity}`;
+    return `2-Week Trip from ${departureCountry}`;
   } else {
-    return `Extended Trip from ${departureCity}`;
+    return `Extended Trip from ${departureCountry}`;
   }
 };
 
@@ -159,7 +421,7 @@ const DestinationRecommender = () => {
   const [sortBy, setSortBy] = useState("popular");
   const [filteredDestinations, setFilteredDestinations] = useState(allDestinations);
   const [searchQuery, setSearchQuery] = useState("");
-  const [departureCity, setDepartureCity] = useState("New York");
+  const [departureCountry, setDepartureCountry] = useState("United States");
   const [selectedDurationFilters, setSelectedDurationFilters] = useState<string[]>([]);
   
   // Initialize from URL params if they exist
@@ -168,6 +430,11 @@ const DestinationRecommender = () => {
     if (searchFromUrl) {
       setSearchQuery(searchFromUrl);
       setFilters(prev => ({ ...prev, search: searchFromUrl }));
+    }
+    
+    const fromCountry = searchParams.get("from");
+    if (fromCountry && countryList.includes(fromCountry)) {
+      setDepartureCountry(fromCountry);
     }
   }, [searchParams]);
 
@@ -180,7 +447,7 @@ const DestinationRecommender = () => {
       results = results.filter(destination => {
         if (!destination.onsiteDuration) return false;
         
-        const tripLabel = getTripLabel(departureCity, destination.region, destination.onsiteDuration);
+        const tripLabel = getTripLabel(departureCountry, destination.region, destination.onsiteDuration);
         return selectedDurationFilters.some(filter => tripLabel.includes(filter));
       });
     }
@@ -192,9 +459,9 @@ const DestinationRecommender = () => {
     const newSearchParams = new URLSearchParams();
     if (filters.search) newSearchParams.set("search", filters.search);
     if (sortBy !== "popular") newSearchParams.set("sort", sortBy);
-    if (departureCity !== "New York") newSearchParams.set("from", departureCity);
+    if (departureCountry !== "United States") newSearchParams.set("from", departureCountry);
     setSearchParams(newSearchParams);
-  }, [filters, sortBy, departureCity, selectedDurationFilters, setSearchParams]);
+  }, [filters, sortBy, departureCountry, selectedDurationFilters, setSearchParams]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -275,13 +542,13 @@ const DestinationRecommender = () => {
             <MapPin className="h-5 w-5 text-travel-blue" />
             <span className="font-medium">I'm traveling from:</span>
           </div>
-          <Select value={departureCity} onValueChange={setDepartureCity}>
+          <Select value={departureCountry} onValueChange={setDepartureCountry}>
             <SelectTrigger className="w-[180px]">
-              <SelectValue placeholder="Select city" />
+              <SelectValue placeholder="Select country" />
             </SelectTrigger>
-            <SelectContent>
-              {availableDepartureCities.map(city => (
-                <SelectItem key={city} value={city}>{city}</SelectItem>
+            <SelectContent className="max-h-[200px] overflow-y-auto">
+              {countryList.map(country => (
+                <SelectItem key={country} value={country}>{country}</SelectItem>
               ))}
             </SelectContent>
           </Select>
@@ -378,7 +645,7 @@ const DestinationRecommender = () => {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
-              <DropdownMenuLabel>Trip Duration from {departureCity}</DropdownMenuLabel>
+              <DropdownMenuLabel>Trip Duration from {departureCountry}</DropdownMenuLabel>
               <DropdownMenuSeparator />
               {["Weekend Trip", "Long Weekend", "1-Week Trip", "2-Week Trip", "Extended Trip"].map(duration => (
                 <DropdownMenuCheckboxItem
@@ -472,7 +739,7 @@ const DestinationRecommender = () => {
             <DestinationCard 
               key={destination.id} 
               destination={destination} 
-              tripLabel={getTripLabel(departureCity, destination.region, destination.onsiteDuration)}
+              tripLabel={getTripLabel(departureCountry, destination.region, destination.onsiteDuration)}
             />
           ))}
         </div>

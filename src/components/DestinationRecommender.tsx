@@ -7,7 +7,9 @@ import {
   continentsList, 
   durationOptions, 
   accessibilityOptions, 
-  riskLevels 
+  riskLevels,
+  onsiteDurationOptions,
+  OnsiteDuration 
 } from "@/data/destinations";
 import { FilterOptions, initialFilterOptions, filterDestinations, sortDestinations } from "@/utils/filterUtils";
 import { Button } from "@/components/ui/button";
@@ -21,9 +23,136 @@ import {
   DropdownMenuSeparator, 
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu";
-import { Search, X, Filter } from "lucide-react";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Search, X, Filter, MapPin } from "lucide-react";
 import DestinationCard from "./DestinationCard";
 import { useSearchParams } from "react-router-dom";
+
+// Major cities with estimated travel times between them (simplified for demo)
+const TRAVEL_TIMES: Record<string, Record<string, number>> = {
+  'New York': {
+    'London': 7, // hours
+    'Paris': 8,
+    'Tokyo': 14,
+    'Sydney': 22,
+    'Cairo': 12,
+    'Rio': 10,
+    'Bangkok': 20,
+  },
+  'London': {
+    'New York': 7,
+    'Paris': 1,
+    'Tokyo': 12,
+    'Sydney': 22,
+    'Cairo': 5,
+    'Rio': 12,
+    'Bangkok': 12,
+  },
+  'Tokyo': {
+    'New York': 14,
+    'London': 12,
+    'Paris': 12,
+    'Sydney': 10,
+    'Cairo': 14,
+    'Rio': 24,
+    'Bangkok': 6,
+  },
+  'Bangkok': {
+    'New York': 20,
+    'London': 12,
+    'Paris': 12,
+    'Tokyo': 6,
+    'Sydney': 9,
+    'Cairo': 10,
+    'Rio': 24,
+  },
+  'Cairo': {
+    'New York': 12,
+    'London': 5,
+    'Paris': 4,
+    'Tokyo': 14,
+    'Sydney': 18,
+    'Rio': 14,
+    'Bangkok': 10,
+  },
+  'Sydney': {
+    'New York': 22,
+    'London': 22,
+    'Paris': 22,
+    'Tokyo': 10,
+    'Cairo': 18,
+    'Rio': 18,
+    'Bangkok': 9,
+  },
+  'Rio': {
+    'New York': 10,
+    'London': 12,
+    'Paris': 11,
+    'Tokyo': 24,
+    'Sydney': 18,
+    'Cairo': 14,
+    'Bangkok': 24,
+  }
+};
+
+const availableDepartureCities = Object.keys(TRAVEL_TIMES);
+
+// Convert onsite duration to hours for calculations
+const onsiteDurationToHours: Record<OnsiteDuration, number> = {
+  'half-day': 6,
+  'full-day': 12,
+  '2-3 days': 60,
+  '4-7 days': 144,
+  '8+ days': 240
+};
+
+// Calculate appropriate trip label based on travel time and onsite duration
+const getTripLabel = (departureCity: string, destinationRegion: string, onsiteDuration: OnsiteDuration | undefined): string => {
+  if (!onsiteDuration) return "Duration varies";
+  
+  // Simplistic mapping of regions to nearest major city
+  const getClosestHub = (region: string): string => {
+    const regionToHub: Record<string, string> = {
+      'Western Europe': 'London',
+      'Eastern Europe': 'London',
+      'Mediterranean': 'Cairo',
+      'North America': 'New York',
+      'South America': 'Rio',
+      'East Asia': 'Tokyo',
+      'Southeast Asia': 'Bangkok',
+      'South Asia': 'Bangkok',
+      'Middle East': 'Cairo',
+      'Africa': 'Cairo',
+      'Oceania': 'Sydney',
+    };
+    
+    return regionToHub[region] || 'London'; // Default to London if not found
+  };
+  
+  const destinationHub = getClosestHub(destinationRegion);
+  
+  // Get approximate travel time
+  const travelTimeOneWay = TRAVEL_TIMES[departureCity]?.[destinationHub] || 
+                         TRAVEL_TIMES[destinationHub]?.[departureCity] || 
+                         12; // Default to 12 hours if not found
+  
+  const totalTravelTime = travelTimeOneWay * 2; // Round trip
+  const onsiteTime = onsiteDurationToHours[onsiteDuration];
+  const totalTripTime = totalTravelTime + onsiteTime;
+  
+  // Determine appropriate label
+  if (totalTripTime <= 36) {
+    return `Weekend Trip from ${departureCity}`;
+  } else if (totalTripTime <= 72) {
+    return `Long Weekend from ${departureCity}`;
+  } else if (totalTripTime <= 168) {
+    return `1-Week Trip from ${departureCity}`;
+  } else if (totalTripTime <= 336) {
+    return `2-Week Trip from ${departureCity}`;
+  } else {
+    return `Extended Trip from ${departureCity}`;
+  }
+};
 
 const DestinationRecommender = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -31,7 +160,9 @@ const DestinationRecommender = () => {
   const [sortBy, setSortBy] = useState("popular");
   const [filteredDestinations, setFilteredDestinations] = useState(allDestinations);
   const [searchQuery, setSearchQuery] = useState("");
-
+  const [departureCity, setDepartureCity] = useState("New York");
+  const [selectedDurationFilters, setSelectedDurationFilters] = useState<string[]>([]);
+  
   // Initialize from URL params if they exist
   useEffect(() => {
     const searchFromUrl = searchParams.get("search");
@@ -44,6 +175,17 @@ const DestinationRecommender = () => {
   // Apply filters and sorting
   useEffect(() => {
     let results = filterDestinations(allDestinations, filters);
+    
+    // Additional filtering for smart duration
+    if (selectedDurationFilters.length > 0) {
+      results = results.filter(destination => {
+        if (!destination.onsiteDuration) return false;
+        
+        const tripLabel = getTripLabel(departureCity, destination.region, destination.onsiteDuration);
+        return selectedDurationFilters.some(filter => tripLabel.includes(filter));
+      });
+    }
+    
     results = sortDestinations(results, sortBy);
     setFilteredDestinations(results);
 
@@ -51,8 +193,9 @@ const DestinationRecommender = () => {
     const newSearchParams = new URLSearchParams();
     if (filters.search) newSearchParams.set("search", filters.search);
     if (sortBy !== "popular") newSearchParams.set("sort", sortBy);
+    if (departureCity !== "New York") newSearchParams.set("from", departureCity);
     setSearchParams(newSearchParams);
-  }, [filters, sortBy, setSearchParams]);
+  }, [filters, sortBy, departureCity, selectedDurationFilters, setSearchParams]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -74,13 +217,22 @@ const DestinationRecommender = () => {
   const clearFilters = () => {
     setFilters(initialFilterOptions);
     setSearchQuery("");
+    setSelectedDurationFilters([]);
   };
 
   const hasActiveFilters = () => {
     return Object.entries(filters).some(([key, value]) => {
       if (key === 'search') return Boolean(value);
       return (value as string[]).length > 0;
-    });
+    }) || selectedDurationFilters.length > 0;
+  };
+
+  const toggleDurationFilter = (value: string) => {
+    setSelectedDurationFilters(prev => 
+      prev.includes(value) 
+        ? prev.filter(item => item !== value) 
+        : [...prev, value]
+    );
   };
 
   return (
@@ -113,6 +265,23 @@ const DestinationRecommender = () => {
           </div>
           <Button type="submit">Search</Button>
         </form>
+
+        <div className="flex flex-wrap items-center gap-4 mb-4">
+          <div className="flex items-center gap-2">
+            <MapPin className="h-5 w-5 text-travel-blue" />
+            <span className="font-medium">I'm traveling from:</span>
+          </div>
+          <Select value={departureCity} onValueChange={setDepartureCity}>
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Select city" />
+            </SelectTrigger>
+            <SelectContent>
+              {availableDepartureCities.map(city => (
+                <SelectItem key={city} value={city}>{city}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {/* Activity Type Dropdown */}
@@ -193,25 +362,25 @@ const DestinationRecommender = () => {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          {/* Duration Dropdown */}
+          {/* Smart Duration Dropdown */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline" className="w-full justify-start">
                 <span className="truncate">
-                  {filters.duration.length > 0 
-                    ? `Duration (${filters.duration.length})` 
-                    : "Duration"}
+                  {selectedDurationFilters.length > 0 
+                    ? `Trip Length (${selectedDurationFilters.length})` 
+                    : "Trip Length"}
                 </span>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
-              <DropdownMenuLabel>Trip Duration</DropdownMenuLabel>
+              <DropdownMenuLabel>Trip Duration from {departureCity}</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              {durationOptions.map(duration => (
+              {["Weekend Trip", "Long Weekend", "1-Week Trip", "2-Week Trip", "Extended Trip"].map(duration => (
                 <DropdownMenuCheckboxItem
                   key={duration}
-                  checked={filters.duration.includes(duration)}
-                  onCheckedChange={() => toggleFilter('duration', duration)}
+                  checked={selectedDurationFilters.includes(duration)}
+                  onCheckedChange={() => toggleDurationFilter(duration)}
                 >
                   {duration}
                 </DropdownMenuCheckboxItem>
@@ -296,7 +465,11 @@ const DestinationRecommender = () => {
       {filteredDestinations.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {filteredDestinations.map(destination => (
-            <DestinationCard key={destination.id} destination={destination} />
+            <DestinationCard 
+              key={destination.id} 
+              destination={destination} 
+              tripLabel={getTripLabel(departureCity, destination.region, destination.onsiteDuration)}
+            />
           ))}
         </div>
       ) : (

@@ -16,7 +16,10 @@ export type Destination = {
     riskLevel: string;
   };
   featured?: boolean;
+  onsiteDuration?: OnsiteDuration;
 };
+
+export type OnsiteDuration = 'half-day' | 'full-day' | '2-3 days' | '4-7 days' | '8+ days';
 
 // Sample data for some destinations
 export const destinations: Destination[] = [
@@ -36,6 +39,7 @@ export const destinations: Destination[] = [
       accessibility: ['Wheelchair Friendly', 'Public Transport'],
       riskLevel: 'Safe'
     },
+    onsiteDuration: '4-7 days',
     featured: true
   },
   {
@@ -54,6 +58,7 @@ export const destinations: Destination[] = [
       accessibility: ['Challenging Terrain', 'Altitude'],
       riskLevel: 'Moderate'
     },
+    onsiteDuration: '2-3 days',
     featured: true
   },
   {
@@ -72,6 +77,7 @@ export const destinations: Destination[] = [
       accessibility: ['Good Public Transport', 'Some Hills'],
       riskLevel: 'Safe'
     },
+    onsiteDuration: '4-7 days',
     featured: true
   },
   {
@@ -90,6 +96,7 @@ export const destinations: Destination[] = [
       accessibility: ['Many Stairs', 'Hilly Terrain'],
       riskLevel: 'Safe'
     },
+    onsiteDuration: '2-3 days',
     featured: true
   },
   {
@@ -108,6 +115,7 @@ export const destinations: Destination[] = [
       accessibility: ['Rough Terrain', 'Remote'],
       riskLevel: 'Moderate'
     },
+    onsiteDuration: '4-7 days',
     featured: true
   }
 ];
@@ -187,6 +195,14 @@ export const durationOptions = [
   '1 Week',
   '2 Weeks',
   '1 Month+'
+];
+
+export const onsiteDurationOptions = [
+  'half-day',
+  'full-day',
+  '2-3 days',
+  '4-7 days',
+  '8+ days'
 ];
 
 export const accessibilityOptions = [

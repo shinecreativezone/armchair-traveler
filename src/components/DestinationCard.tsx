@@ -2,13 +2,15 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Destination } from "@/data/destinations";
+import { Clock } from "lucide-react";
 
 interface DestinationCardProps {
   destination: Destination;
   className?: string;
+  tripLabel?: string;
 }
 
-const DestinationCard = ({ destination, className = "" }: DestinationCardProps) => {
+const DestinationCard = ({ destination, className = "", tripLabel }: DestinationCardProps) => {
   return (
     <Link to={`/destination/${destination.slug}`} className={`block ${className}`}>
       <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full">
@@ -32,6 +34,12 @@ const DestinationCard = ({ destination, className = "" }: DestinationCardProps) 
             </div>
           </div>
           <p className="mt-2 text-sm text-gray-600 line-clamp-2">{destination.description}</p>
+          {tripLabel && (
+            <div className="flex items-center gap-1 mt-2 text-travel-blue">
+              <Clock className="h-4 w-4" />
+              <span className="text-sm font-medium">{tripLabel}</span>
+            </div>
+          )}
         </CardContent>
         <CardFooter className="flex flex-wrap gap-1 pt-0 pb-4">
           {destination.tags.activities.slice(0, 3).map((activity, index) => (

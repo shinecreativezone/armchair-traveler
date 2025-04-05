@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { festivals, Festival } from "@/data/festivals";
-import { FestivalCard } from "@/components/FestivalCard";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
 import { 
   Select, 
   SelectContent, 
@@ -10,31 +10,88 @@ import {
   SelectTrigger, 
   SelectValue 
 } from "@/components/ui/select";
-import { Input } from "@/components/ui/input";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { MapPin as MapPinIcon, Calendar as CalendarIcon } from "lucide-react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
+import { CalendarIcon, MapPinIcon } from "lucide-react";
+import { Slider } from "@/components/ui/slider";
+
+// Array of months for the slider labels and filtering
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+// List of continents for filtering
+const CONTINENTS = ["Africa", "Asia", "Europe", "North America", "South America", "Oceania"];
+
+// Helper function to determine festival continent based on country
+const getContinent = (country: string): string => {
+  const europeCountries = ["Germany", "France", "Spain", "Italy", "United Kingdom", "Belgium", "Bulgaria"];
+  const asiaCountries = ["India", "Japan", "Thailand", "China"];
+  const africaCountries = ["Egypt", "Morocco", "South Africa"];
+  const northAmericaCountries = ["United States", "Canada", "Mexico"];
+  const southAmericaCountries = ["Brazil", "Argentina", "Peru"];
+  const oceaniaCountries = ["Australia", "New Zealand"];
+  
+  if (europeCountries.includes(country)) return "Europe";
+  if (asiaCountries.includes(country)) return "Asia";
+  if (africaCountries.includes(country)) return "Africa";
+  if (northAmericaCountries.includes(country)) return "North America";
+  if (southAmericaCountries.includes(country)) return "South America";
+  if (oceaniaCountries.includes(country)) return "Oceania";
+  
+  // Default continent based on country name for those not in our lists
+  if (country === "Brazil") return "South America";
+  
+  return "Other";
+};
 
 export default function FestivalsPage() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [countryFilter, setCountryFilter] = useState<string>("");
-  const [categoryFilter, setCategoryFilter] = useState<Festival["category"] | "">("");
+  // State for filters
+  const [monthRange, setMonthRange] = useState<[number, number]>([0, 2]); // Default: Jan to Mar
+  const [selectedContinents, setSelectedContinents] = useState<string[]>([...CONTINENTS]); // All continents selected by default
   
-  // Get unique countries
-  const countries = Array.from(new Set(festivals.map(festival => festival.country))).sort();
+  // Handle continent selection/deselection
+  const toggleContinent = (continent: string) => {
+    setSelectedContinents(prev => 
+      prev.includes(continent) 
+        ? prev.filter(c => c !== continent) 
+        : [...prev, continent]
+    );
+  };
   
-  // Filter festivals based on search and filters
+  // Filter festivals based on selected filters
   const filteredFestivals = festivals.filter(festival => {
-    const matchesSearch = festival.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                          festival.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          festival.country.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          festival.city.toLowerCase().includes(searchQuery.toLowerCase());
+    // Continent filter
+    const festivalContinent = getContinent(festival.country);
+    const passesContinentFilter = selectedContinents.length === 0 || selectedContinents.includes(festivalContinent);
     
-    const matchesCountry = countryFilter ? festival.country === countryFilter : true;
-    const matchesCategory = categoryFilter ? festival.category === categoryFilter : true;
+    // Month filter - simplify this logic
+    let matchesMonthRange = false;
+    const startMonth = monthRange[0];
+    const endMonth = monthRange[1];
     
-    return matchesSearch && matchesCountry && matchesCategory;
+    // Test against each month in the date string
+    for (const month of MONTHS) {
+      if (festival.date.toLowerCase().includes(month.toLowerCase())) {
+        const monthIndex = MONTHS.indexOf(month);
+        
+        // If start > end, we're looking at a wrap-around range (e.g., Nov-Feb)
+        if (startMonth > endMonth) {
+          if (monthIndex >= startMonth || monthIndex <= endMonth) {
+            matchesMonthRange = true;
+            break;
+          }
+        } else {
+          // Regular range (e.g., Mar-Jul)
+          if (monthIndex >= startMonth && monthIndex <= endMonth) {
+            matchesMonthRange = true;
+            break;
+          }
+        }
+      }
+    }
+    
+    return passesContinentFilter && matchesMonthRange;
   });
 
   return (
@@ -45,127 +102,136 @@ export default function FestivalsPage() {
         <div className="flex flex-col items-center mb-8">
           <h1 className="text-4xl font-bold text-center mb-2">World Festivals</h1>
           <p className="text-center text-muted-foreground max-w-2xl">
-            Discover the most famous and vibrant festivals from around the world. From cultural celebrations to music events, explore the diversity of global festivities.
+            Discover the most famous and vibrant festivals from around the world.
           </p>
         </div>
 
-        <div className="space-y-6">
-          {/* Search and Filters */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Input
-              placeholder="Search festivals..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full"
-            />
+        <div className="space-y-8">
+          {/* Filters */}
+          <div className="bg-card rounded-lg p-6 shadow-sm border">
+            <h2 className="text-xl font-semibold mb-4">Filter Festivals</h2>
             
-            <Select value={countryFilter} onValueChange={setCountryFilter}>
-              <SelectTrigger>
-                <SelectValue placeholder="Filter by country" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="">All Countries</SelectItem>
-                {countries.map((country) => (
-                  <SelectItem key={country} value={country}>
-                    {country}
-                  </SelectItem>
+            {/* Continent Filter */}
+            <div className="mb-6">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-sm font-medium">Continents</h3>
+                <button 
+                  onClick={() => selectedContinents.length === CONTINENTS.length 
+                    ? setSelectedContinents([]) 
+                    : setSelectedContinents([...CONTINENTS])
+                  }
+                  className="text-xs text-travel-blue hover:underline"
+                >
+                  {selectedContinents.length === CONTINENTS.length ? "Clear All" : "Select All"}
+                </button>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
+                {CONTINENTS.map((continent) => (
+                  <div key={continent} className="flex items-center space-x-2">
+                    <Checkbox 
+                      id={`continent-${continent}`} 
+                      checked={selectedContinents.includes(continent)}
+                      onCheckedChange={() => toggleContinent(continent)}
+                    />
+                    <Label htmlFor={`continent-${continent}`}>{continent}</Label>
+                  </div>
                 ))}
-              </SelectContent>
-            </Select>
+              </div>
+            </div>
             
-            <Select value={categoryFilter} onValueChange={(value: any) => setCategoryFilter(value)}>
-              <SelectTrigger>
-                <SelectValue placeholder="Filter by category" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="">All Categories</SelectItem>
-                <SelectItem value="music">Music</SelectItem>
-                <SelectItem value="cultural">Cultural</SelectItem>
-                <SelectItem value="religious">Religious</SelectItem>
-                <SelectItem value="food">Food</SelectItem>
-                <SelectItem value="art">Art</SelectItem>
-              </SelectContent>
-            </Select>
+            {/* Simple Month Range Selector */}
+            <div>
+              <div className="flex justify-between mb-3">
+                <h3 className="text-sm font-medium">Month Range: {MONTHS[monthRange[0]]} - {MONTHS[monthRange[1]]}</h3>
+              </div>
+              
+              <div className="px-2 pt-4 pb-2">
+                <Slider
+                  value={monthRange}
+                  min={0}
+                  max={11}
+                  step={1}
+                  minStepsBetweenThumbs={1}
+                  onValueChange={(values: number[]) => setMonthRange([values[0], values[1]])}
+                  className="mb-4"
+                />
+                <div className="flex justify-between text-xs text-muted-foreground">
+                  {MONTHS.map((month) => (
+                    <span key={month}>{month}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Results count */}
+          <div className="flex justify-between items-center">
+            <h2 className="text-xl font-semibold">
+              {filteredFestivals.length} {filteredFestivals.length === 1 ? 'Festival' : 'Festivals'} Found
+            </h2>
           </div>
 
-          {/* Tabs for different views */}
-          <Tabs defaultValue="grid">
-            <div className="flex justify-between items-center">
-              <h2 className="text-xl font-semibold">
-                {filteredFestivals.length} {filteredFestivals.length === 1 ? 'Festival' : 'Festivals'} Found
-              </h2>
-              <TabsList>
-                <TabsTrigger value="grid">Grid View</TabsTrigger>
-                <TabsTrigger value="list">List View</TabsTrigger>
-              </TabsList>
-            </div>
-
-            <TabsContent value="grid" className="mt-6">
-              {filteredFestivals.length > 0 ? (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                  {filteredFestivals.map((festival) => (
-                    <FestivalCard
-                      key={festival.id}
-                      festival={festival}
+          {/* Festival Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {filteredFestivals.map((festival) => (
+              <Link 
+                to={`/festival/${festival.id}`} 
+                key={festival.id}
+                className="group"
+              >
+                <Card className="overflow-hidden h-full hover:shadow-md transition-all border-2 hover:border-travel-blue">
+                  <div className="relative h-48">
+                    <img 
+                      src={festival.imageUrl} 
+                      alt={festival.name} 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                  ))}
-                </div>
-              ) : (
-                <div className="text-center py-12">
-                  <p className="text-muted-foreground">No festivals found matching your filters.</p>
-                </div>
-              )}
-            </TabsContent>
-
-            <TabsContent value="list">
-              {filteredFestivals.length > 0 ? (
-                <div className="space-y-4">
-                  {filteredFestivals.map((festival) => (
-                    <Link 
-                      key={festival.id}
-                      to={`/festival/${festival.id}`}
-                      className="block"
-                    >
-                      <div 
-                        className="flex flex-col md:flex-row gap-4 border rounded-lg overflow-hidden hover:shadow-md transition-all"
-                      >
-                        <div className="md:w-48 h-48 md:h-auto">
-                          <img 
-                            src={festival.imageUrl} 
-                            alt={festival.name} 
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div className="flex-1 p-4">
-                          <div className="flex justify-between items-start">
-                            <div>
-                              <h3 className="text-xl font-semibold">{festival.name}</h3>
-                              <p className="text-sm text-muted-foreground flex items-center gap-1 mt-1">
-                                <MapPinIcon className="h-4 w-4" />
-                                {festival.city}, {festival.country}
-                              </p>
-                            </div>
-                            <Badge className={`${getCategoryColor(festival.category)} text-white`}>
-                              {festival.category}
-                            </Badge>
-                          </div>
-                          <p className="mt-2">{festival.description}</p>
-                          <div className="mt-4 text-sm text-muted-foreground flex items-center gap-1">
-                            <CalendarIcon className="h-4 w-4" />
-                            {festival.date}
-                          </div>
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              ) : (
-                <div className="text-center py-12">
-                  <p className="text-muted-foreground">No festivals found matching your filters.</p>
-                </div>
-              )}
-            </TabsContent>
-          </Tabs>
+                    <div className="absolute top-2 right-2">
+                      <Badge className={`${getCategoryColor(festival.category)} text-white`}>
+                        {festival.category}
+                      </Badge>
+                    </div>
+                    <Badge className="absolute top-2 left-2 bg-travel-blue text-white">
+                      {getContinent(festival.country)}
+                    </Badge>
+                  </div>
+                  <CardContent className="pt-4">
+                    <h3 className="font-bold text-xl group-hover:text-travel-blue transition-colors">
+                      {festival.name}
+                    </h3>
+                    <p className="text-sm text-muted-foreground flex items-center gap-1 mt-1">
+                      <MapPinIcon className="h-3 w-3" />
+                      {festival.city}, {festival.country}
+                    </p>
+                    <p className="mt-2 line-clamp-2 text-sm">
+                      {festival.description}
+                    </p>
+                  </CardContent>
+                  <CardFooter className="pt-0">
+                    <p className="text-sm text-muted-foreground flex items-center gap-1">
+                      <CalendarIcon className="h-3 w-3" />
+                      {festival.date}
+                    </p>
+                  </CardFooter>
+                </Card>
+              </Link>
+            ))}
+          </div>
+          
+          {filteredFestivals.length === 0 && (
+            <div className="text-center py-12 border rounded-lg bg-gray-50">
+              <p className="text-muted-foreground">No festivals found matching your filters.</p>
+              <button 
+                onClick={() => {
+                  setMonthRange([0, 2]);
+                  setSelectedContinents([...CONTINENTS]);
+                }}
+                className="mt-4 text-travel-blue hover:underline"
+              >
+                Reset filters
+              </button>
+            </div>
+          )}
         </div>
       </main>
       

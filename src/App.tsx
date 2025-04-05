@@ -9,7 +9,7 @@ import RecommenderPage from "./pages/RecommenderPage";
 import CountriesPage from "./pages/CountriesPage";
 import CountryPage from "./pages/CountryPage";
 import DestinationPage from "./pages/DestinationPage";
-import FestivalsPageNew from "./pages/FestivalsPageNew";
+import FestivalsPage from "./pages/FestivalsPage";
 import FestivalDetail from "./pages/FestivalDetail";
 import ExperiencesPage from "./pages/ExperiencesPage";
 import ExperiencePage from "./pages/ExperiencePage";
@@ -74,7 +74,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/recommender" element={<RecommenderPage />} />
             <Route path="/countries" element={<CountriesPage />} />
-            <Route path="/festivals" element={<FestivalsPageNew />} />
+            <Route path="/festivals" element={<FestivalsPage />} />
             <Route path="/festival/:festivalId" element={<FestivalDetail />} />
             <Route path="/experiences" element={<ExperiencesPage />} />
             <Route path="/experience/:experienceId" element={<ExperiencePage />} />

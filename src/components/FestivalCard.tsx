@@ -28,45 +28,47 @@ export function FestivalCard({ festival, className = "" }: FestivalCardProps) {
   };
 
   return (
-    <Card className={`overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full ${className}`}>
-      <div className="relative aspect-[4/3] overflow-hidden">
-        <img 
-          src={festival.imageUrl} 
-          alt={festival.name}
-          className="h-full w-full object-cover transition-transform duration-500 hover:scale-110" 
-        />
-        <div className="absolute top-2 right-2">
-          <Badge className={`${getCategoryColor(festival.category)} text-white`}>
-            {festival.category}
-          </Badge>
-        </div>
-        <div className="absolute bottom-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-full">
-          {festival.country}
-        </div>
-        {festival.popularity === "high" && (
-          <div className="absolute top-2 left-2 bg-travel-terracotta text-white text-xs px-2 py-1 rounded-full">
-            Popular
+    <Link to={`/festival/${festival.id}`} className="block h-full">
+      <Card className={`overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full ${className}`}>
+        <div className="relative aspect-[4/3] overflow-hidden">
+          <img 
+            src={festival.imageUrl} 
+            alt={festival.name}
+            className="h-full w-full object-cover transition-transform duration-500 hover:scale-110" 
+          />
+          <div className="absolute top-2 right-2">
+            <Badge className={`${getCategoryColor(festival.category)} text-white`}>
+              {festival.category}
+            </Badge>
           </div>
-        )}
-      </div>
-      <CardContent className="pt-4">
-        <div className="flex justify-between items-start">
-          <div>
-            <h3 className="font-bold text-xl text-heading">{festival.name}</h3>
-            <p className="text-gray-500 flex items-center gap-1">
-              <MapPinIcon className="h-4 w-4" />
-              {festival.city}
-            </p>
+          <div className="absolute bottom-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-full">
+            {festival.country}
           </div>
+          {festival.popularity === "high" && (
+            <div className="absolute top-2 left-2 bg-travel-terracotta text-white text-xs px-2 py-1 rounded-full">
+              Popular
+            </div>
+          )}
         </div>
-        <p className="mt-2 text-sm text-gray-600 line-clamp-2">
-          {festival.description}
-        </p>
-        <div className="flex items-center gap-1 mt-2 text-travel-blue">
-          <CalendarIcon className="h-4 w-4" />
-          <span className="text-sm font-medium">{festival.date}</span>
-        </div>
-      </CardContent>
-    </Card>
+        <CardContent className="pt-4">
+          <div className="flex justify-between items-start">
+            <div>
+              <h3 className="font-bold text-xl text-heading">{festival.name}</h3>
+              <p className="text-gray-500 flex items-center gap-1">
+                <MapPinIcon className="h-4 w-4" />
+                {festival.city}
+              </p>
+            </div>
+          </div>
+          <p className="mt-2 text-sm text-gray-600 line-clamp-2">
+            {festival.description}
+          </p>
+          <div className="flex items-center gap-1 mt-2 text-travel-blue">
+            <CalendarIcon className="h-4 w-4" />
+            <span className="text-sm font-medium">{festival.date}</span>
+          </div>
+        </CardContent>
+      </Card>
+    </Link>
   );
 } 

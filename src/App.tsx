@@ -10,7 +10,7 @@ import CountriesPage from "./pages/CountriesPage";
 import CountryPage from "./pages/CountryPage";
 import DestinationPage from "./pages/DestinationPage";
 import FestivalsPage from "./pages/FestivalsPage";
-import FestivalPage from "./pages/FestivalPage";
+import FestivalDetail from "./pages/FestivalDetail";
 import ExperiencesPage from "./pages/ExperiencesPage";
 import ExperiencePage from "./pages/ExperiencePage";
 import StoriesPage from "./pages/StoriesPage";
@@ -75,7 +75,7 @@ const App = () => (
             <Route path="/recommender" element={<RecommenderPage />} />
             <Route path="/countries" element={<CountriesPage />} />
             <Route path="/festivals" element={<FestivalsPage />} />
-            <Route path="/festival/:festivalId" element={<FestivalPage />} />
+            <Route path="/festival/:festivalId" element={<FestivalDetail />} />
             <Route path="/experiences" element={<ExperiencesPage />} />
             <Route path="/experience/:experienceId" element={<ExperiencePage />} />
             <Route path="/stories" element={<StoriesPage />} />

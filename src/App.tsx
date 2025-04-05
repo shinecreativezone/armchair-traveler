@@ -37,6 +37,14 @@ import BelizeCountry from "./pages/countries/BelizeCountry";
 import BeninCountry from "./pages/countries/BeninCountry";
 import BhutanCountry from "./pages/countries/BhutanCountry";
 import BoliviaCountry from "./pages/countries/BoliviaCountry";
+import BosniaAndHerzegovinaCountry from "./pages/countries/BosniaAndHerzegovinaCountry";
+import BotswanaCountry from "./pages/countries/BotswanaCountry";
+import BruneiCountry from "./pages/countries/BruneiCountry";
+import BulgariaCountry from "./pages/countries/BulgariaCountry";
+import BurkinaFasoCountry from "./pages/countries/BurkinaFasoCountry";
+import BurundiCountry from "./pages/countries/BurundiCountry";
+import CaboVerdeCountry from "./pages/countries/CaboVerdeCountry";
+import CambodiaCountry from "./pages/countries/CambodiaCountry";
 // Note: Import additional country components as they are created
 
 // Create a client
@@ -77,7 +85,15 @@ const App = () => (
             <Route path="/country/benin" element={<BeninCountry />} />
             <Route path="/country/bhutan" element={<BhutanCountry />} />
             <Route path="/country/bolivia" element={<BoliviaCountry />} />
+            <Route path="/country/bosnia-and-herzegovina" element={<BosniaAndHerzegovinaCountry />} />
+            <Route path="/country/botswana" element={<BotswanaCountry />} />
             <Route path="/country/brazil" element={<BrazilCountry />} />
+            <Route path="/country/brunei" element={<BruneiCountry />} />
+            <Route path="/country/bulgaria" element={<BulgariaCountry />} />
+            <Route path="/country/burkina-faso" element={<BurkinaFasoCountry />} />
+            <Route path="/country/burundi" element={<BurundiCountry />} />
+            <Route path="/country/cabo-verde" element={<CaboVerdeCountry />} />
+            <Route path="/country/cambodia" element={<CambodiaCountry />} />
             <Route path="/country/canada" element={<CanadaCountry />} />
             <Route path="/country/denmark" element={<DenmarkCountry />} />
             <Route path="/country/egypt" element={<EgyptCountry />} />

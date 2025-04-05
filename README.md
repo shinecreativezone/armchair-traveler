@@ -4,6 +4,10 @@
 
 **URL**: https://lovable.dev/projects/2537723b-532a-45b1-9524-8fd1503ab32d
 
+## Deployed Site
+
+Visit the live site: [Armchair Traveler](https://shinecreativezone.github.io/armchair-traveler/)
+
 ## How can I edit this code?
 
 There are several ways of editing your application.

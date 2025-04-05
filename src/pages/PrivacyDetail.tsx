@@ -1,65 +1,85 @@
 import TemplateContentDetail from "./TemplateContentDetail";
 
-export default function PrivacyDetail() {
+const PrivacyDetail = () => {
   return (
     <TemplateContentDetail 
       title="Privacy Policy" 
-      subtitle="How we protect and manage your data"
+      subtitle="How we protect and handle your data"
     >
-      <h2>Introduction</h2>
       <p>
-        This Privacy Policy describes how Armchair Traveler ("we", "our", or "us") collects, uses, and shares
-        information about you when you use our website, mobile application, and other online products and 
-        services (collectively, the "Services").
+        At Armchair Traveler, we take your privacy seriously. This Privacy Policy explains how we collect, use, 
+        and protect your personal information when you use our website and services.
       </p>
       
       <h2>Information We Collect</h2>
-      <p>
-        We collect information you provide directly to us, such as when you create an account, update your profile,
-        use the interactive features of our Services, participate in contests, promotions, or surveys, request
-        customer support, or communicate with us.
-      </p>
+      
+      <p>We may collect the following types of information:</p>
+      
+      <ul>
+        <li><strong>Personal Information:</strong> Name, email address, and profile details when you create an account</li>
+        <li><strong>Usage Data:</strong> Information about how you interact with our website and services</li>
+        <li><strong>Device Information:</strong> Browser type, IP address, and device details</li>
+        <li><strong>Cookies:</strong> Small data files stored on your device to improve your experience</li>
+      </ul>
       
       <h2>How We Use Your Information</h2>
+      
+      <p>We use your information to:</p>
+      
+      <ul>
+        <li>Provide and improve our services</li>
+        <li>Personalize your experience</li>
+        <li>Communicate with you about our services</li>
+        <li>Process transactions</li>
+        <li>Analyze usage patterns to improve our website</li>
+      </ul>
+      
+      <h2>Data Protection</h2>
+      
       <p>
-        We use the information we collect to provide, maintain, and improve our Services, as well as to develop
-        new features and services, and to protect our users and ourselves.
+        We implement appropriate security measures to protect your personal information against unauthorized 
+        access, alteration, disclosure, or destruction.
       </p>
       
-      <h2>Sharing of Information</h2>
-      <p>
-        We do not share your personal information except in limited circumstances, such as when you give us
-        permission, when it's necessary to fulfill the purpose for which you provided it, or when required by law.
-      </p>
+      <h2>Your Rights</h2>
       
-      <h2>Your Rights and Choices</h2>
-      <p>
-        You have certain rights and choices regarding the information we collect and how it is used, including
-        the ability to access, update, or delete your information, as well as to opt out of certain uses or sharing.
-      </p>
+      <p>You have the right to:</p>
       
-      <h2>Data Security</h2>
-      <p>
-        We take measures to help protect information about you from loss, theft, misuse, and unauthorized access,
-        disclosure, alteration, and destruction.
-      </p>
+      <ul>
+        <li>Access and receive a copy of your personal data</li>
+        <li>Rectify inaccurate or incomplete information</li>
+        <li>Request deletion of your personal data</li>
+        <li>Object to or restrict processing of your data</li>
+        <li>Data portability</li>
+      </ul>
       
-      <h2>Children's Privacy</h2>
+      <h2>Third-Party Services</h2>
+      
       <p>
-        Our Services are not directed to children under 13, and we do not knowingly collect personal information
-        from children under 13.
+        Our website may contain links to third-party websites or services that are not owned or controlled 
+        by Armchair Traveler. We have no control over and assume no responsibility for the content, 
+        privacy policies, or practices of any third-party sites or services.
       </p>
       
       <h2>Changes to This Policy</h2>
+      
       <p>
-        We may change this Privacy Policy from time to time. If we make changes, we will notify you by revising
-        the date at the top of the policy and, in some cases, we may provide you with additional notice.
+        We may update our Privacy Policy from time to time. We will notify you of any changes by posting 
+        the new Privacy Policy on this page and updating the "Last Updated" date.
+      </p>
+      
+      <p className="text-sm text-muted-foreground mt-6">
+        Last Updated: January 15, 2024
       </p>
       
       <h2>Contact Us</h2>
+      
       <p>
-        If you have any questions about this Privacy Policy, please contact us at privacy@armchairtraveler.com.
+        If you have any questions about this Privacy Policy, please contact us at 
+        <a href="mailto:privacy@armchairtraveler.com" className="text-blue-600 hover:underline"> privacy@armchairtraveler.com</a>.
       </p>
     </TemplateContentDetail>
   );
-} 
+};
+
+export default PrivacyDetail; 

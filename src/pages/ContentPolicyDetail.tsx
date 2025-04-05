@@ -1,90 +1,90 @@
 import TemplateContentDetail from "./TemplateContentDetail";
 
-export default function ContentPolicyDetail() {
+const ContentPolicyDetail = () => {
   return (
     <TemplateContentDetail 
       title="Content Policy" 
-      subtitle="Guidelines for creating and sharing content on Armchair Traveler"
+      subtitle="Guidelines for content on Armchair Traveler"
     >
-      <h2>Our Content Values</h2>
       <p>
-        At Armchair Traveler, we value authentic, respectful, and informative content that enhances
-        understanding of global cultures and destinations. Our platform aims to foster a community
-        where travel enthusiasts can share knowledge and experiences in a constructive manner.
+        At Armchair Traveler, we strive to create a positive, engaging environment where users can share their 
+        travel experiences and learn about destinations around the world. This Content Policy outlines the types 
+        of content that are acceptable on our platform and content that is prohibited.
       </p>
       
-      <h2>User-Generated Content Guidelines</h2>
-      <p>
-        When contributing content to Armchair Traveler, please adhere to these guidelines:
-      </p>
+      <h2>Acceptable Content</h2>
       
-      <h3>Accuracy and Authenticity</h3>
-      <ul>
-        <li>Share accurate information based on personal experience or well-researched facts</li>
-        <li>Clearly distinguish between factual information and personal opinions</li>
-        <li>Do not misrepresent your travel experiences or qualifications</li>
-        <li>Cite sources when sharing information that is not based on personal experience</li>
-      </ul>
+      <p>We encourage content that:</p>
       
-      <h3>Cultural Sensitivity</h3>
       <ul>
-        <li>Approach different cultures with respect and openness</li>
-        <li>Avoid stereotyping or making broad generalizations about cultures or regions</li>
-        <li>Consider the local context when describing customs, traditions, or social norms</li>
-        <li>Be mindful of using respectful language when discussing cultural practices</li>
-      </ul>
-      
-      <h3>Appropriate Content</h3>
-      <ul>
-        <li>Do not share content that is obscene, hateful, discriminatory, or promotes illegal activities</li>
-        <li>Avoid excessive profanity or inflammatory language</li>
-        <li>Respect the privacy of individuals who may appear in your photos or stories</li>
-        <li>Consider the potential impact of sharing sensitive information about locations or communities</li>
+        <li>Shares authentic travel experiences and recommendations</li>
+        <li>Respects local cultures, customs, and communities</li>
+        <li>Provides useful, accurate information about destinations</li>
+        <li>Inspires others to explore and appreciate the world</li>
+        <li>Fosters positive engagement and respectful discussion</li>
       </ul>
       
       <h2>Prohibited Content</h2>
+      
+      <p>The following types of content are prohibited:</p>
+      
+      <ul>
+        <li><strong>Illegal Content:</strong> Content that promotes illegal activities or violates applicable laws</li>
+        <li><strong>Hateful Content:</strong> Content that promotes hatred, discrimination, or violence against individuals or groups based on attributes such as race, ethnicity, religion, disability, gender, age, nationality, or sexual orientation</li>
+        <li><strong>Harassment:</strong> Content that harasses, intimidates, or bullies any individual</li>
+        <li><strong>Adult Content:</strong> Explicit sexual content, pornography, or nudity</li>
+        <li><strong>Violent Content:</strong> Graphic depictions of violence or content that glorifies violence</li>
+        <li><strong>Harmful Misinformation:</strong> Content that contains demonstrably false information that could lead to significant harm</li>
+        <li><strong>Privacy Violations:</strong> Content that invades others' privacy, such as sharing personal information without consent</li>
+        <li><strong>Intellectual Property Violations:</strong> Content that infringes on others' intellectual property rights</li>
+        <li><strong>Spam:</strong> Repetitive, unwanted, or unsolicited content</li>
+      </ul>
+      
+      <h2>Responsible Tourism Content</h2>
+      
       <p>
-        The following types of content are strictly prohibited on Armchair Traveler:
+        We encourage content that promotes responsible tourism. Please avoid content that:
       </p>
       
       <ul>
-        <li>Content that promotes discrimination based on race, gender, religion, nationality, disability, sexual orientation, or age</li>
-        <li>Content that depicts or promotes illegal activities</li>
-        <li>Content that contains threats, harassment, or incitement to violence</li>
-        <li>Content that infringes on intellectual property rights</li>
-        <li>Content that contains personal information of others without their consent</li>
-        <li>Spam, deceptive content, or misleading information</li>
-        <li>Content that promotes exploitation of people, wildlife, or cultural heritage</li>
+        <li>Promotes activities harmful to wildlife or the environment</li>
+        <li>Encourages disrespectful behavior toward local cultures or sacred sites</li>
+        <li>Glamorizes overtourism or activities that damage sensitive locations</li>
+        <li>Misrepresents destinations or travel experiences</li>
       </ul>
       
-      <h2>Content Moderation</h2>
-      <p>
-        We moderate content on our platform to ensure compliance with these guidelines. Content that violates
-        our policy may be removed, and repeated violations may result in restrictions on your account.
-      </p>
+      <h2>Enforcement</h2>
       
       <p>
-        We encourage community reporting of content that violates these guidelines. If you encounter
-        problematic content, please use the reporting feature to bring it to our attention.
+        We may take action against content that violates this policy, including:
       </p>
       
-      <h2>Copyright and Intellectual Property</h2>
+      <ul>
+        <li>Removing the violating content</li>
+        <li>Issuing warnings to the content creator</li>
+        <li>Temporarily restricting posting privileges</li>
+        <li>Suspending or terminating accounts for severe or repeated violations</li>
+      </ul>
+      
+      <h2>Reporting Violations</h2>
+      
       <p>
-        Only share content that you have created or have the right to share. When using content created by
-        others, ensure you have appropriate permission and provide proper attribution.
+        If you encounter content that you believe violates our Content Policy, please report it 
+        by contacting us at <a href="mailto:content@armchairtraveler.com" className="text-blue-600 hover:underline">content@armchairtraveler.com</a>.
       </p>
       
-      <h2>Changes to This Policy</h2>
+      <h2>Policy Updates</h2>
+      
       <p>
-        We may update our Content Policy from time to time. We will notify users of any significant changes
-        by posting the updated policy on this page.
+        We may update this Content Policy from time to time to reflect new issues that arise, changes in our 
+        services, or in response to user feedback. We will notify users of significant changes to this policy.
       </p>
       
-      <h2>Contact Us</h2>
-      <p>
-        If you have questions about our Content Policy or need to report a violation, please contact us at
-        content@armchairtraveler.com.
+      <p className="text-sm text-muted-foreground mt-6">
+        Last Updated: January 15, 2024
       </p>
     </TemplateContentDetail>
   );
-} 
+};
+
+export default ContentPolicyDetail; 

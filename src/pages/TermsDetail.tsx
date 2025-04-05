@@ -1,82 +1,98 @@
 import TemplateContentDetail from "./TemplateContentDetail";
 
-export default function TermsDetail() {
+const TermsDetail = () => {
   return (
     <TemplateContentDetail 
       title="Terms of Service" 
-      subtitle="Guidelines for using Armchair Traveler"
+      subtitle="Please read these terms carefully before using our platform"
     >
-      <h2>Acceptance of Terms</h2>
       <p>
-        By accessing or using the Armchair Traveler services, you agree to be bound by these Terms of Service.
-        If you do not agree to these terms, please do not use our services.
+        By accessing or using the Armchair Traveler website and services, you agree to be bound by these Terms of Service.
+        If you do not agree to all the terms and conditions, you should not use our service.
       </p>
       
-      <h2>Changes to Terms</h2>
+      <h2>1. Account Registration</h2>
+      
       <p>
-        We may update these Terms of Service from time to time. We will notify you of any changes by posting
-        the new Terms on this page and updating the "Last Updated" date.
+        To access certain features of our platform, you may need to create an account. You are responsible for maintaining 
+        the confidentiality of your account credentials and for all activities that occur under your account.
       </p>
       
-      <h2>User Accounts</h2>
+      <h2>2. Content</h2>
+      
       <p>
-        When you create an account with us, you must provide accurate, complete, and current information.
-        You are responsible for maintaining the confidentiality of your account credentials and for all
-        activities that occur under your account.
+        Our platform contains content provided by us, users, and third parties. All content must comply with our Content Policy.
+        We reserve the right to remove any content that violates these terms or that we find objectionable.
       </p>
       
-      <h2>User Content</h2>
+      <h2>3. User Conduct</h2>
+      
+      <p>You agree not to:</p>
+      
+      <ul>
+        <li>Use our services for any illegal purpose</li>
+        <li>Attempt to gain unauthorized access to our systems</li>
+        <li>Interfere with or disrupt our services</li>
+        <li>Collect or harvest data from our services without permission</li>
+        <li>Post content that is offensive, harmful, or violates others' rights</li>
+      </ul>
+      
+      <h2>4. Intellectual Property</h2>
+      
       <p>
-        You retain all rights to any content you submit, post, or display on or through our services.
-        By submitting content, you grant us a worldwide, non-exclusive, royalty-free license to use,
-        reproduce, modify, adapt, publish, translate, and distribute such content.
+        The content, features, and functionality of our platform are owned by Armchair Traveler and protected by copyright, 
+        trademark, and other intellectual property laws. You may not copy, modify, distribute, or create derivative works 
+        without our express permission.
       </p>
       
-      <h2>Prohibited Uses</h2>
+      <h2>5. Third-Party Links</h2>
+      
       <p>
-        You agree not to use our services for any purpose that is illegal or prohibited by these Terms,
-        including but not limited to posting inappropriate content, harassing other users, or attempting
-        to gain unauthorized access to our systems.
+        Our services may contain links to third-party websites or services that are not owned or controlled by us. 
+        We have no control over, and assume no responsibility for, the content, privacy policies, or practices of 
+        any third-party websites or services.
       </p>
       
-      <h2>Intellectual Property</h2>
+      <h2>6. Limitation of Liability</h2>
+      
       <p>
-        Our services and all content, features, and functionality are owned by Armchair Traveler, its
-        licensors, or other providers and are protected by copyright, trademark, and other intellectual
-        property laws.
+        To the maximum extent permitted by law, Armchair Traveler shall not be liable for any indirect, incidental, 
+        special, consequential, or punitive damages resulting from your use of or inability to use our services.
       </p>
       
-      <h2>Termination</h2>
+      <h2>7. Modifications to Terms</h2>
+      
       <p>
-        We may terminate or suspend your account and access to our services at our sole discretion,
-        without notice, for conduct that we believe violates these Terms or is harmful to other users,
-        us, or third parties, or for any other reason.
+        We may modify these Terms at any time by posting the updated terms on our website. Your continued use of our 
+        services after any such changes constitutes your acceptance of the new Terms.
       </p>
       
-      <h2>Disclaimer of Warranties</h2>
+      <h2>8. Termination</h2>
+      
       <p>
-        Our services are provided "as is" and "as available" without warranties of any kind, either
-        express or implied, including but not limited to warranties of merchantability, fitness for a
-        particular purpose, or non-infringement.
+        We may terminate or suspend your account and access to our services at our sole discretion, without notice, 
+        for conduct that we believe violates these Terms or is harmful to other users, us, or third parties.
       </p>
       
-      <h2>Limitation of Liability</h2>
+      <h2>9. Governing Law</h2>
+      
       <p>
-        To the fullest extent permitted by applicable law, Armchair Traveler shall not be liable for
-        any indirect, incidental, special, consequential, or punitive damages, or any loss of profits
-        or revenues, whether incurred directly or indirectly.
+        These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which 
+        Armchair Traveler is established, without regard to its conflict of law provisions.
       </p>
       
-      <h2>Governing Law</h2>
-      <p>
-        These Terms shall be governed by and construed in accordance with the laws of the jurisdiction
-        in which Armchair Traveler is established, without regard to its conflict of law provisions.
+      <p className="text-sm text-muted-foreground mt-6">
+        Last Updated: January 15, 2024
       </p>
       
       <h2>Contact Us</h2>
+      
       <p>
-        If you have any questions about these Terms, please contact us at terms@armchairtraveler.com.
+        If you have any questions about these Terms, please contact us at 
+        <a href="mailto:legal@armchairtraveler.com" className="text-blue-600 hover:underline"> legal@armchairtraveler.com</a>.
       </p>
     </TemplateContentDetail>
   );
-} 
+};
+
+export default TermsDetail; 

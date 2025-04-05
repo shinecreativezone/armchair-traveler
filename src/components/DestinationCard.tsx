@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Destination } from "@/data/destinations";
@@ -10,9 +9,25 @@ interface DestinationCardProps {
   tripLabel?: string;
 }
 
+// List of countries that have dedicated pages
+const countriesWithPages = [
+  "afghanistan", "albania", "algeria", "andorra", "angola", "antigua and barbuda",
+  "argentina", "armenia", "australia", "austria", "azerbaijan", "bahamas", "bahrain",
+  "bangladesh", "barbados", "belarus", "belgium", "belize", "benin", "bhutan", "bolivia",
+  "bosnia and herzegovina", "botswana", "brazil", "brunei", "bulgaria", "burkina faso",
+  "burundi", "cabo verde", "cambodia"
+];
+
 const DestinationCard = ({ destination, className = "", tripLabel }: DestinationCardProps) => {
+  // Determine if we should link to a country page or a destination page
+  const countrySlug = destination.country.toLowerCase().replace(/\s+/g, '-');
+  const hasCountryPage = countriesWithPages.includes(destination.country.toLowerCase());
+  const linkUrl = hasCountryPage 
+    ? `/country/${countrySlug}` 
+    : `/destination/${destination.slug}`;
+
   return (
-    <Link to={`/destination/${destination.slug}`} className={`block ${className}`}>
+    <Link to={linkUrl} className={`block ${className}`}>
       <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full">
         <div className="relative aspect-[4/3] overflow-hidden">
           <img
@@ -28,6 +43,11 @@ const DestinationCard = ({ destination, className = "", tripLabel }: Destination
           {destination.country && (
             <div className="absolute bottom-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded-full">
               {destination.country}
+            </div>
+          )}
+          {hasCountryPage && (
+            <div className="absolute top-2 left-2 bg-travel-blue text-white text-xs px-2 py-1 rounded-full">
+              Country Guide Available
             </div>
           )}
         </div>

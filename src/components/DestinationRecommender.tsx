@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { 
   destinations as allDestinations, 
@@ -26,6 +25,7 @@ import {
 import { Search, X, Filter, MapPin } from "lucide-react";
 import DestinationCard from "./DestinationCard";
 import { useSearchParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // Comprehensive travel times database between major regions
 // This represents average flight times in hours between global regions
@@ -415,6 +415,20 @@ const getTripLabel = (departureCountry: string, destinationRegion: string, onsit
   }
 };
 
+// Add this country page helper function
+const hasCountryPage = (country: string): boolean => {
+  // List of countries that have detailed pages
+  const countriesWithPages = [
+    "afghanistan", "albania", "algeria", "andorra", "angola", "antigua and barbuda",
+    "argentina", "armenia", "australia", "austria", "azerbaijan", "bahamas", "bahrain",
+    "bangladesh", "barbados", "belarus", "belgium", "belize", "benin", "bhutan", "bolivia",
+    "bosnia and herzegovina", "botswana", "brazil", "brunei", "bulgaria", "burkina faso",
+    "burundi", "cabo verde", "cambodia"
+  ];
+  
+  return countriesWithPages.includes(country.toLowerCase());
+};
+
 const DestinationRecommender = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [filters, setFilters] = useState<FilterOptions>(initialFilterOptions);
@@ -753,6 +767,25 @@ const DestinationRecommender = () => {
           <Button onClick={clearFilters} className="mt-4">
             Clear All Filters
           </Button>
+        </div>
+      )}
+
+      {filteredDestinations.length > 0 && (
+        <div className="my-6">
+          <h3 className="text-xl font-semibold mb-4">Countries with Detailed Guides:</h3>
+          <div className="flex flex-wrap gap-2">
+            {Array.from(new Set(filteredDestinations.map(dest => dest.country)))
+              .filter(country => hasCountryPage(country))
+              .map(country => (
+                <Link
+                  key={country}
+                  to={`/country/${country.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="px-3 py-1 bg-travel-blue text-white rounded-full text-sm hover:bg-travel-blue/80"
+                >
+                  {country}
+                </Link>
+              ))}
+          </div>
         </div>
       )}
     </div>

@@ -523,6 +523,115 @@ export const destinations: Destination[] = [
       riskLevel: 'Adventure'
     },
     onsiteDuration: '8+ days'
+  },
+  {
+    id: uuidv4(),
+    name: "Bandar Seri Begawan",
+    slug: "bandar-seri-begawan",
+    country: "Brunei",
+    region: "Southeast Asia",
+    continent: "Asia",
+    description: "The capital of Brunei offering a glimpse into Islamic culture with its stunning Omar Ali Saifuddien Mosque and water villages.",
+    imageUrl: "https://images.unsplash.com/photo-1607512060958-862f3a1efdb2?q=80&w=1000",
+    tags: {
+      activities: ["Cultural", "Historical", "Architectural"],
+      climate: ["Tropical", "Humid"],
+      duration: ["2-4 days"],
+      accessibility: ["Moderate", "Public Transport"],
+      riskLevel: "Safe"
+    },
+    onsiteDuration: "2-3 days"
+  },
+  {
+    id: uuidv4(),
+    name: "Ancient Plovdiv",
+    slug: "ancient-plovdiv",
+    country: "Bulgaria",
+    region: "Eastern Europe",
+    continent: "Europe",
+    description: "One of Europe's oldest continuously inhabited cities with remarkable ancient Roman ruins and a charming Old Town.",
+    imageUrl: "https://images.unsplash.com/photo-1520860560195-0f14c411476e?q=80&w=1000",
+    tags: {
+      activities: ["Historical", "Cultural", "Architecture"],
+      climate: ["Continental", "Mild"],
+      duration: ["2-3 days"],
+      accessibility: ["Wheelchair Friendly", "Public Transport"],
+      riskLevel: "Safe"
+    },
+    onsiteDuration: "2-3 days"
+  },
+  {
+    id: uuidv4(),
+    name: "Tiébélé Painted Houses",
+    slug: "tiebele-painted-houses",
+    country: "Burkina Faso",
+    region: "Western Africa",
+    continent: "Africa",
+    description: "A village known for its elaborately painted houses of the Kassena people featuring geometric patterns and symbolic designs.",
+    imageUrl: "https://images.unsplash.com/photo-1614531341773-3bff8b7cb3fc?q=80&w=1000",
+    tags: {
+      activities: ["Cultural", "Photography", "Eco-tourism"],
+      climate: ["Hot", "Arid"],
+      duration: ["1-2 days"],
+      accessibility: ["Remote Location", "Guided Tours"],
+      riskLevel: "Moderate"
+    },
+    onsiteDuration: "full-day"
+  },
+  {
+    id: uuidv4(),
+    name: "Lake Tanganyika",
+    slug: "lake-tanganyika-burundi",
+    country: "Burundi",
+    region: "Eastern Africa",
+    continent: "Africa",
+    description: "The second-oldest freshwater lake in the world with beautiful beaches and opportunities for swimming and water sports.",
+    imageUrl: "https://images.unsplash.com/photo-1536859355448-76f92ebdc33d?q=80&w=1000",
+    tags: {
+      activities: ["Nature", "Swimming", "Beach"],
+      climate: ["Tropical", "Pleasant"],
+      duration: ["2-3 days"],
+      accessibility: ["Moderate"],
+      riskLevel: "Moderate"
+    },
+    onsiteDuration: "2-3 days"
+  },
+  {
+    id: uuidv4(),
+    name: "Fogo Volcano",
+    slug: "fogo-volcano",
+    country: "Cabo Verde",
+    region: "Western Africa",
+    continent: "Africa",
+    description: "An active volcano with a caldera nearly 9 km wide offering spectacular hiking opportunities and unique landscapes.",
+    imageUrl: "https://images.unsplash.com/photo-1566156206616-d97f1cdc7122?q=80&w=1000",
+    tags: {
+      activities: ["Adventure", "Hiking", "Nature"],
+      climate: ["Dry", "Mild"],
+      duration: ["1-2 days"],
+      accessibility: ["Challenging Terrain"],
+      riskLevel: "Adventure"
+    },
+    onsiteDuration: "full-day"
+  },
+  {
+    id: uuidv4(),
+    name: "Angkor Wat",
+    slug: "angkor-wat",
+    country: "Cambodia",
+    region: "Southeast Asia",
+    continent: "Asia",
+    description: "The world's largest religious monument, a stunning temple complex from the Khmer Empire that's a UNESCO World Heritage site.",
+    imageUrl: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1000",
+    tags: {
+      activities: ["Historical", "Cultural", "UNESCO"],
+      climate: ["Tropical", "Warm"],
+      duration: ["2-3 days"],
+      accessibility: ["Moderate", "Some Stairs"],
+      riskLevel: "Safe"
+    },
+    onsiteDuration: "2-3 days",
+    featured: true
   }
 ];
 

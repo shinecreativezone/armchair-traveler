@@ -21,6 +21,7 @@ import {
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { toast } from "sonner";
 import { festivals, getPopularFestivals } from "@/data/festivals";
+import { experiences, getPopularExperiences } from "@/data/experiences";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -47,6 +48,7 @@ const Navbar = () => {
   ];
 
   const topFestivals = getPopularFestivals().slice(0, 5);
+  const topExperiences = getPopularExperiences().slice(0, 5);
 
   return (
     <header className="w-full bg-white shadow-sm sticky top-0 z-40">
@@ -101,7 +103,7 @@ const Navbar = () => {
                   <div className="grid grid-cols-2 gap-1">
                     {topFestivals.map(festival => (
                       <DropdownMenuItem key={festival.id} asChild>
-                        <Link to="/festivals">{festival.name}</Link>
+                        <Link to={`/festival/${festival.id}`}>{festival.name}</Link>
                       </DropdownMenuItem>
                     ))}
                   </div>
@@ -111,14 +113,16 @@ const Navbar = () => {
                 <div className="p-3">
                   <div className="flex items-center justify-between mb-2">
                     <DropdownMenuLabel className="px-0">Experiences</DropdownMenuLabel>
-                    <span className="text-xs text-travel-blue/50">Coming soon</span>
+                    <Link to="/experiences" className="text-xs text-travel-blue hover:underline">
+                      View all experiences
+                    </Link>
                   </div>
                   <div className="grid grid-cols-2 gap-1">
-                    <DropdownMenuItem disabled>Virtual Tours</DropdownMenuItem>
-                    <DropdownMenuItem disabled>Local Cooking</DropdownMenuItem>
-                    <DropdownMenuItem disabled>Cultural Activities</DropdownMenuItem>
-                    <DropdownMenuItem disabled>Language Immersion</DropdownMenuItem>
-                    <DropdownMenuItem disabled>Art & Music</DropdownMenuItem>
+                    {topExperiences.map(experience => (
+                      <DropdownMenuItem key={experience.id} asChild>
+                        <Link to={`/experience/${experience.id}`}>{experience.name}</Link>
+                      </DropdownMenuItem>
+                    ))}
                   </div>
                 </div>
               </DropdownMenuGroup>
@@ -220,7 +224,7 @@ const Navbar = () => {
                       {topFestivals.map(festival => (
                         <Link 
                           key={festival.id}
-                          to="/festivals"
+                          to={`/festival/${festival.id}`}
                           className="block text-gray-600 py-1"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
@@ -238,9 +242,23 @@ const Navbar = () => {
 
                     <h4 className="font-medium py-1 mt-3">Experiences</h4>
                     <div className="pl-2 space-y-1">
-                      <span className="block text-gray-400 py-1">Virtual Tours (Coming soon)</span>
-                      <span className="block text-gray-400 py-1">Local Cooking (Coming soon)</span>
-                      <span className="block text-gray-400 py-1">Cultural Activities (Coming soon)</span>
+                      {topExperiences.map(experience => (
+                        <Link 
+                          key={experience.id}
+                          to={`/experience/${experience.id}`}
+                          className="block text-gray-600 py-1"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {experience.name}
+                        </Link>
+                      ))}
+                      <Link 
+                        to="/experiences"
+                        className="block text-travel-blue py-1 text-sm"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        View all experiences
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -251,9 +269,14 @@ const Navbar = () => {
                       <Avatar className="h-6 w-6">
                         <AvatarFallback>{getUserInitials()}</AvatarFallback>
                       </Avatar>
-                      <span className="text-sm">{user.email}</span>
+                      <span className="text-sm font-medium">{user.email}</span>
                     </div>
-                    <Button variant="outline" className="w-full" onClick={handleSignOut}>
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="w-full flex items-center justify-center"
+                      onClick={handleSignOut}
+                    >
                       <LogOut className="h-4 w-4 mr-2" />
                       Sign Out
                     </Button>
@@ -261,7 +284,7 @@ const Navbar = () => {
                 ) : (
                   <Button 
                     variant="outline" 
-                    className="mt-4 w-full"
+                    className="mt-4"
                     onClick={() => {
                       setIsMobileMenuOpen(false);
                       setIsSignInOpen(true);

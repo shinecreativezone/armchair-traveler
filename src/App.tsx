@@ -9,7 +9,19 @@ import RecommenderPage from "./pages/RecommenderPage";
 import CountriesPage from "./pages/CountriesPage";
 import CountryPage from "./pages/CountryPage";
 import DestinationPage from "./pages/DestinationPage";
-import FestivalsPage from "./pages/FestivalsPage";
+import FestivalsPageNew from "./pages/FestivalsPageNew";
+import FestivalPage from "./pages/FestivalPage";
+import ExperiencesPage from "./pages/ExperiencesPage";
+import ExperiencePage from "./pages/ExperiencePage";
+import StoriesPage from "./pages/StoriesPage";
+import AboutPage from "./pages/AboutPage";
+import MissionPage from "./pages/MissionPage";
+import SustainabilityPage from "./pages/SustainabilityPage";
+import CareersPage from "./pages/CareersPage";
+import PrivacyPage from "./pages/PrivacyPage";
+import TermsPage from "./pages/TermsPage";
+import CookiesPage from "./pages/CookiesPage";
+import ContentPolicyPage from "./pages/ContentPolicyPage";
 import NotFound from "./pages/NotFound";
 import BahrainCountry from "./pages/countries/BahrainCountry";
 import AfghanistanCountry from "./pages/countries/AfghanistanCountry";
@@ -62,8 +74,24 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/recommender" element={<RecommenderPage />} />
             <Route path="/countries" element={<CountriesPage />} />
-            <Route path="/festivals" element={<FestivalsPage />} />
+            <Route path="/festivals" element={<FestivalsPageNew />} />
+            <Route path="/festival/:festivalId" element={<FestivalPage />} />
+            <Route path="/experiences" element={<ExperiencesPage />} />
+            <Route path="/experience/:experienceId" element={<ExperiencePage />} />
+            <Route path="/stories" element={<StoriesPage />} />
             <Route path="/country/:countrySlug" element={<CountryPage />} />
+            
+            {/* Company Pages */}
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/mission" element={<MissionPage />} />
+            <Route path="/sustainability" element={<SustainabilityPage />} />
+            <Route path="/careers" element={<CareersPage />} />
+            
+            {/* Legal Pages */}
+            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/cookies" element={<CookiesPage />} />
+            <Route path="/content-policy" element={<ContentPolicyPage />} />
             
             {/* Individual country routes */}
             <Route path="/country/afghanistan" element={<AfghanistanCountry />} />

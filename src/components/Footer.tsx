@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Globe, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
@@ -16,16 +15,16 @@ const Footer = () => {
               Explore the world without leaving home. Travel through stories, images, and virtual experiences.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-travel-sand-light">
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-travel-sand-light">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="hover:text-travel-sand-light">
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-travel-sand-light">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="hover:text-travel-sand-light">
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-travel-sand-light">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="hover:text-travel-sand-light">
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-travel-sand-light">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -45,12 +44,17 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/" className="hover:text-travel-sand-light">
-                  Collections
+                <Link to="/festivals" className="hover:text-travel-sand-light">
+                  Festivals
                 </Link>
               </li>
               <li>
-                <Link to="/" className="hover:text-travel-sand-light">
+                <Link to="/experiences" className="hover:text-travel-sand-light">
+                  Experiences
+                </Link>
+              </li>
+              <li>
+                <Link to="/stories" className="hover:text-travel-sand-light">
                   Travel Stories
                 </Link>
               </li>
@@ -61,22 +65,22 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4 text-heading">Company</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="hover:text-travel-sand-light">
+                <Link to="/about" className="hover:text-travel-sand-light">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/" className="hover:text-travel-sand-light">
+                <Link to="/mission" className="hover:text-travel-sand-light">
                   Our Mission
                 </Link>
               </li>
               <li>
-                <Link to="/" className="hover:text-travel-sand-light">
+                <Link to="/sustainability" className="hover:text-travel-sand-light">
                   Sustainability
                 </Link>
               </li>
               <li>
-                <Link to="/" className="hover:text-travel-sand-light">
+                <Link to="/careers" className="hover:text-travel-sand-light">
                   Careers
                 </Link>
               </li>
@@ -87,22 +91,22 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4 text-heading">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="hover:text-travel-sand-light">
+                <Link to="/privacy" className="hover:text-travel-sand-light">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/" className="hover:text-travel-sand-light">
+                <Link to="/terms" className="hover:text-travel-sand-light">
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link to="/" className="hover:text-travel-sand-light">
+                <Link to="/cookies" className="hover:text-travel-sand-light">
                   Cookie Policy
                 </Link>
               </li>
               <li>
-                <Link to="/" className="hover:text-travel-sand-light">
+                <Link to="/content-policy" className="hover:text-travel-sand-light">
                   Content Policy
                 </Link>
               </li>

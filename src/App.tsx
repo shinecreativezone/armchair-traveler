@@ -14,14 +14,14 @@ import FestivalDetail from "./pages/FestivalDetail";
 import ExperiencesPage from "./pages/ExperiencesPage";
 import ExperiencePage from "./pages/ExperiencePage";
 import StoriesDetail from "./pages/StoriesDetail";
-import AboutPage from "./pages/AboutPage";
-import MissionPage from "./pages/MissionPage";
-import SustainabilityPage from "./pages/SustainabilityPage";
-import CareersPage from "./pages/CareersPage";
-import PrivacyPage from "./pages/PrivacyPage";
-import TermsPage from "./pages/TermsPage";
-import CookiesPage from "./pages/CookiesPage";
-import ContentPolicyPage from "./pages/ContentPolicyPage";
+import AboutDetail from "./pages/AboutDetail";
+import MissionDetail from "./pages/MissionDetail";
+import SustainabilityDetail from "./pages/SustainabilityDetail";
+import CareersDetail from "./pages/CareersDetail";
+import PrivacyDetail from "./pages/PrivacyDetail";
+import TermsDetail from "./pages/TermsDetail";
+import CookiesDetail from "./pages/CookiesDetail";
+import ContentPolicyDetail from "./pages/ContentPolicyDetail";
 import NotFound from "./pages/NotFound";
 import BahrainCountry from "./pages/countries/BahrainCountry";
 import AfghanistanCountry from "./pages/countries/AfghanistanCountry";
@@ -82,16 +82,16 @@ const App = () => (
             <Route path="/country/:countrySlug" element={<CountryPage />} />
             
             {/* Company Pages */}
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/mission" element={<MissionPage />} />
-            <Route path="/sustainability" element={<SustainabilityPage />} />
-            <Route path="/careers" element={<CareersPage />} />
+            <Route path="/about" element={<AboutDetail />} />
+            <Route path="/mission" element={<MissionDetail />} />
+            <Route path="/sustainability" element={<SustainabilityDetail />} />
+            <Route path="/careers" element={<CareersDetail />} />
             
             {/* Legal Pages */}
-            <Route path="/privacy" element={<PrivacyPage />} />
-            <Route path="/terms" element={<TermsPage />} />
-            <Route path="/cookies" element={<CookiesPage />} />
-            <Route path="/content-policy" element={<ContentPolicyPage />} />
+            <Route path="/privacy" element={<PrivacyDetail />} />
+            <Route path="/terms" element={<TermsDetail />} />
+            <Route path="/cookies" element={<CookiesDetail />} />
+            <Route path="/content-policy" element={<ContentPolicyDetail />} />
             
             {/* Individual country routes */}
             <Route path="/country/afghanistan" element={<AfghanistanCountry />} />

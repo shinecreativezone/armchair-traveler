@@ -13,7 +13,7 @@ import FestivalsPage from "./pages/FestivalsPage";
 import FestivalDetail from "./pages/FestivalDetail";
 import ExperiencesPage from "./pages/ExperiencesPage";
 import ExperiencePage from "./pages/ExperiencePage";
-import StoriesPage from "./pages/StoriesPage";
+import StoriesDetail from "./pages/StoriesDetail";
 import AboutPage from "./pages/AboutPage";
 import MissionPage from "./pages/MissionPage";
 import SustainabilityPage from "./pages/SustainabilityPage";
@@ -78,7 +78,7 @@ const App = () => (
             <Route path="/festival/:festivalId" element={<FestivalDetail />} />
             <Route path="/experiences" element={<ExperiencesPage />} />
             <Route path="/experience/:experienceId" element={<ExperiencePage />} />
-            <Route path="/stories" element={<StoriesPage />} />
+            <Route path="/stories" element={<StoriesDetail />} />
             <Route path="/country/:countrySlug" element={<CountryPage />} />
             
             {/* Company Pages */}

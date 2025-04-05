@@ -6,139 +6,139 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 
-const BahrainCountry: React.FC = () => {
+const ArmeniaCountry: React.FC = () => {
   // Real country data
   const countryData = {
-    name: "Bahrain",
-    slug: "bahrain",
+    name: "Armenia",
+    slug: "armenia",
     continent: "Asia",
-    capital: "Manama",
-    languageOfficial: "Arabic",
-    languagesSpoken: ["Arabic", "English", "Persian", "Urdu"],
-    currency: "Bahraini Dinar (BHD)",
-    population: 1701583,
-    area: 765,
-    timeZones: ["GMT+3"],
-    callingCode: "+973",
+    capital: "Yerevan",
+    languageOfficial: "Armenian",
+    languagesSpoken: ["Armenian", "Russian", "Kurdish", "Assyrian"],
+    currency: "Armenian Dram (AMD)",
+    population: 2963000,
+    area: 29743,
+    timeZones: ["GMT+4"],
+    callingCode: "+374",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1547158291-06774526756c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-    description: "Bahrain, officially the Kingdom of Bahrain, is a small island nation in the Persian Gulf. Despite its small size, Bahrain offers an intriguing mix of ancient history and modern development. As one of the first Gulf states to discover oil, it has transformed into a financial hub while preserving its rich cultural heritage.",
-    whyVisit: "Bahrain offers a unique blend of Arabian heritage and modern comfort that sets it apart from its larger neighbors. Despite its small size, the country packs in diverse experiences from ancient archaeological sites to ultra-modern architecture. Visitors can explore 5,000-year-old ruins at Qal'at al-Bahrain, experience the fascinating Tree of Life surviving in the desert, and enjoy the vibrant souks of Manama. For those interested in modern attractions, the Bahrain International Circuit hosts Formula 1 races, while excellent museums like the Bahrain National Museum provide cultural insights.",
+    flagImageUrl: "https://images.unsplash.com/photo-1589229489458-7ffb68c425cf?q=80&w=1000",
+    description: "Armenia is a mountainous, landlocked country located at the crossroads of Western Asia and Eastern Europe. One of the oldest Christian nations in the world, Armenia has a rich cultural heritage that spans over 3,000 years. Its dramatic landscapes include soaring mountains, ancient monasteries perched on cliffsides, pristine forests, and mineral-rich hot springs that have drawn visitors since antiquity.",
+    whyVisit: "Armenia offers travelers an authentic and off-the-beaten-path experience with its striking monastery complexes, spectacular mountain vistas, and one of the world's oldest continuous wine traditions. The country's capital, Yerevan, combines ancient history with Soviet-era architecture and modern amenities, while the warm hospitality of Armenians creates unforgettable cultural exchanges. Visitors can explore UNESCO World Heritage sites, hike through dramatic gorges, enjoy mineral hot springs, and experience a culinary tradition that reflects Armenia's position at the crossroads of East and West.",
     bestTimeToVisit: {
-      text: "The best time to visit Bahrain is during the mild winter months from November to April when temperatures are pleasant and range from 15-25°C (59-77°F).",
-      months: ["November", "December", "January", "February", "March", "April"]
+      text: "The best time to visit Armenia is during late spring (May-June) and early autumn (September-October) when the weather is mild and ideal for sightseeing and outdoor activities. Summer can be hot in Yerevan but pleasant in the mountains, while winter offers skiing opportunities but can make some remote areas difficult to access.",
+      months: ["May", "June", "September", "October"]
     },
     weatherInfo: {
-      summer: "Extremely hot with temperatures regularly exceeding 40°C (104°F) from May to October. High humidity makes outdoor activities uncomfortable during daytime.",
-      winter: "Mild and pleasant with temperatures ranging from 15-25°C (59-77°F) from November to April, making it the ideal time to visit Bahrain.",
-      spring: "Brief but pleasant in March and April with temperatures ranging from 20-30°C (68-86°F) before the summer heat intensifies.",
-      fall: "October and November see temperatures gradually dropping from summer highs, ranging from 25-35°C (77-95°F)."
+      summer: "Hot and dry in Yerevan and lowlands (reaching 30-35°C/86-95°F), while mountainous regions remain cooler and more comfortable. Summer thunderstorms are common in the mountains.",
+      winter: "Cold and snowy, especially in highlands where temperatures drop well below freezing (-10 to -15°C/14 to 5°F). Yerevan experiences milder winters but still with freezing temperatures and occasional snow.",
+      spring: "Mild with abundant wildflowers in the countryside, though spring comes late to mountain areas. Temperatures range from 10-25°C (50-77°F) with occasional rainfall.",
+      fall: "Crisp and sunny with spectacular autumn colors in the forests. Temperatures gradually cool from 25°C to 5°C (77°F to 41°F) from September through November."
     },
     majorCities: [
       {
-        name: "Manama",
-        description: "The capital and largest city, blending modern skyscrapers with traditional souks. Key attractions include Bahrain World Trade Center, Bab Al Bahrain, and the vibrant Manama Souq known for gold, spices, and traditional crafts."
+        name: "Yerevan",
+        description: "The capital and largest city, featuring a unique pink-hued architecture from volcanic tuff stone. Known for its vibrant café culture, Republic Square with its musical fountains, the Cascade complex with modern art, and stunning views of Mount Ararat. Founded in 782 BCE, Yerevan is one of the world's oldest continuously inhabited cities."
       },
       {
-        name: "Riffa",
-        description: "The second-largest city, divided into East and West Riffa. Known for Riffa Fort, the Royal Golf Club designed by Colin Montgomerie, and traditional architecture that offers glimpses into Bahrain's past."
+        name: "Gyumri",
+        description: "Armenia's second-largest city with distinctive 19th-century architecture and significant cultural heritage. Despite being devastated by a 1988 earthquake, Gyumri has preserved its historical character and artisan traditions, particularly in blacksmithing, ceramics, and textiles."
       },
       {
-        name: "Muharraq",
-        description: "The former capital with rich cultural heritage evident in its traditional architecture and pearling history. Home to Bahrain International Airport, Sheikh Isa bin Ali House, and the UNESCO-listed Pearling Path."
+        name: "Vanadzor",
+        description: "The third-largest city situated in the picturesque Lori Province, surrounded by forested mountains. Known for its Soviet industrial heritage now transitioning to tourism, arts, and as a gateway to northern Armenia's monasteries and natural attractions."
       },
       {
-        name: "Hamad Town",
-        description: "A planned residential city named after the late Emir Sheikh Hamad bin Isa Al Khalifa. Features orderly neighborhoods, modern amenities, and is near the popular Bahrain National Museum."
+        name: "Dilijan",
+        description: "Often called 'Armenia's Switzerland' due to its lush forested mountains and alpine architecture. This resort town is famous for its sanatoriums, mineral water springs, and as an artists' retreat with numerous studios and galleries."
       },
       {
-        name: "Isa Town",
-        description: "Known for its traditional Thursday/Saturday market selling everything from fabrics to electronics. Home to the University of Bahrain and the Bahrain National Stadium."
+        name: "Jermuk",
+        description: "A renowned spa town high in the mountains famous for its healing hot springs and mineral water. Featuring a scenic waterfall in the town center, Soviet-era sanatoriums, modern resort facilities, and surrounded by hiking trails."
       }
     ],
     famousFor: [
-      "Formula 1 Bahrain Grand Prix - First F1 race in the Middle East",
-      "Qal'at al-Bahrain (Bahrain Fort) - UNESCO World Heritage Site",
-      "Pearl diving heritage - Once the center of the world's pearl trade",
-      "Tree of Life - Mysterious 400-year-old tree surviving in the desert",
-      "Al-Fateh Grand Mosque - One of the largest mosques in the world"
+      "Ancient Monasteries - Including Geghard, Khor Virap, and Tatev with their stunning mountain locations",
+      "Mount Ararat - Biblical mountain visible from Yerevan but located in Turkey",
+      "Lavash Bread - Thin traditional flatbread recognized by UNESCO as cultural heritage",
+      "Brandy (Cognac) Production - Particularly the renowned Ararat brand",
+      "Chess - A national passion where chess education is mandatory in schools"
     ],
     topAttractions: [
       {
-        name: "Qal'at al-Bahrain (Bahrain Fort)",
-        description: "This UNESCO World Heritage site reveals 4,000 years of continuous human presence, from the ancient Dilmun civilization to the Portuguese period. The impressive fort structure and surrounding archaeological site offer stunning views over the sea.",
-        imageUrl: "https://images.unsplash.com/photo-1548604308-9a2215103738?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+        name: "Monastery of Geghard",
+        description: "A UNESCO World Heritage Site partially carved into the adjacent mountain, featuring remarkable rock-cut churches and tombs from the 4th to 13th centuries. Known for its spectacular acoustics and spiritual atmosphere.",
+        imageUrl: "https://images.unsplash.com/photo-1563499797412-8b7248ce6a72?q=80&w=1000"
       },
       {
-        name: "Al-Fateh Grand Mosque",
-        description: "One of the largest mosques in the world, capable of accommodating over 7,000 worshippers. This impressive structure features a huge fiberglass dome, Italian marble, and Austrian chandeliers. Guided tours welcome non-Muslim visitors.",
-        imageUrl: "https://images.unsplash.com/photo-1604260733112-e5ceb2730eaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        name: "Khor Virap Monastery",
+        description: "A pilgrimage site with the most iconic view in Armenia—the monastery with Mount Ararat as backdrop. Historically significant as the place where Saint Gregory the Illuminator was imprisoned before converting Armenia to Christianity.",
+        imageUrl: "https://images.unsplash.com/photo-1605396591139-6dfd75d6b1a2?q=80&w=1000"
       },
       {
-        name: "Tree of Life",
-        description: "This 400-year-old mesquite tree has become a symbol of Bahrain, mysteriously thriving in the harsh desert with no visible water source. Standing 32 feet tall, it attracts visitors curious about its survival and spiritual significance.",
-        imageUrl: "https://images.unsplash.com/photo-1542401886-65d6c61db217?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        name: "Temple of Garni",
+        description: "The only standing Greco-Roman colonnaded building in Armenia, built in the 1st century CE. This pagan temple dedicated to the sun god Mihr survived Christianization and offers excellent views of the Azat River Gorge.",
+        imageUrl: "https://images.unsplash.com/photo-1580207683252-e265d8221b1c?q=80&w=1000"
       },
       {
-        name: "Bahrain National Museum",
-        description: "The country's largest and oldest public museum showcases the rich cultural heritage of Bahrain through archaeological artifacts, traditional handicrafts, and exhibits on the nation's customs and traditions spanning 6,000 years.",
-        imageUrl: "https://images.unsplash.com/photo-1578895101408-1a5490642f42?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80"
+        name: "Tatev Monastery",
+        description: "A 9th-century monastery complex perched on the edge of a deep gorge, accessible via the 'Wings of Tatev'—the world's longest non-stop double-track cable car. Once a major medieval university and spiritual center.",
+        imageUrl: "https://images.unsplash.com/photo-1539089875484-ac9fbb6fb199?q=80&w=1000"
       },
       {
-        name: "Bahrain International Circuit",
-        description: "Home to the Formula 1 Bahrain Grand Prix, this state-of-the-art motorsport facility offers track experiences, karting, and tours. The circuit's innovative design and desert setting make it unique among Formula 1 venues.",
-        imageUrl: "https://images.unsplash.com/photo-1586899021945-72798540ad8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+        name: "Lake Sevan",
+        description: "A vast high-altitude freshwater lake covering 5% of Armenia's territory, surrounded by mountains. Features the picturesque Sevanavank Monastery on a peninsula, beaches, water sports, and is a popular summer retreat.",
+        imageUrl: "https://images.unsplash.com/photo-1590068232592-23ad4fea9cd9?q=80&w=1000"
       }
     ],
     localCuisine: {
-      description: "Bahraini cuisine reflects its island heritage with a delicious mix of Arabic, Persian, and Indian influences. Seafood naturally features prominently, with hammour (grouper) being particularly popular in many dishes. The cuisine is characterized by the use of aromatic spices, rice dishes, and slow-cooked meats.",
+      description: "Armenian cuisine is one of the oldest in the world, featuring fresh, locally-sourced ingredients with an emphasis on grilled meats, seasonal vegetables, flavorful herbs, and slow-cooked stews. Heavily influenced by its geography at the crossroads of Europe and Asia, Armenian food combines techniques and flavors from the Mediterranean, Middle East, and the Caucasus while maintaining its unique identity through specific cooking methods and ingredient combinations.",
       famousDishes: [
-        "Machboos - Bahrain's national dish consisting of fragrant rice cooked with meat (usually chicken, fish, or lamb) and a blend of spices similar to Indian biryani",
-        "Muhammar - Sweet rice dish prepared with sugar, dates, and spices, typically served with fish",
-        "Ghoozi - Whole roasted lamb or sheep served over a bed of rice, nuts, and eggs",
-        "Balaleet - Sweet vermicelli noodles topped with a savory omelet, commonly eaten for breakfast",
-        "Halwa - A traditional sweet gelatinous dessert made with saffron, cardamom, and nuts"
+        "Khorovats - Barbecued meat (usually pork or lamb) marinated with herbs and spices",
+        "Dolma - Grape or cabbage leaves stuffed with spiced meat and rice mixture",
+        "Ghapama - Pumpkin stuffed with rice, dried fruits, nuts, and honey, traditionally served at Armenian Christmas",
+        "Harissa - A thick porridge made from korkot (cracked wheat) and fatty chicken, cooked slowly for hours",
+        "Khash - A traditional winter soup made from cow's feet and herbs, typically eaten at breakfast with lots of garlic"
       ]
     },
     culturalCustoms: [
-      "Greeting Etiquette - Men typically greet each other with a handshake, while women may greet with a kiss on the cheek. Between genders, wait for the Bahraini woman to extend her hand first",
-      "Majlis Culture - The traditional gathering spaces where Bahrainis socialize and discuss community matters. If invited to one, it's an honor and opportunity to experience local hospitality",
-      "Coffee Ritual - The serving of Arabic coffee (gahwa) is an important cultural tradition. It's polite to accept at least one cup when offered",
-      "Ramadan Observance - During the holy month, respect fasting hours by refraining from eating, drinking, or smoking in public during daylight hours",
-      "Photography - Always ask permission before photographing local people, especially women. Avoid photographing government buildings and military installations"
+      "Hospitality - Armenians take great pride in welcoming guests, often insisting visitors eat and drink beyond satiety as a sign of respect",
+      "Toasting - Elaborate toasts are a crucial part of Armenian dining, with each toast often telling a story or expressing a wish",
+      "Chess Culture - The game is embedded in daily life, with chess education compulsory in schools and many public parks featuring permanent chess tables",
+      "Traditional Music - The duduk (apricot wood flute) is considered the national instrument, producing a hauntingly beautiful sound central to Armenian cultural identity",
+      "Religious Observance - As the first Christian nation (301 CE), religious traditions remain important with many Armenians visiting monasteries on significant days"
     ],
     travelTips: [
-      "Dress modestly in public places (covering shoulders and knees), especially when visiting religious sites",
-      "Taxis are the main form of public transportation, though ride-sharing apps like Uber and Careem are also available",
-      "Renting a car is convenient as Bahrain is small and easy to navigate, with good road infrastructure",
-      "Many nationalities can obtain visas on arrival or apply for e-visas before travel",
-      "The Bahraini Dinar is one of the highest-valued currencies in the world, so check exchange rates carefully",
-      "English is widely spoken in tourist areas, hotels, and restaurants"
+      "Learn a few phrases in Armenian - locals greatly appreciate even basic attempts at their language",
+      "Carry cash - while cards are accepted in Yerevan, many rural areas and small businesses operate cash-only",
+      "Dress modestly when visiting monasteries - shoulders and knees should be covered",
+      "Try public transportation - shared vans called marshrutkas connect most towns and are an affordable way to travel",
+      "Be prepared for spontaneous hospitality - you may be invited to homes or offered food and drinks by strangers",
+      "Purchase a local SIM card for reliable internet access throughout the country"
     ],
-    safetyInfo: "Bahrain is generally safe for tourists with low crime rates. The main concerns are road safety, as driving can be aggressive, and the extreme summer heat that requires proper hydration and sun protection. Political demonstrations occasionally occur, so it's advisable to avoid large gatherings. Healthcare facilities are excellent, particularly in private hospitals, though medical costs can be high, making travel insurance advisable.",
-    sustainableTourism: "Bahrain is investing in sustainable tourism initiatives, including coral reef restoration projects, desert conservation efforts, and the development of eco-friendly tour options. Visitors can contribute by choosing operators with environmental policies, conserving water (a precious resource in this desert nation), and respecting marine ecosystems when participating in water activities. Supporting local artisans in traditional markets rather than purchasing mass-produced souvenirs also promotes sustainable cultural preservation.",
-    visaRequirements: "Many nationalities can obtain a visa on arrival or an e-visa before travel to Bahrain. The on-arrival visa is typically valid for two weeks with the possibility of extension. Travelers from some countries need to apply in advance through a Bahraini embassy or consulate. The Bahrain government offers an online visa application system that simplifies the process. Always check the latest requirements as visa policies occasionally change.",
+    safetyInfo: "Armenia is generally very safe for travelers with low crime rates and friendly locals often willing to help tourists. The biggest concerns are occasional political tensions with neighboring Azerbaijan (particularly in border regions) and sometimes poor road conditions in remote areas. Yerevan and major tourist sites are well-policed and visitors report feeling quite secure. Standard precautions like watching belongings in crowded places are sufficient. The country has a reliable healthcare system in major cities, though travel insurance is recommended.",
+    sustainableTourism: "Armenia is developing its ecotourism offerings with several initiatives focused on preserving its pristine natural environments while supporting local communities. Travelers can contribute by staying in family-run guesthouses, participating in community-based tourism projects, hiking established trails to minimize erosion, and supporting local conservation efforts for Lake Sevan and forest preservation. Several NGOs offer opportunities to engage in sustainable tourism, including bird watching tours, organic farm stays, and cultural heritage preservation activities.",
+    visaRequirements: "Citizens of the EU, US, UK, Canada, Japan, and many other countries can enter Armenia visa-free for up to 180 days per year. For those requiring a visa, an e-visa system is available online with processing typically taking 2-3 business days. Visitors should ensure their passport is valid for at least six months beyond their planned departure date. No specific vaccinations are required for entry, though standard travel immunizations are recommended.",
     budget: {
-      budget: "25-50 BHD ($65-130 USD) per day for basic accommodations, local transportation, and affordable meals",
-      midRange: "50-100 BHD ($130-265 USD) per day for better hotels, restaurant dining, and some activities",
-      luxury: "100+ BHD ($265+ USD) per day for luxury hotels, fine dining, and premium experiences"
+      budget: "15,000-25,000 AMD ($40-65 USD) per day for hostel accommodation, public transportation, and eating at local cafes",
+      midRange: "25,000-50,000 AMD ($65-130 USD) per day for 3-star hotels, occasional taxis, and better restaurants",
+      luxury: "50,000+ AMD ($130+ USD) per day for 4-5 star hotels, private drivers, and fine dining"
     },
     transportationOptions: [
-      "Taxis - Available throughout the country with regulated fares",
-      "Ride-sharing apps - Uber and Careem operate in Bahrain",
-      "Rental cars - Good option for exploring, with well-maintained roads and signage in both Arabic and English",
-      "Public buses - Limited network operated by Bahrain Public Transport Company",
-      "Private drivers - Available for hire through hotels and travel agencies"
+      "Metro - Clean and efficient in Yerevan but limited network",
+      "Taxis - Affordable by Western standards; use apps like GG or Yandex in Yerevan for reliable service",
+      "Marshrutkas - Shared minivans that serve as the main intercity transport; inexpensive but can be crowded",
+      "Rental cars - Available in major cities; international driver's license required",
+      "Tours - Organized day trips to major attractions available from tour companies in Yerevan"
     ],
     neighboringCountries: [
-      "Saudi Arabia (connected by the King Fahd Causeway)"
+      "Georgia", "Iran", "Turkey", "Azerbaijan"
     ]
   };
 
   // Tags for recommender system
   const tags = [
-    "Island Nation", "Middle East", "Historical Sites", "Ancient Civilization", "Modern Architecture",
-    "Desert Landscapes", "Formula 1", "Islamic Culture", "Pearl Diving", "Shopping"
+    "Ancient Churches", "Mountain Landscapes", "Wine Heritage", "Historical Sites",
+    "Cultural Experience", "UNESCO Heritage", "Hiking", "Religious Tourism", "Caucasus Region", "Gastronomy"
   ];
 
   return (
@@ -432,4 +432,4 @@ const BahrainCountry: React.FC = () => {
   );
 };
 
-export default BahrainCountry;
+export default ArmeniaCountry; 

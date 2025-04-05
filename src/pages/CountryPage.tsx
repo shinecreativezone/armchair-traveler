@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -9,6 +8,57 @@ import { Calendar, Globe, MapPin, Utensils, CameraIcon, Music, BookOpen, Plane, 
 import { countriesList } from "@/data/destinations";
 
 type TabKey = "overview" | "stay" | "sights" | "food" | "culture" | "planning" | "tips";
+
+// Function to determine a country's continent
+const getCountryContinent = (country: string): string => {
+  // This is a simplified mapping of countries to continents
+  // In a production app, this would reference a complete database
+  const continentMap: Record<string, string> = {
+    // Africa
+    'Algeria': 'Africa', 'Angola': 'Africa', 'Egypt': 'Africa', 'Kenya': 'Africa', 
+    'Morocco': 'Africa', 'Nigeria': 'Africa', 'South Africa': 'Africa',
+    
+    // Asia
+    'Armenia': 'Asia', 'Bahrain': 'Asia', 'China': 'Asia', 'India': 'Asia', 
+    'Japan': 'Asia', 'South Korea': 'Asia', 'Thailand': 'Asia', 'Vietnam': 'Asia',
+    
+    // Europe
+    'France': 'Europe', 'Germany': 'Europe', 'Italy': 'Europe', 'Spain': 'Europe', 
+    'United Kingdom': 'Europe', 'Greece': 'Europe', 'Switzerland': 'Europe',
+    
+    // North America
+    'Canada': 'North America', 'Mexico': 'North America', 'United States': 'North America',
+    
+    // South America
+    'Argentina': 'South America', 'Brazil': 'South America', 'Peru': 'South America',
+    
+    // Oceania
+    'Australia': 'Oceania', 'New Zealand': 'Oceania'
+  };
+  
+  return continentMap[country] || 'Unknown';
+};
+
+// Function to determine a country's popularity status
+const getCountryPopularity = (country: string): string => {
+  // This could be based on visit statistics, trending data, or editorial decisions
+  const popularDestinations = [
+    'France', 'Spain', 'United States', 'China', 'Italy', 'Turkey', 'Mexico', 
+    'Thailand', 'Germany', 'United Kingdom', 'Japan', 'Austria', 'Greece'
+  ];
+  
+  const emergingDestinations = [
+    'Vietnam', 'Portugal', 'Armenia', 'Georgia', 'Colombia', 'Slovenia', 'Uzbekistan'
+  ];
+  
+  if (popularDestinations.includes(country)) {
+    return 'Popular Destination';
+  } else if (emergingDestinations.includes(country)) {
+    return 'Emerging Destination';
+  } else {
+    return 'Hidden Gem';
+  }
+};
 
 const CountryPage = () => {
   const { countrySlug } = useParams<{ countrySlug: string }>();
@@ -91,15 +141,13 @@ const CountryPage = () => {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">{country}</h1>
                 <div className="flex items-center text-travel-sand-light">
                   <Globe className="h-5 w-5 mr-2" />
-                  {/* This would be dynamic in a real app */}
-                  <span>Asia</span>
+                  <span>{getCountryContinent(country)}</span>
                 </div>
               </div>
               
               <div className="mt-4 md:mt-0">
-                {/* This would be a dynamically generated badge in a real app */}
                 <span className="bg-travel-terracotta px-3 py-1 rounded-full text-white text-sm font-medium">
-                  Popular Destination
+                  {getCountryPopularity(country)}
                 </span>
               </div>
             </div>

@@ -6,139 +6,140 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 
-const BahrainCountry: React.FC = () => {
+const ArgentinaCountry: React.FC = () => {
   // Real country data
   const countryData = {
-    name: "Bahrain",
-    slug: "bahrain",
-    continent: "Asia",
-    capital: "Manama",
-    languageOfficial: "Arabic",
-    languagesSpoken: ["Arabic", "English", "Persian", "Urdu"],
-    currency: "Bahraini Dinar (BHD)",
-    population: 1701583,
-    area: 765,
-    timeZones: ["GMT+3"],
-    callingCode: "+973",
+    name: "Argentina",
+    slug: "argentina",
+    continent: "South America",
+    capital: "Buenos Aires",
+    languageOfficial: "Spanish",
+    languagesSpoken: ["Spanish", "Italian", "German", "Guaraní", "Quechua"],
+    currency: "Argentine Peso (ARS)",
+    population: 45376763,
+    area: 2780400,
+    timeZones: ["GMT-3"],
+    callingCode: "+54",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1547158291-06774526756c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-    description: "Bahrain, officially the Kingdom of Bahrain, is a small island nation in the Persian Gulf. Despite its small size, Bahrain offers an intriguing mix of ancient history and modern development. As one of the first Gulf states to discover oil, it has transformed into a financial hub while preserving its rich cultural heritage.",
-    whyVisit: "Bahrain offers a unique blend of Arabian heritage and modern comfort that sets it apart from its larger neighbors. Despite its small size, the country packs in diverse experiences from ancient archaeological sites to ultra-modern architecture. Visitors can explore 5,000-year-old ruins at Qal'at al-Bahrain, experience the fascinating Tree of Life surviving in the desert, and enjoy the vibrant souks of Manama. For those interested in modern attractions, the Bahrain International Circuit hosts Formula 1 races, while excellent museums like the Bahrain National Museum provide cultural insights.",
+    flagImageUrl: "https://images.unsplash.com/photo-1589909202802-8f4aadce1849?q=80&w=1000",
+    description: "Argentina is a vast South American country with terrain encompassing the Andes mountains, glacial lakes, and Pampas grassland. The eighth-largest country in the world, it boasts a rich cultural heritage shaped by indigenous peoples, Spanish colonization, and waves of European immigration. From the subtropical north to the subpolar south, Argentina offers extraordinary geographic diversity paired with a passionate national character.",
+    whyVisit: "Argentina offers travelers an extraordinary blend of cultural richness and natural wonders. The country is home to passionate tango dancers and world-class beef, vibrant Buenos Aires with its European architecture, and the untamed wilderness of Patagonia with its glaciers and mountains. Wine enthusiasts can explore Mendoza's vineyards, while adventure seekers can witness the thundering Iguazú Falls. With its diverse landscapes ranging from subtropical forests to subpolar regions, friendly locals, and incredible cuisine, Argentina provides unforgettable experiences for every type of traveler.",
     bestTimeToVisit: {
-      text: "The best time to visit Bahrain is during the mild winter months from November to April when temperatures are pleasant and range from 15-25°C (59-77°F).",
-      months: ["November", "December", "January", "February", "March", "April"]
+      text: "The best time to visit Argentina depends on the region, but generally the shoulder seasons of spring (September to November) and fall (March to May) offer pleasant temperatures and fewer crowds. Summer (December to February) is ideal for Patagonia but can be very hot in the north.",
+      months: ["March", "April", "May", "September", "October", "November"]
     },
     weatherInfo: {
-      summer: "Extremely hot with temperatures regularly exceeding 40°C (104°F) from May to October. High humidity makes outdoor activities uncomfortable during daytime.",
-      winter: "Mild and pleasant with temperatures ranging from 15-25°C (59-77°F) from November to April, making it the ideal time to visit Bahrain.",
-      spring: "Brief but pleasant in March and April with temperatures ranging from 20-30°C (68-86°F) before the summer heat intensifies.",
-      fall: "October and November see temperatures gradually dropping from summer highs, ranging from 25-35°C (77-95°F)."
+      summer: "Summer (December to February) brings hot and humid conditions to the north, with temperatures regularly exceeding 30°C (86°F). Buenos Aires is warm and often humid (25-35°C/77-95°F), while Patagonia experiences mild, windy conditions (15-25°C/59-77°F).",
+      winter: "Winter (June to August) sees mild temperatures in the north (15-25°C/59-77°F), cool and occasionally rainy conditions in Buenos Aires (8-15°C/46-59°F), and cold, snowy weather in Patagonia and the Andes (-5 to 5°C/23-41°F), making it ideal for skiing.",
+      spring: "Spring (September to November) offers moderate temperatures throughout the country, blooming jacaranda trees in Buenos Aires, and the awakening of wildlife in Patagonia. It's an excellent time for wine tours in Mendoza.",
+      fall: "Fall (March to May) brings spectacular foliage to the Lake District and wine regions, comfortable temperatures across most of the country, and fewer tourists in popular destinations like Patagonia and Iguazú Falls."
     },
     majorCities: [
       {
-        name: "Manama",
-        description: "The capital and largest city, blending modern skyscrapers with traditional souks. Key attractions include Bahrain World Trade Center, Bab Al Bahrain, and the vibrant Manama Souq known for gold, spices, and traditional crafts."
+        name: "Buenos Aires",
+        description: "The cosmopolitan capital combines European grandeur with Latin American passion. Known for its wide boulevards like the famous 9 de Julio Avenue, elegant neighborhoods like Recoleta with its renowned cemetery, the colorful artists' quarter of La Boca, and a vibrant nightlife centered around tango clubs called milongas."
       },
       {
-        name: "Riffa",
-        description: "The second-largest city, divided into East and West Riffa. Known for Riffa Fort, the Royal Golf Club designed by Colin Montgomerie, and traditional architecture that offers glimpses into Bahrain's past."
+        name: "Córdoba",
+        description: "Argentina's second-largest city, located in the geographical center of the country. Home to the country's oldest university and a wealth of colonial architecture, Córdoba balances historic charm with a youthful energy from its large student population. The surrounding sierras offer beautiful landscapes and weekend retreats."
       },
       {
-        name: "Muharraq",
-        description: "The former capital with rich cultural heritage evident in its traditional architecture and pearling history. Home to Bahrain International Airport, Sheikh Isa bin Ali House, and the UNESCO-listed Pearling Path."
+        name: "Mendoza",
+        description: "The heart of Argentina's wine country, nestled at the foot of the Andes. Famous for its Malbec wines, tree-lined streets, and sophisticated culinary scene. A gateway for mountaineering expeditions to Aconcagua, the highest peak in the Americas, and a center for adventure sports."
       },
       {
-        name: "Hamad Town",
-        description: "A planned residential city named after the late Emir Sheikh Hamad bin Isa Al Khalifa. Features orderly neighborhoods, modern amenities, and is near the popular Bahrain National Museum."
+        name: "Rosario",
+        description: "A vibrant port city on the Paraná River and the birthplace of revolutionary Che Guevara and football legend Lionel Messi. Known for its impressive riverfront, the Monumento a la Bandera (Flag Monument), and a thriving cultural scene with numerous theaters, museums, and music venues."
       },
       {
-        name: "Isa Town",
-        description: "Known for its traditional Thursday/Saturday market selling everything from fabrics to electronics. Home to the University of Bahrain and the Bahrain National Stadium."
+        name: "Ushuaia",
+        description: "The world's southernmost city, dramatically situated on the Beagle Channel with snow-capped mountains as a backdrop. Serves as the gateway to Antarctica, offers access to Tierra del Fuego National Park, and features unique attractions like the End of the World Train and Maritime Museum."
       }
     ],
     famousFor: [
-      "Formula 1 Bahrain Grand Prix - First F1 race in the Middle East",
-      "Qal'at al-Bahrain (Bahrain Fort) - UNESCO World Heritage Site",
-      "Pearl diving heritage - Once the center of the world's pearl trade",
-      "Tree of Life - Mysterious 400-year-old tree surviving in the desert",
-      "Al-Fateh Grand Mosque - One of the largest mosques in the world"
+      "Tango - The passionate dance and music born in Buenos Aires' working-class neighborhoods",
+      "Beef and Asado - World-renowned beef and traditional barbecue cooking methods",
+      "Malbec Wine - Exceptional wines, particularly from the Mendoza region",
+      "Iguazú Falls - One of the world's most spectacular waterfall systems",
+      "Patagonia - Dramatic landscapes of mountains, glaciers, and wilderness"
     ],
     topAttractions: [
       {
-        name: "Qal'at al-Bahrain (Bahrain Fort)",
-        description: "This UNESCO World Heritage site reveals 4,000 years of continuous human presence, from the ancient Dilmun civilization to the Portuguese period. The impressive fort structure and surrounding archaeological site offer stunning views over the sea.",
-        imageUrl: "https://images.unsplash.com/photo-1548604308-9a2215103738?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+        name: "Iguazú Falls",
+        description: "A breathtaking system of 275 waterfalls on the Argentina-Brazil border. The Devil's Throat is the most impressive section, where water plunges 82 meters. The surrounding subtropical rainforest houses diverse wildlife including toucans, coatis, and butterflies.",
+        imageUrl: "https://images.unsplash.com/photo-1581461249918-c060f4571e4c?q=80&w=1000"
       },
       {
-        name: "Al-Fateh Grand Mosque",
-        description: "One of the largest mosques in the world, capable of accommodating over 7,000 worshippers. This impressive structure features a huge fiberglass dome, Italian marble, and Austrian chandeliers. Guided tours welcome non-Muslim visitors.",
-        imageUrl: "https://images.unsplash.com/photo-1604260733112-e5ceb2730eaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        name: "Perito Moreno Glacier",
+        description: "One of the few advancing glaciers in the world, located in Los Glaciares National Park. The 250 km² ice formation rises 74 meters above Lago Argentino and periodically creates spectacular ice collapses as it advances. Walkways allow visitors to view the glacier from different perspectives.",
+        imageUrl: "https://images.unsplash.com/photo-1551398659-42f98cc89b92?q=80&w=1000"
       },
       {
-        name: "Tree of Life",
-        description: "This 400-year-old mesquite tree has become a symbol of Bahrain, mysteriously thriving in the harsh desert with no visible water source. Standing 32 feet tall, it attracts visitors curious about its survival and spiritual significance.",
-        imageUrl: "https://images.unsplash.com/photo-1542401886-65d6c61db217?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        name: "Recoleta Cemetery",
+        description: "Located in Buenos Aires' upscale Recoleta neighborhood, this extraordinary cemetery contains elaborate mausoleums of Argentina's notable figures. Most famous is Eva Perón's tomb, but the cemetery also impresses with its Art Deco, Art Nouveau, and Neo-Gothic architectural styles.",
+        imageUrl: "https://images.unsplash.com/photo-1589308155089-281d2360e56a?q=80&w=1000"
       },
       {
-        name: "Bahrain National Museum",
-        description: "The country's largest and oldest public museum showcases the rich cultural heritage of Bahrain through archaeological artifacts, traditional handicrafts, and exhibits on the nation's customs and traditions spanning 6,000 years.",
-        imageUrl: "https://images.unsplash.com/photo-1578895101408-1a5490642f42?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80"
+        name: "Quebrada de Humahuaca",
+        description: "A UNESCO World Heritage Site in northwest Argentina featuring a spectacular mountain valley with multicolored rock formations including the famous Hill of Seven Colors. The valley has been a crucial trade route for 10,000 years and contains pre-Hispanic settlements and colonial churches.",
+        imageUrl: "https://images.unsplash.com/photo-1589245891263-e31a8fb1440f?q=80&w=1000"
       },
       {
-        name: "Bahrain International Circuit",
-        description: "Home to the Formula 1 Bahrain Grand Prix, this state-of-the-art motorsport facility offers track experiences, karting, and tours. The circuit's innovative design and desert setting make it unique among Formula 1 venues.",
-        imageUrl: "https://images.unsplash.com/photo-1586899021945-72798540ad8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+        name: "Tierra del Fuego National Park",
+        description: "Argentina's only coastal national park, located at the southern tip of the continent. Features dramatic scenery with mountains meeting the sea, subpolar forests, peat bogs, and diverse wildlife. The park is crossed by the historic End of the World Train and offers stunning hiking trails.",
+        imageUrl: "https://images.unsplash.com/photo-1609971757431-26db68fcaccb?q=80&w=1000"
       }
     ],
     localCuisine: {
-      description: "Bahraini cuisine reflects its island heritage with a delicious mix of Arabic, Persian, and Indian influences. Seafood naturally features prominently, with hammour (grouper) being particularly popular in many dishes. The cuisine is characterized by the use of aromatic spices, rice dishes, and slow-cooked meats.",
+      description: "Argentine cuisine is meat-centric and heavily influenced by European immigrants, particularly Italian and Spanish. The country's fertile plains produce world-renowned beef, while its various regions offer distinctive specialties. Family gatherings often center around asado (barbecue), accompanied by robust red wines from Mendoza and other regions. Beyond meat, Italian-inspired pastas and pizzas are ubiquitous, while sweet-toothed locals enjoy dulce de leche in numerous desserts.",
       famousDishes: [
-        "Machboos - Bahrain's national dish consisting of fragrant rice cooked with meat (usually chicken, fish, or lamb) and a blend of spices similar to Indian biryani",
-        "Muhammar - Sweet rice dish prepared with sugar, dates, and spices, typically served with fish",
-        "Ghoozi - Whole roasted lamb or sheep served over a bed of rice, nuts, and eggs",
-        "Balaleet - Sweet vermicelli noodles topped with a savory omelet, commonly eaten for breakfast",
-        "Halwa - A traditional sweet gelatinous dessert made with saffron, cardamom, and nuts"
+        "Asado - Traditional barbecue featuring various cuts of beef, sausages, and organ meats, cooked on a parrilla (grill) or open fire",
+        "Empanadas - Savory pastries filled with beef, chicken, ham and cheese, or vegetable mixtures, with regional variations throughout the country",
+        "Milanesa - Breaded and fried meat cutlet, similar to Austrian schnitzel, often served with mashed potatoes or in a sandwich",
+        "Locro - Hearty stew made with corn, beans, and meat, traditionally served during national holidays",
+        "Dulce de Leche - Sweet caramelized milk spread used in desserts like alfajores (cookie sandwiches) and panqueques (crepes)"
       ]
     },
     culturalCustoms: [
-      "Greeting Etiquette - Men typically greet each other with a handshake, while women may greet with a kiss on the cheek. Between genders, wait for the Bahraini woman to extend her hand first",
-      "Majlis Culture - The traditional gathering spaces where Bahrainis socialize and discuss community matters. If invited to one, it's an honor and opportunity to experience local hospitality",
-      "Coffee Ritual - The serving of Arabic coffee (gahwa) is an important cultural tradition. It's polite to accept at least one cup when offered",
-      "Ramadan Observance - During the holy month, respect fasting hours by refraining from eating, drinking, or smoking in public during daylight hours",
-      "Photography - Always ask permission before photographing local people, especially women. Avoid photographing government buildings and military installations"
+      "Mate Ritual - Sharing mate (a caffeine-rich infused drink) is a social custom with specific etiquette; the same gourd and straw are passed around a group",
+      "Greetings - Argentines typically greet with one kiss on the cheek, even upon meeting someone for the first time",
+      "Late Dining - Dinner is usually eaten very late by international standards, often starting at 9 PM or later, especially in Buenos Aires",
+      "Football Passion - Soccer is more than a sport, it's a national obsession; River Plate vs. Boca Juniors is one of the world's most intense rivalries",
+      "Respect for Personal Appearance - Argentines generally dress well and take pride in their appearance, even for casual occasions"
     ],
     travelTips: [
-      "Dress modestly in public places (covering shoulders and knees), especially when visiting religious sites",
-      "Taxis are the main form of public transportation, though ride-sharing apps like Uber and Careem are also available",
-      "Renting a car is convenient as Bahrain is small and easy to navigate, with good road infrastructure",
-      "Many nationalities can obtain visas on arrival or apply for e-visas before travel",
-      "The Bahraini Dinar is one of the highest-valued currencies in the world, so check exchange rates carefully",
-      "English is widely spoken in tourist areas, hotels, and restaurants"
+      "Carry cash - While credit cards are widely accepted in cities, smaller towns and establishments may only accept cash",
+      "Learn basic Spanish - While many in tourism speak English, knowing some Spanish will greatly enhance your experience",
+      "Understand the blue dollar - The unofficial exchange rate can sometimes offer better value than official channels",
+      "Be prepared for siesta - In many provinces, businesses close for a few hours in the afternoon",
+      "Book domestic flights in advance - Flights between regions can fill quickly, especially during high season",
+      "Pack for various climates - If traveling to multiple regions, be prepared for significant temperature differences"
     ],
-    safetyInfo: "Bahrain is generally safe for tourists with low crime rates. The main concerns are road safety, as driving can be aggressive, and the extreme summer heat that requires proper hydration and sun protection. Political demonstrations occasionally occur, so it's advisable to avoid large gatherings. Healthcare facilities are excellent, particularly in private hospitals, though medical costs can be high, making travel insurance advisable.",
-    sustainableTourism: "Bahrain is investing in sustainable tourism initiatives, including coral reef restoration projects, desert conservation efforts, and the development of eco-friendly tour options. Visitors can contribute by choosing operators with environmental policies, conserving water (a precious resource in this desert nation), and respecting marine ecosystems when participating in water activities. Supporting local artisans in traditional markets rather than purchasing mass-produced souvenirs also promotes sustainable cultural preservation.",
-    visaRequirements: "Many nationalities can obtain a visa on arrival or an e-visa before travel to Bahrain. The on-arrival visa is typically valid for two weeks with the possibility of extension. Travelers from some countries need to apply in advance through a Bahraini embassy or consulate. The Bahrain government offers an online visa application system that simplifies the process. Always check the latest requirements as visa policies occasionally change.",
+    safetyInfo: "Argentina is generally safe for tourists, though standard precautions should be taken, especially in major cities like Buenos Aires where pickpocketing and bag-snatching can occur in tourist areas and public transport. Demonstrations are common but usually peaceful; nevertheless, it's best to avoid them. Economic volatility can occasionally lead to temporary shortages or restrictions on banking services. The country has good healthcare facilities in urban areas, though travel insurance is recommended. Natural hazards include occasional flooding in the north and volcanic activity along the Chilean border.",
+    sustainableTourism: "Argentina is developing its sustainable tourism initiatives, with numerous national parks implementing conservation programs and responsible tourism guidelines. Visitors can contribute by choosing eco-friendly accommodations, respecting wildlife viewing distances (particularly in Patagonia and marine environments), supporting community-based tourism in indigenous areas, and minimizing plastic use. Certified tour operators following responsible practices are increasingly available, particularly in fragile ecosystems like Iguazú and Patagonia. Sustainable wine tourism is also growing in regions like Mendoza, with many vineyards adopting organic and biodynamic practices.",
+    visaRequirements: "Citizens of the US, Canada, Australia, the UK, and most EU countries do not need visas for tourist stays of up to 90 days. Visitors must have a passport valid for at least six months beyond their stay. Some nationalities need to pay a reciprocity fee before arrival, though this requirement changes periodically. No specific vaccinations are required, though yellow fever vaccination is recommended for travelers visiting Iguazú Falls and other northern regions. Always check the latest requirements with the Argentine embassy or consulate before traveling.",
     budget: {
-      budget: "25-50 BHD ($65-130 USD) per day for basic accommodations, local transportation, and affordable meals",
-      midRange: "50-100 BHD ($130-265 USD) per day for better hotels, restaurant dining, and some activities",
-      luxury: "100+ BHD ($265+ USD) per day for luxury hotels, fine dining, and premium experiences"
+      budget: "2,500-5,000 ARS ($25-50 USD) per day for hostel accommodation, public transportation, and affordable meals",
+      midRange: "5,000-10,000 ARS ($50-100 USD) per day for mid-range hotels, some taxis, and restaurant dining",
+      luxury: "10,000+ ARS ($100+ USD) per day for luxury accommodations, private transfers, and fine dining"
     },
     transportationOptions: [
-      "Taxis - Available throughout the country with regulated fares",
-      "Ride-sharing apps - Uber and Careem operate in Bahrain",
-      "Rental cars - Good option for exploring, with well-maintained roads and signage in both Arabic and English",
-      "Public buses - Limited network operated by Bahrain Public Transport Company",
-      "Private drivers - Available for hire through hotels and travel agencies"
+      "Domestic Flights - Necessary for covering long distances in this vast country",
+      "Long-distance Buses - Comfortable and extensive network with various service classes",
+      "Local Buses (Colectivos) - Affordable public transportation within cities",
+      "Subways - Available in Buenos Aires, efficient for avoiding traffic",
+      "Taxis and Remises - Widely available in cities; remises are pre-arranged taxi services with fixed rates",
+      "Car Rentals - Good option for exploring wine regions or parts of Patagonia"
     ],
     neighboringCountries: [
-      "Saudi Arabia (connected by the King Fahd Causeway)"
+      "Chile", "Uruguay", "Paraguay", "Brazil", "Bolivia"
     ]
   };
 
   // Tags for recommender system
   const tags = [
-    "Island Nation", "Middle East", "Historical Sites", "Ancient Civilization", "Modern Architecture",
-    "Desert Landscapes", "Formula 1", "Islamic Culture", "Pearl Diving", "Shopping"
+    "Tango", "Wine Regions", "Patagonia", "Andes Mountains", "Gauchos",
+    "Wildlife", "National Parks", "Gastronomy", "Glaciers", "Waterfalls"
   ];
 
   return (
@@ -432,4 +433,4 @@ const BahrainCountry: React.FC = () => {
   );
 };
 
-export default BahrainCountry;
+export default ArgentinaCountry; 

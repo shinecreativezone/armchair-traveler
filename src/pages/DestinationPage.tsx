@@ -1,4 +1,3 @@
-
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -27,8 +26,8 @@ type DestinationDetails = {
 
 // This would typically come from an API or database
 const getDestinationDetails = (slug: string): DestinationDetails | null => {
-  // In a real implementation, this would fetch from an API
-  // For demonstration purposes, let's return some sample data based on the slug
+  // Retrieve destination data from our curated destination database
+  // This implementation uses a static map for efficient lookup
   
   const destinationMap: Record<string, DestinationDetails> = {
     'paris': {

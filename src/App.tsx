@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -17,6 +16,26 @@ import AlgeriaCountry from "./pages/countries/AlgeriaCountry";
 import AndorraCountry from "./pages/countries/AndorraCountry";
 import AngolaCountry from "./pages/countries/AngolaCountry";
 import AntiguaAndBarbudaCountry from "./pages/countries/AntiguaAndBarbudaCountry";
+import ArmeniaCountry from "./pages/countries/ArmeniaCountry";
+import ArgentinaCountry from "./pages/countries/ArgentinaCountry";
+import AustraliaCountry from "./pages/countries/AustraliaCountry";
+import AustriaCountry from "./pages/countries/AustriaCountry";
+import AzerbaijanCountry from "./pages/countries/AzerbaijanCountry";
+import BrazilCountry from "./pages/countries/BrazilCountry";
+import CanadaCountry from "./pages/countries/CanadaCountry";
+import DenmarkCountry from "./pages/countries/DenmarkCountry";
+import EgyptCountry from "./pages/countries/EgyptCountry";
+import FranceCountry from "./pages/countries/FranceCountry";
+import GermanyCountry from "./pages/countries/GermanyCountry";
+import BahamasCountry from "./pages/countries/BahamasCountry";
+import BangladeshCountry from "./pages/countries/BangladeshCountry";
+import BarbadosCountry from "./pages/countries/BarbadosCountry";
+import BelarusCountry from "./pages/countries/BelarusCountry";
+import BelgiumCountry from "./pages/countries/BelgiumCountry";
+import BelizeCountry from "./pages/countries/BelizeCountry";
+import BeninCountry from "./pages/countries/BeninCountry";
+import BhutanCountry from "./pages/countries/BhutanCountry";
+import BoliviaCountry from "./pages/countries/BoliviaCountry";
 // Note: Import additional country components as they are created
 
 // Create a client
@@ -41,7 +60,27 @@ const App = () => (
           <Route path="/country/andorra" element={<AndorraCountry />} />
           <Route path="/country/angola" element={<AngolaCountry />} />
           <Route path="/country/antigua-and-barbuda" element={<AntiguaAndBarbudaCountry />} />
+          <Route path="/country/argentina" element={<ArgentinaCountry />} />
+          <Route path="/country/armenia" element={<ArmeniaCountry />} />
+          <Route path="/country/australia" element={<AustraliaCountry />} />
+          <Route path="/country/austria" element={<AustriaCountry />} />
+          <Route path="/country/azerbaijan" element={<AzerbaijanCountry />} />
+          <Route path="/country/bahamas" element={<BahamasCountry />} />
           <Route path="/country/bahrain" element={<BahrainCountry />} />
+          <Route path="/country/bangladesh" element={<BangladeshCountry />} />
+          <Route path="/country/barbados" element={<BarbadosCountry />} />
+          <Route path="/country/belarus" element={<BelarusCountry />} />
+          <Route path="/country/belgium" element={<BelgiumCountry />} />
+          <Route path="/country/belize" element={<BelizeCountry />} />
+          <Route path="/country/benin" element={<BeninCountry />} />
+          <Route path="/country/bhutan" element={<BhutanCountry />} />
+          <Route path="/country/bolivia" element={<BoliviaCountry />} />
+          <Route path="/country/brazil" element={<BrazilCountry />} />
+          <Route path="/country/canada" element={<CanadaCountry />} />
+          <Route path="/country/denmark" element={<DenmarkCountry />} />
+          <Route path="/country/egypt" element={<EgyptCountry />} />
+          <Route path="/country/france" element={<FranceCountry />} />
+          <Route path="/country/germany" element={<GermanyCountry />} />
           {/* More country routes will be added as their components are created */}
           
           <Route path="/destination/:destinationSlug" element={<DestinationPage />} />

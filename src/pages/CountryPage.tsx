@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -111,7 +111,7 @@ const CountryPage = () => {
             <h1 className="text-3xl font-bold mb-4">Country Not Found</h1>
             <p className="mb-8 text-gray-600">We couldn't find information for the requested country.</p>
             <Button asChild>
-              <a href="/countries">Return to Countries List</a>
+              <Link to="/countries">Return to Countries List</Link>
             </Button>
           </div>
         </main>

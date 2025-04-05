@@ -10,7 +10,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Card, CardContent } from "@/components/ui/card";
 import { toast } from "sonner";
 
-export default function FestivalPage() {
+export default function FestivalDetail() {
   const { festivalId } = useParams();
   const navigate = useNavigate();
   const [festival, setFestival] = useState<Festival | null>(null);

@@ -46,6 +46,7 @@ const Navbar = () => {
           <Link to="/" className="text-gray-700 hover:text-travel-blue-light transition">Home</Link>
           <Link to="/recommender" className="text-gray-700 hover:text-travel-blue-light transition">Destination Recommender</Link>
           <Link to="/countries" className="text-gray-700 hover:text-travel-blue-light transition">Countries</Link>
+          <Link to="/festivals" className="text-gray-700 hover:text-travel-blue-light transition">Festivals</Link>
         </nav>
         
         <div className="flex items-center space-x-4">
@@ -116,6 +117,13 @@ const Navbar = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Countries
+                </Link>
+                <Link 
+                  to="/festivals" 
+                  className="text-lg font-medium py-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Festivals
                 </Link>
                 
                 {user ? (

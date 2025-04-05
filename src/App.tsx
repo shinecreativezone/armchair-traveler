@@ -9,6 +9,7 @@ import RecommenderPage from "./pages/RecommenderPage";
 import CountriesPage from "./pages/CountriesPage";
 import CountryPage from "./pages/CountryPage";
 import DestinationPage from "./pages/DestinationPage";
+import FestivalsPage from "./pages/FestivalsPage";
 import NotFound from "./pages/NotFound";
 import BahrainCountry from "./pages/countries/BahrainCountry";
 import AfghanistanCountry from "./pages/countries/AfghanistanCountry";
@@ -61,6 +62,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/recommender" element={<RecommenderPage />} />
             <Route path="/countries" element={<CountriesPage />} />
+            <Route path="/festivals" element={<FestivalsPage />} />
             <Route path="/country/:countrySlug" element={<CountryPage />} />
             
             {/* Individual country routes */}

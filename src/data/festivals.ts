@@ -1,5 +1,3 @@
-import { v4 as uuidv4 } from 'uuid';
-
 export interface Festival {
   id: string;
   name: string;
@@ -14,7 +12,7 @@ export interface Festival {
 
 export const festivals: Festival[] = [
   {
-    id: uuidv4(),
+    id: "festival-1",
     name: "Carnival of Rio de Janeiro",
     country: "Brazil",
     city: "Rio de Janeiro",
@@ -25,7 +23,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-2",
     name: "Oktoberfest",
     country: "Germany",
     city: "Munich",
@@ -36,7 +34,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-3",
     name: "Holi",
     country: "India",
     city: "Nationwide",
@@ -47,7 +45,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-4",
     name: "Songkran",
     country: "Thailand",
     city: "Nationwide",
@@ -58,7 +56,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-5",
     name: "La Tomatina",
     country: "Spain",
     city: "Buñol",
@@ -69,7 +67,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-6",
     name: "Coachella",
     country: "United States",
     city: "Indio, California",
@@ -80,7 +78,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-7",
     name: "Día de los Muertos",
     country: "Mexico",
     city: "Nationwide",
@@ -91,7 +89,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-8",
     name: "Glastonbury Festival",
     country: "United Kingdom",
     city: "Pilton, Somerset",
@@ -102,7 +100,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-9",
     name: "Cherry Blossom Festival",
     country: "Japan",
     city: "Nationwide",
@@ -113,7 +111,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-10",
     name: "Burning Man",
     country: "United States",
     city: "Black Rock Desert, Nevada",
@@ -124,7 +122,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-11",
     name: "Diwali",
     country: "India",
     city: "Nationwide",
@@ -135,7 +133,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-12",
     name: "Mardi Gras",
     country: "United States",
     city: "New Orleans, Louisiana",
@@ -146,7 +144,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-13",
     name: "Solar Eclipse Festival",
     country: "Multiple",
     city: "Various",
@@ -157,7 +155,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-14",
     name: "Oberammergau Passion Play",
     country: "Germany",
     city: "Oberammergau",
@@ -168,7 +166,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-15",
     name: "Canfranc International Station Festival",
     country: "Spain",
     city: "Canfranc",
@@ -179,7 +177,7 @@ export const festivals: Festival[] = [
     popularity: "low",
   },
   {
-    id: uuidv4(),
+    id: "festival-16",
     name: "Camino de Santiago Festival",
     country: "Spain",
     city: "Santiago de Compostela",
@@ -190,7 +188,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-17",
     name: "Flow Country Festival",
     country: "Scotland",
     city: "Highlands",
@@ -201,7 +199,7 @@ export const festivals: Festival[] = [
     popularity: "low",
   },
   {
-    id: uuidv4(),
+    id: "festival-18",
     name: "Cherry Blossom Festival",
     country: "United States",
     city: "Washington, D.C.",
@@ -212,7 +210,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-19",
     name: "Sicilian Divide Cycling Festival",
     country: "Italy",
     city: "Sicily",
@@ -223,7 +221,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-20",
     name: "Alentejo Wine Festival",
     country: "Portugal",
     city: "Alentejo Region",
@@ -234,7 +232,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-21",
     name: "Barossa Valley Wine Festival",
     country: "Australia",
     city: "Barossa Valley",
@@ -245,7 +243,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-22",
     name: "Tokaj Wine Festival",
     country: "Hungary",
     city: "Tokaj",
@@ -256,7 +254,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-23",
     name: "Laugavegur Trail Festival",
     country: "Iceland",
     city: "Highlands",
@@ -266,9 +264,8 @@ export const festivals: Festival[] = [
     imageUrl: "https://images.unsplash.com/photo-1553693006-6bffb26dd5b9?q=80&w=1000",
     popularity: "medium",
   },
-  // Adding new festivals
   {
-    id: uuidv4(),
+    id: "festival-24",
     name: "Kumbh Mela",
     country: "India",
     city: "Rotating between four locations",
@@ -279,7 +276,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-25",
     name: "Vesak",
     country: "Thailand",
     city: "Bangkok",
@@ -290,7 +287,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-26",
     name: "Chuseok",
     country: "South Korea",
     city: "Nationwide",
@@ -301,7 +298,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-27",
     name: "Loy Krathong",
     country: "Thailand",
     city: "Nationwide",
@@ -312,7 +309,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-28",
     name: "Mid-Autumn Festival",
     country: "China",
     city: "Nationwide",
@@ -323,7 +320,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-29",
     name: "Naghol Land Diving",
     country: "Vanuatu",
     city: "Pentecost Island",
@@ -334,7 +331,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-30",
     name: "Tết Nguyên Đán",
     country: "Vietnam",
     city: "Nationwide",
@@ -345,7 +342,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-31",
     name: "Durga Puja",
     country: "India",
     city: "Kolkata",
@@ -356,7 +353,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-32",
     name: "Pushkar Camel Fair",
     country: "India",
     city: "Pushkar, Rajasthan",
@@ -367,7 +364,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-33",
     name: "Ganga Dussehra",
     country: "India",
     city: "Varanasi",
@@ -378,7 +375,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-34",
     name: "Sapporo Snow Festival",
     country: "Japan",
     city: "Sapporo",
@@ -389,7 +386,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-35",
     name: "Tango Festival",
     country: "Argentina",
     city: "Buenos Aires",
@@ -400,7 +397,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-36",
     name: "Fiesta de la Virgen del Carmen",
     country: "Peru",
     city: "Cuzco",
@@ -411,7 +408,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-37",
     name: "Timkat",
     country: "Ethiopia",
     city: "Nationwide",
@@ -422,7 +419,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-38",
     name: "Lake of Stars",
     country: "Malawi",
     city: "Lake Malawi",
@@ -433,7 +430,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-39",
     name: "Fes Festival of World Sacred Music",
     country: "Morocco",
     city: "Fes",
@@ -444,7 +441,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-40",
     name: "Gerewol Festival",
     country: "Niger",
     city: "Wodaabe territory",
@@ -455,7 +452,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-41",
     name: "Carnival of Venice",
     country: "Italy",
     city: "Venice",
@@ -466,7 +463,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-42",
     name: "Edinburgh Festival Fringe",
     country: "United Kingdom",
     city: "Edinburgh",
@@ -477,7 +474,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-43",
     name: "Running of the Bulls",
     country: "Spain",
     city: "Pamplona",
@@ -488,7 +485,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-44",
     name: "Tomorrowland",
     country: "Belgium",
     city: "Boom",
@@ -499,7 +496,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-45",
     name: "Notting Hill Carnival",
     country: "United Kingdom",
     city: "London",
@@ -510,7 +507,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-46",
     name: "St. Patrick's Day",
     country: "Ireland",
     city: "Dublin",
@@ -521,7 +518,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-47",
     name: "White Nights Festival",
     country: "Russia",
     city: "St. Petersburg",
@@ -532,7 +529,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-48",
     name: "Up Helly Aa",
     country: "United Kingdom",
     city: "Lerwick, Scotland",
@@ -543,7 +540,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-49",
     name: "Battle of the Oranges",
     country: "Italy",
     city: "Ivrea",
@@ -554,7 +551,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-50",
     name: "Yi Peng Lantern Festival",
     country: "Thailand",
     city: "Chiang Mai",
@@ -565,7 +562,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-51",
     name: "Harbin Ice and Snow Festival",
     country: "China",
     city: "Harbin",
@@ -576,7 +573,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-52",
     name: "Montreal International Jazz Festival",
     country: "Canada",
     city: "Montreal",
@@ -586,9 +583,8 @@ export const festivals: Festival[] = [
     imageUrl: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6a3?q=80&w=1000",
     popularity: "high",
   },
-  // Adding more festivals from various regions
   {
-    id: uuidv4(),
+    id: "festival-53",
     name: "Dubai Shopping Festival",
     country: "United Arab Emirates",
     city: "Dubai",
@@ -599,7 +595,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-54",
     name: "Eid al-Fitr",
     country: "Various Middle Eastern Countries",
     city: "Multiple locations",
@@ -610,7 +606,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-55",
     name: "Hajj",
     country: "Saudi Arabia",
     city: "Mecca",
@@ -621,7 +617,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-56",
     name: "The National Arts Festival",
     country: "South Africa",
     city: "Grahamstown",
@@ -632,7 +628,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-57",
     name: "Ouidah Voodoo Festival",
     country: "Benin",
     city: "Ouidah",
@@ -643,7 +639,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-58",
     name: "Zanzibar International Film Festival",
     country: "Tanzania",
     city: "Zanzibar",
@@ -654,7 +650,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-59",
     name: "Cape Town International Jazz Festival",
     country: "South Africa",
     city: "Cape Town",
@@ -665,7 +661,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-60",
     name: "Albuquerque International Balloon Fiesta",
     country: "United States",
     city: "Albuquerque, New Mexico",
@@ -676,7 +672,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-61",
     name: "Toronto International Film Festival",
     country: "Canada",
     city: "Toronto",
@@ -687,7 +683,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-62",
     name: "Quebec Winter Carnival",
     country: "Canada",
     city: "Quebec City",
@@ -698,7 +694,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-63",
     name: "South by Southwest",
     country: "United States",
     city: "Austin, Texas",
@@ -709,7 +705,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-64",
     name: "Cinco de Mayo",
     country: "Mexico",
     city: "Puebla",
@@ -720,7 +716,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-65",
     name: "La Feria de Abril",
     country: "Spain",
     city: "Seville",
@@ -731,7 +727,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-66",
     name: "Fallas",
     country: "Spain",
     city: "Valencia",
@@ -742,7 +738,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-67",
     name: "Baisakhi",
     country: "India",
     city: "Punjab",
@@ -753,7 +749,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-68",
     name: "Ganesh Chaturthi",
     country: "India",
     city: "Mumbai",
@@ -764,7 +760,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-69",
     name: "Sydney Gay and Lesbian Mardi Gras",
     country: "Australia",
     city: "Sydney",
@@ -775,7 +771,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-70",
     name: "Matariki Festival",
     country: "New Zealand",
     city: "Nationwide",
@@ -786,7 +782,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-71",
     name: "Queenstown Winter Festival",
     country: "New Zealand",
     city: "Queenstown",
@@ -797,7 +793,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-72",
     name: "Noche de los Rábanos",
     country: "Mexico",
     city: "Oaxaca",
@@ -808,7 +804,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-73",
     name: "Festa de Iemanjá",
     country: "Brazil",
     city: "Salvador",
@@ -819,7 +815,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-74",
     name: "Onam",
     country: "India",
     city: "Kerala",
@@ -830,7 +826,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-75",
     name: "Rath Yatra",
     country: "India",
     city: "Puri",
@@ -841,7 +837,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-76",
     name: "Boryeong Mud Festival",
     country: "South Korea",
     city: "Boryeong",
@@ -852,7 +848,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-77",
     name: "Thaipusam",
     country: "Malaysia",
     city: "Batu Caves",
@@ -862,9 +858,8 @@ export const festivals: Festival[] = [
     imageUrl: "https://images.unsplash.com/photo-1574235985561-5edc4ca013a4?q=80&w=1000",
     popularity: "high",
   },
-  // UNESCO-recognized festivals
   {
-    id: uuidv4(),
+    id: "festival-78",
     name: "Ceremony of Mehregan",
     country: "Tajikistan & Iran",
     city: "Multiple locations",
@@ -875,7 +870,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-79",
     name: "Festival of Bà Chúa Xứ Goddess",
     country: "Vietnam",
     city: "Sam Mountain",
@@ -886,7 +881,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-80",
     name: "Atā Thingyan",
     country: "Myanmar",
     city: "Nationwide",
@@ -897,7 +892,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-81",
     name: "Nowruz",
     country: "Multiple Central Asian Countries",
     city: "Various",
@@ -908,7 +903,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-82",
     name: "Ch'utillos Festival",
     country: "Bolivia",
     city: "Potosí",
@@ -919,7 +914,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-83",
     name: "Junkanoo",
     country: "Bahamas",
     city: "Nassau",
@@ -930,7 +925,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-84",
     name: "Maltese Village Festa",
     country: "Malta",
     city: "Various villages",
@@ -941,7 +936,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-85",
     name: "Shuwalid Festival",
     country: "Ethiopia",
     city: "Southern Ethiopia",
@@ -952,7 +947,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-86",
     name: "Sea Turtle Festival of Armila",
     country: "Panama",
     city: "Armila",
@@ -963,7 +958,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-87",
     name: "August 15th Festivities in Northern Greece",
     country: "Greece",
     city: "Vlasti and Syrrako",
@@ -974,7 +969,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-88",
     name: "Journey of the Holy Family Festival",
     country: "Egypt",
     city: "Multiple locations",
@@ -985,7 +980,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-89",
     name: "Corso Flower and Fruit Parades",
     country: "Netherlands",
     city: "Various cities",
@@ -996,7 +991,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-90",
     name: "Nar Bayrami",
     country: "Azerbaijan",
     city: "Goychay",
@@ -1007,7 +1002,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-91",
     name: "Wine Horses Festival",
     country: "Spain",
     city: "Caravaca de la Cruz",
@@ -1018,7 +1013,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-92",
     name: "Yeondeunghoe",
     country: "Republic of Korea",
     city: "Nationwide",
@@ -1029,7 +1024,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-93",
     name: "Hatajo de Negritos and Pallitas",
     country: "Peru",
     city: "South-central coastline",
@@ -1040,7 +1035,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-94",
     name: "Traditional Spring Rites of Kazakh Horse Breeders",
     country: "Kazakhstan",
     city: "Rural regions",
@@ -1051,7 +1046,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-95",
     name: "Argungu International Fishing Festival",
     country: "Nigeria",
     city: "Argungu",
@@ -1062,7 +1057,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-96",
     name: "Carnival of El Callao",
     country: "Venezuela",
     city: "El Callao",
@@ -1073,7 +1068,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-97",
     name: "Mangal Shobhajatra",
     country: "Bangladesh",
     city: "Dhaka",
@@ -1084,7 +1079,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-98",
     name: "Winegrowers' Festival",
     country: "Switzerland",
     city: "Vevey",
@@ -1095,7 +1090,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-99",
     name: "Yama, Hoko, Yatai Float Festivals",
     country: "Japan",
     city: "Various cities",
@@ -1106,7 +1101,7 @@ export const festivals: Festival[] = [
     popularity: "high",
   },
   {
-    id: uuidv4(),
+    id: "festival-100",
     name: "Fichee-Chambalaalla",
     country: "Ethiopia",
     city: "Sidama region",
@@ -1117,7 +1112,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-101",
     name: "Oshituthi shomagongo",
     country: "Namibia",
     city: "Northern Namibia",
@@ -1128,7 +1123,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-102",
     name: "Summer Solstice Fire Festivals",
     country: "Andorra, Spain, France",
     city: "Pyrenees region",
@@ -1139,7 +1134,7 @@ export const festivals: Festival[] = [
     popularity: "medium",
   },
   {
-    id: uuidv4(),
+    id: "festival-103",
     name: "Parachicos Festival",
     country: "Mexico",
     city: "Chiapa de Corzo",

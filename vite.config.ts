@@ -9,7 +9,8 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: "/armchair-traveler/",
+  // Base path is conditionally set based on the environment
+  base: process.env.VERCEL ? '/' : '/armchair-traveler/',
   plugins: [
     react(),
     mode === 'development' &&

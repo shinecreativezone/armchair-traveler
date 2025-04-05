@@ -17,11 +17,7 @@ import AlgeriaCountry from "./pages/countries/AlgeriaCountry";
 import AndorraCountry from "./pages/countries/AndorraCountry";
 import AngolaCountry from "./pages/countries/AngolaCountry";
 import AntiguaAndBarbudaCountry from "./pages/countries/AntiguaAndBarbudaCountry";
-import ArgentinaCountry from "./pages/countries/ArgentinaCountry";
-import ArmeniaCountry from "./pages/countries/ArmeniaCountry";
-import AustraliaCountry from "./pages/countries/AustraliaCountry";
-import AustriaCountry from "./pages/countries/AustriaCountry";
-// ... More country imports will be added programmatically below
+// Note: Import additional country components as they are created
 
 // Create a client
 const queryClient = new QueryClient();
@@ -45,12 +41,8 @@ const App = () => (
           <Route path="/country/andorra" element={<AndorraCountry />} />
           <Route path="/country/angola" element={<AngolaCountry />} />
           <Route path="/country/antigua-and-barbuda" element={<AntiguaAndBarbudaCountry />} />
-          <Route path="/country/argentina" element={<ArgentinaCountry />} />
-          <Route path="/country/armenia" element={<ArmeniaCountry />} />
-          <Route path="/country/australia" element={<AustraliaCountry />} />
-          <Route path="/country/austria" element={<AustriaCountry />} />
           <Route path="/country/bahrain" element={<BahrainCountry />} />
-          {/* More country routes will go here */}
+          {/* More country routes will be added as their components are created */}
           
           <Route path="/destination/:destinationSlug" element={<DestinationPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MapPin as MapPinIcon, Calendar as CalendarIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 
 export default function FestivalsPage() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -120,37 +121,42 @@ export default function FestivalsPage() {
               {filteredFestivals.length > 0 ? (
                 <div className="space-y-4">
                   {filteredFestivals.map((festival) => (
-                    <div 
-                      key={festival.id} 
-                      className="flex flex-col md:flex-row gap-4 border rounded-lg overflow-hidden hover:shadow-md transition-all"
+                    <Link 
+                      key={festival.id}
+                      to={`/festival/${festival.id}`}
+                      className="block"
                     >
-                      <div className="md:w-48 h-48 md:h-auto">
-                        <img 
-                          src={festival.imageUrl} 
-                          alt={festival.name} 
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="flex-1 p-4">
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <h3 className="text-xl font-semibold">{festival.name}</h3>
-                            <p className="text-sm text-muted-foreground flex items-center gap-1 mt-1">
-                              <MapPinIcon className="h-4 w-4" />
-                              {festival.city}, {festival.country}
-                            </p>
+                      <div 
+                        className="flex flex-col md:flex-row gap-4 border rounded-lg overflow-hidden hover:shadow-md transition-all"
+                      >
+                        <div className="md:w-48 h-48 md:h-auto">
+                          <img 
+                            src={festival.imageUrl} 
+                            alt={festival.name} 
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="flex-1 p-4">
+                          <div className="flex justify-between items-start">
+                            <div>
+                              <h3 className="text-xl font-semibold">{festival.name}</h3>
+                              <p className="text-sm text-muted-foreground flex items-center gap-1 mt-1">
+                                <MapPinIcon className="h-4 w-4" />
+                                {festival.city}, {festival.country}
+                              </p>
+                            </div>
+                            <Badge className={`${getCategoryColor(festival.category)} text-white`}>
+                              {festival.category}
+                            </Badge>
                           </div>
-                          <Badge className={`${getCategoryColor(festival.category)} text-white`}>
-                            {festival.category}
-                          </Badge>
-                        </div>
-                        <p className="mt-2">{festival.description}</p>
-                        <div className="mt-4 text-sm text-muted-foreground flex items-center gap-1">
-                          <CalendarIcon className="h-4 w-4" />
-                          {festival.date}
+                          <p className="mt-2">{festival.description}</p>
+                          <div className="mt-4 text-sm text-muted-foreground flex items-center gap-1">
+                            <CalendarIcon className="h-4 w-4" />
+                            {festival.date}
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               ) : (

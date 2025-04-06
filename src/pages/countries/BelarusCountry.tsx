@@ -21,7 +21,7 @@ const BelarusCountry: React.FC = () => {
     timeZones: ["GMT+3"],
     callingCode: "+375",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2013/07/12/15/32/flag-150112_1280.png",
     description: "Belarus is an Eastern European country with a rich cultural heritage and complex history. Known for its Stalinist architecture, grand fortifications, and primeval forests, Belarus offers visitors a glimpse into a region that has preserved many of its Soviet-era characteristics while developing its own distinct national identity.",
     whyVisit: "Belarus offers travelers a unique opportunity to experience a lesser-visited part of Europe with distinctive Slavic culture and preserved Soviet heritage. The country boasts impressive fortresses like Mir and Nesvizh Castles (both UNESCO World Heritage Sites), pristine natural landscapes including Belovezhskaya Pushcha National Park (home to European bison), and elegant cities with grand boulevards, particularly the capital Minsk with its imposing Stalinist architecture. Visitors will be impressed by the country's cleanliness, well-maintained public spaces, and efficient public transportation. Belarus is also known for its vibrant folk traditions, with numerous festivals celebrating traditional music, dance, and crafts throughout the year. For travelers seeking an authentic experience away from typical tourist crowds, Belarus provides an intriguing destination with a fascinating blend of history, culture, and natural beauty.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const BelarusCountry: React.FC = () => {
       {
         name: "Mir Castle Complex",
         description: "This UNESCO World Heritage Site is a stunning example of Gothic, Baroque, and Renaissance architecture. Built in the 16th century, the castle features distinctive towers, a courtyard, and a surrounding lake. Visitors can explore the restored interiors with period furniture, armor displays, and exhibitions on the castle's history under various noble families.",
-        imageUrl: "https://images.unsplash.com/photo-1595242000522-1c9b7bd689e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Belovezhskaya Pushcha National Park",
         description: "One of Europe's last and largest remaining parts of the primeval forest that once stretched across the European Plain. This UNESCO World Heritage Site is home to hundreds of European bison (zubr), the continent's heaviest land animal once nearly extinct. The park offers nature trails, a nature museum, and the estate of Belarusian Father Frost (Ded Moroz).",
-        imageUrl: "https://images.unsplash.com/photo-1472060651845-c080a84f3cfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Brest Fortress",
         description: "A 19th-century Russian fortress that became a symbol of Soviet resistance during the Nazi invasion in 1941. Now a major memorial complex, it features dramatic sculptures including the enormous 'Thirst' and 'Courage' monuments, preserved ruins, a museum, and the daily playing of Soviet war songs through loudspeakers.",
-        imageUrl: "https://images.unsplash.com/photo-1638109932381-c38c96c3e50a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1528&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Nesvizh Castle",
         description: "A UNESCO-listed residential castle of the Radziwill family, one of the most powerful families in the Grand Duchy of Lithuania. The palace complex features beautiful baroque architecture, lavish halls, portrait galleries, and extensive gardens with lakes and parkland. The nearby Corpus Christi Church contains the Radziwill family mausoleum.",
-        imageUrl: "https://images.unsplash.com/photo-1578301978069-45264acf340a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1474&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Independence Avenue, Minsk",
         description: "The main thoroughfare of Belarus's capital showcases impressive Stalinist architecture built after WWII destroyed much of the city. The grand boulevard features monumental buildings, Soviet decorative elements, wide sidewalks, and immaculately maintained public spaces. Key landmarks include Government House, GUM department store, and the imposing KGB Headquarters.",
-        imageUrl: "https://images.unsplash.com/photo-1612715076253-18ab349babb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -179,6 +179,11 @@ const BelarusCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

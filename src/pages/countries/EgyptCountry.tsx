@@ -21,7 +21,7 @@ const EgyptCountry: React.FC = () => {
     timeZones: ["UTC+2 (Eastern European Time)"],
     callingCode: "+20",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?q=80&w=1000",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2016/01/29/17/49/banner-1168019_1280.jpg",
     description: "Egypt, one of the world's oldest civilizations, straddles northeast Africa and the southwest corner of Asia via the Sinai Peninsula. With a history spanning over 5,000 years, this transcontinental nation is home to the iconic Nile River, ancient pyramids, and a rich cultural heritage that has fascinated the world for millennia. Modern Egypt combines its pharaonic past with Islamic traditions and contemporary challenges, creating a unique and complex society at the crossroads of African, Mediterranean, and Middle Eastern cultures.",
     whyVisit: "Egypt offers travelers an unparalleled journey through time, from the magnificent pyramids of Giza and the enigmatic Sphinx to the treasures of Tutankhamun and the temples of Luxor. The Nile River provides a serene backdrop for exploring ancient wonders, while the vibrant chaos of Cairo showcases contemporary Egyptian life. Beyond historical sites, visitors can experience world-class diving in the Red Sea, desert adventures in the Sahara, and the distinct cultures of Nubian villages and Bedouin communities. With its combination of archaeological marvels, natural beauty, and warm hospitality, Egypt presents a travel experience that has captivated explorers for centuries.",
     majorCities: [
@@ -45,12 +45,12 @@ const EgyptCountry: React.FC = () => {
       {
         name: "Pyramids of Giza & the Sphinx",
         description: "These iconic monuments stand on the outskirts of Cairo as enduring symbols of ancient Egyptian power and engineering prowess. The Great Pyramid of Khufu (Cheops), built around 2560 BCE, is the only surviving structure from the Seven Wonders of the Ancient World. Alongside it stand the pyramids of Khafre and Menkaure, while the enigmatic Great Sphinx keeps watch nearby. Visitors can enter select pyramids, ride camels around the complex, and witness the nightly sound and light show illuminating these ancient wonders.",
-        imageUrl: "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Luxor Temple & Karnak Complex",
         description: "Often described as the world's greatest open-air museum, Luxor contains some of Egypt's most magnificent ancient temples. The massive Karnak Complex, built over centuries by different pharaohs, features enormous columns, obelisks, and intricate hieroglyphics. Luxor Temple, particularly beautiful when illuminated at night, connects to Karnak via the Avenue of Sphinxes. On the West Bank, the Valley of the Kings contains 63 royal tombs, including that of Tutankhamun, while the mortuary temple of Queen Hatshepsut showcases remarkable architectural innovation.",
-        imageUrl: "https://images.unsplash.com/photo-1539768942893-daf53e448371?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -112,6 +112,11 @@ const EgyptCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

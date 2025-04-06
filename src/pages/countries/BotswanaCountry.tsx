@@ -21,7 +21,7 @@ const BotswanaCountry: React.FC = () => {
     timeZones: ["GMT+2 (CAT)"],
     callingCode: "+267",
     drivingSide: "left" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1476&q=80",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2013/07/12/15/32/flag-150112_1280.png",
     description: "Botswana is a landlocked country in Southern Africa, known for its dramatic landscapes, abundant wildlife, and stable democracy. Home to the vast Kalahari Desert, the magnificent Okavango Delta, and some of Africa's most spectacular safari destinations, Botswana offers exceptional wildlife viewing in a pristine natural environment.",
     whyVisit: "Botswana offers a unique safari experience distinguished by its commitment to sustainable, low-impact tourism and extraordinary wildlife encounters. Unlike more developed safari destinations, Botswana's conservation-focused approach limits visitor numbers in protected areas, ensuring intimate wildlife encounters without the crowds. The Okavango Delta—a UNESCO World Heritage site and one of Africa's last remaining untouched wilderness areas—presents a magical landscape where water transforms desert into an intricate maze of channels, islands, and floodplains teeming with diverse wildlife. Botswana's political stability, investment in tourism infrastructure, and English-speaking population make it accessible yet authentic. Visitors can witness the world's largest elephant population in Chobe National Park, track endangered wild dogs in Moremi Game Reserve, experience cultural interactions with the San Bushmen who have adapted to the Kalahari Desert for thousands of years, and observe rare species like sitatunga and puku antelope in their natural habitats. From luxury tented camps to mokoro (dugout canoe) excursions and mobile safari adventures, Botswana delivers profound wilderness experiences while maintaining its commitment to conservation, making it an ideal destination for conscientious travelers seeking meaningful connections with Africa's wild places.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const BotswanaCountry: React.FC = () => {
       {
         name: "Okavango Delta",
         description: "This UNESCO World Heritage site is one of Africa's most extraordinary ecosystems—a 15,000 square kilometer inland delta where the Okavango River fans out across the Kalahari sands, creating a maze of channels, islands, and floodplains. This miracle of nature supports incredible biodiversity: large populations of elephant, buffalo, giraffe, zebra, and various antelope species, along with predators including lion, leopard, and endangered wild dog. Visitors can explore this watery wilderness via mokoro (traditional dugout canoe) poles by local guides through papyrus-lined channels, stay at intimate tented camps on private concessions, take guided walking safaris on islands, or observe wildlife from motorized boats. The delta's seasonal flooding (peaking June-August) creates constantly changing landscapes and wildlife distributions.",
-        imageUrl: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Chobe National Park",
         description: "Botswana's first national park is home to approximately 120,000 elephants—the highest concentration in Africa—along with enormous buffalo herds and abundant predators. The park's lifeline is the Chobe River, where afternoon boat cruises provide unforgettable close encounters with elephants swimming across channels, hippos, crocodiles, and numerous water birds. The Savuti Channel area in the southwest features open savannah famous for lion prides that have adapted to hunting elephants, while the Linyanti Marshes in the northwest offer exclusive wildlife viewing in secluded wetlands. Game drives throughout the park reveal diverse habitats supporting over 450 bird species and classic African mammals including giraffes, zebras, kudu, and impala, with excellent predator sightings.",
-        imageUrl: "https://images.unsplash.com/photo-1535395155851-2f6eb76b42ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Moremi Game Reserve",
         description: "Occupying the eastern third of the Okavango Delta, this reserve combines permanent water systems with seasonal floodplains and dry peninsulas, creating diverse habitats supporting extraordinary wildlife density and diversity. Chief's Island, the largest landmass within the reserve, is renowned for big cat sightings, particularly leopards, while the Khwai River area features dense concentrations of animals and birds along its fertile floodplains. Unlike other Botswana wilderness areas, Moremi allows self-drive safaris on its network of sand tracks, though many visitors opt for guided experiences from luxury lodges or mobile tented camps. The reserve is one of Africa's best locations for spotting the endangered African wild dog, alongside all major predators and herbivores, making it an essential component of any comprehensive Botswana safari.",
-        imageUrl: "https://images.unsplash.com/photo-1504655546449-6528fd628898?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Central Kalahari Game Reserve",
         description: "The second-largest game reserve in the world covers 52,800 square kilometers of the central Kalahari Desert, offering a completely different safari experience from Botswana's water-rich northern parks. This vast wilderness of undulating sand dunes, ancient riverbeds, and scattered pan depressions transforms dramatically between seasons—from the stark aridity of winter to surprising abundance after summer rains. Deception Valley, an ancient riverbed, attracts large herbivore herds during the green season (December-April), followed by predators including the famous black-maned Kalahari lions. The reserve is also the ancestral home of the San Bushmen, whose traditional knowledge allowed them to thrive in this challenging environment for thousands of years. Visitors can experience game drives revealing desert-adapted wildlife, guided walks learning about San survival techniques, and incredibly remote camps offering unparalleled wilderness immersion under star-filled skies.",
-        imageUrl: "https://images.unsplash.com/photo-1551575695-afc2a137b302?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Makgadikgadi Pans",
         description: "This surreal landscape of vast salt flats—the remains of an ancient super-lake that once covered much of northern Botswana—offers one of Africa's most distinctive environments. During the dry season, the pans transform into an otherworldly moonscape where quad biking across the crusty surface creates the illusion of infinite space. After summer rains, shallow water attracts thousands of flamingos and other water birds, along with Africa's second-largest zebra and wildebeest migration. Scattered palm islands, particularly Kubu Island with its ancient baobabs and archaeological sites, provide stark visual contrast to the white expanses. Visitors can experience traditional bush walks with San guides, observe habituated meerkats at close range, witness the zebra migration (December-April), stay at unique camps ranging from luxury lodges to fly camps on the pans themselves, and encounter desert specialists like brown hyena and aardvark.",
-        imageUrl: "https://images.unsplash.com/photo-1508984986863-6ca17fc692a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -178,6 +178,11 @@ const BotswanaCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

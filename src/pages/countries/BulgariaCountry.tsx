@@ -21,7 +21,7 @@ const BulgariaCountry: React.FC = () => {
     timeZones: ["GMT+2 (EET)", "GMT+3 (EEST) Summer"],
     callingCode: "+359",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1563789031959-4c02bcb41319?ixlib=rb-4.0.3&auto=format&fit=crop&w=1476&q=80",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2017/01/31/14/43/flag-2024732_1280.png",
     description: "Bulgaria is a Balkan nation with diverse terrain encompassing Black Sea coastline, rivers including the Danube, and a mountainous interior. A cultural melting pot with Greek, Slavic, Ottoman, and Persian influences, it has a rich heritage of traditional dance, music, costumes, and crafts. Bulgaria's long history spans from ancient civilizations to medieval kingdoms, Ottoman rule, and communism before becoming a democracy.",
     whyVisit: "Bulgaria offers travelers an incredible value proposition where Western European charm meets Eastern European prices, with a diversity of experiences packed into a compact geography. Within a single day, visitors can journey from golden Black Sea beaches through ancient forests to snow-capped mountain peaks. The country boasts an astounding historical legacy spanning 8,000 years—from Thracian tombs and Roman amphitheaters to Byzantine churches and Ottoman mosques—often without the crowds that plague more famous European destinations. Bulgaria's wine tradition dates back to the Thracians (older than France's), producing excellent yet affordable varieties from unique indigenous grapes. The country embraces wellness tourism with over 600 mineral springs, ancient Roman bath complexes, and modern spa resorts offering therapeutic treatments at a fraction of Western prices. Bulgarian cuisine delights with its fresh, farm-to-table approach featuring yogurt (with its unique bacterial strain), feta-like sirene cheese, and slow-cooked stews, while the people's legendary hospitality makes visitors feel immediately welcome. For adventurers, Bulgaria offers epic hiking along well-maintained mountain trails, emerging ski resorts with excellent conditions at budget prices, and pristine nature including Europe's largest bear and wolf populations.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const BulgariaCountry: React.FC = () => {
       {
         name: "Rila Monastery",
         description: "Founded in the 10th century by St. John of Rila, this UNESCO World Heritage site represents the spiritual and architectural pinnacle of Bulgarian Orthodox tradition. Nestled dramatically at 1,147 meters among the conifer forests of Rila Mountain, the monastery's current form dates primarily from the 19th-century National Revival period. Its fortress-like exterior walls enclose a magnificent courtyard where striped archways and bright frescoes create a striking contrast against mountain backdrops. The monastery's crown jewel is the main church with its vivid biblical scenes painted by the finest Bulgarian artists of the period, including masterworks by Zahari Zograf. The complex houses Bulgaria's richest historical museum, featuring Rafail's Cross—a wooden crucifix with 104 microscopic scenes and 650 miniature figures carved using only a magnifying glass. The monastery continues functioning as an active religious center where visitors can observe Orthodox traditions, while its remote mountain setting offers hiking opportunities to St. Ivan's cave where the monastery's founder lived as a hermit.",
-        imageUrl: "https://images.unsplash.com/photo-1583137263589-8e75cc0692ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Ancient City of Nessebar",
         description: "This atmospheric UNESCO World Heritage site occupies a rocky peninsula jutting into the Black Sea, connected to the mainland by a narrow isthmus. Originally a Thracian settlement that became a Greek colony in the 6th century BCE, Nessebar preserves layers of history from Hellenistic, Roman, Byzantine, Bulgarian, and Ottoman periods. The compact old town features narrow cobblestone streets winding between more than 40 beautifully preserved churches spanning 800 years of architectural evolution. Most iconic is the Church of St. Stephen with its stunning 16th-century frescoes covering every interior surface. Equally impressive are the wooden National Revival houses with stone ground floors and overhanging upper stories decorated with intricate wooden carvings. Archaeological remains include sections of the ancient Hellenic acropolis, Roman and medieval fortifications, and Byzantine thermal baths. Despite being a major tourist destination, Nessebar maintains its authentic atmosphere, especially in the off-season when visitors can explore the peninsula's 3,000 years of continuous human settlement against the dramatic backdrop of the Black Sea.",
-        imageUrl: "https://images.unsplash.com/photo-1563407844952-ae65e5a6cf97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Plovdiv Old Town",
         description: "One of Europe's oldest continuously inhabited urban areas, Plovdiv's Old Town crowns three of the city's seven hills with an extraordinary architectural ensemble. The cobblestone streets wind past Roman ruins, Ottoman mosques, and the jewel of the district—magnificently preserved Bulgarian National Revival houses from the 18th and 19th centuries. These distinctive buildings feature colorful facades, elaborate wooden ceilings, hidden interior courtyards, and overhanging upper floors supported by intricately carved wooden beams. Many now house museums like the Ethnographic Museum and the Hindliyan House, preserving period furniture and domestic arrangements. The quarter's crown jewel is the Ancient Roman Theatre, built in the 1st century CE with 7,000 seats and still hosting performances against the backdrop of the Rhodope Mountains. Kapana (The Trap), an adjacent neighborhood of narrow streets once home to craftsmen, has transformed into a creative district filled with art galleries, design shops, craft beer bars, and innovative restaurants, especially vibrant since Plovdiv's designation as 2019 European Capital of Culture. Together, these historic districts offer a living museum spanning centuries of Bulgarian and European history.",
-        imageUrl: "https://images.unsplash.com/photo-1617120279904-0df6a0ae78ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Belogradchik Rocks and Fortress",
         description: "Rising dramatically from the forested landscape of northwestern Bulgaria, these extraordinary rock formations stretch for 30 kilometers, reaching heights up to 200 meters. Created over 230 million years ago from red sandstone and conglomerate rock, erosion has sculpted them into fantastic shapes that inspired legends—many formations bear names like The Madonna, The Monks, The Schoolgirl, and The Bear, reflecting their distinctive silhouettes. Integrated perfectly within this natural phenomenon stands Belogradchik Fortress (Kaleto), whose ancient foundations date to Roman times with significant medieval Bulgarian and Ottoman expansions. The fortress walls ingeniously incorporate the massive rock formations as natural defensive barriers, creating an impregnable stronghold until the advent of modern artillery. From the fortress ramparts, visitors enjoy spectacular panoramas across the surrounding Balkan Mountains and valleys. Beyond the main formation, adventure seekers can explore nearby Magura Cave with its prehistoric paintings and Baba Vida Fortress in Vidin. The site offers a unique combination of geological wonder, architectural heritage, and cultural significance, particularly magical at sunset when the rocks glow crimson.",
-        imageUrl: "https://images.unsplash.com/photo-1590127672262-2c4565344a35?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Seven Rila Lakes",
         description: "This spectacular glacial lake formation in the northwestern Rila Mountains comprises one of Bulgaria's most stunning natural landmarks. Situated between 2,100 and 2,500 meters above sea level, each lake carries a descriptive name reflecting its characteristics: The Tear, The Eye, The Kidney, The Twin, The Trefoil, The Fish Lake, and The Lower Lake. They connect via cascading streams and waterfalls, forming a magnificent sequence descending through the mountain landscape. A chairlift from Panichishte resort provides easier access to the lakes, though many hikers prefer the traditional trail offering progressive views of the expanding panorama. The most breathtaking vantage point comes at the highest viewing platform above The Tear, where all seven lakes become visible simultaneously against the backdrop of surrounding peaks. The lakes' appearance transforms dramatically through the seasons—crystal blue in summer surrounded by alpine meadows filled with wild flowers, mystically shrouded in clouds during spring and fall, and frozen under deep snow in winter months. The area holds spiritual significance as a gathering place for followers of the Bulgarian spiritual teacher Peter Deunov, who perform their paneurhythmy ritual dance near the lakes each August.",
-        imageUrl: "https://images.unsplash.com/photo-1538380940530-ba59cc273d7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -179,6 +179,11 @@ const BulgariaCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

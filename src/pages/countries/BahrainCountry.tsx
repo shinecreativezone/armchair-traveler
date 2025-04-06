@@ -21,7 +21,7 @@ const BahrainCountry: React.FC = () => {
     timeZones: ["GMT+3"],
     callingCode: "+973",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1547158291-06774526756c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2016/01/29/17/49/banner-1168019_1280.jpg",
     description: "Bahrain, officially the Kingdom of Bahrain, is a small island nation in the Persian Gulf. Despite its small size, Bahrain offers an intriguing mix of ancient history and modern development. As one of the first Gulf states to discover oil, it has transformed into a financial hub while preserving its rich cultural heritage.",
     whyVisit: "Bahrain offers a unique blend of Arabian heritage and modern comfort that sets it apart from its larger neighbors. Despite its small size, the country packs in diverse experiences from ancient archaeological sites to ultra-modern architecture. Visitors can explore 5,000-year-old ruins at Qal'at al-Bahrain, experience the fascinating Tree of Life surviving in the desert, and enjoy the vibrant souks of Manama. For those interested in modern attractions, the Bahrain International Circuit hosts Formula 1 races, while excellent museums like the Bahrain National Museum provide cultural insights.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const BahrainCountry: React.FC = () => {
       {
         name: "Qal'at al-Bahrain (Bahrain Fort)",
         description: "This UNESCO World Heritage site reveals 4,000 years of continuous human presence, from the ancient Dilmun civilization to the Portuguese period. The impressive fort structure and surrounding archaeological site offer stunning views over the sea.",
-        imageUrl: "https://images.unsplash.com/photo-1548604308-9a2215103738?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Al-Fateh Grand Mosque",
         description: "One of the largest mosques in the world, capable of accommodating over 7,000 worshippers. This impressive structure features a huge fiberglass dome, Italian marble, and Austrian chandeliers. Guided tours welcome non-Muslim visitors.",
-        imageUrl: "https://images.unsplash.com/photo-1604260733112-e5ceb2730eaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Tree of Life",
         description: "This 400-year-old mesquite tree has become a symbol of Bahrain, mysteriously thriving in the harsh desert with no visible water source. Standing 32 feet tall, it attracts visitors curious about its survival and spiritual significance.",
-        imageUrl: "https://images.unsplash.com/photo-1542401886-65d6c61db217?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Bahrain National Museum",
         description: "The country's largest and oldest public museum showcases the rich cultural heritage of Bahrain through archaeological artifacts, traditional handicrafts, and exhibits on the nation's customs and traditions spanning 6,000 years.",
-        imageUrl: "https://images.unsplash.com/photo-1578895101408-1a5490642f42?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Bahrain International Circuit",
         description: "Home to the Formula 1 Bahrain Grand Prix, this state-of-the-art motorsport facility offers track experiences, karting, and tours. The circuit's innovative design and desert setting make it unique among Formula 1 venues.",
-        imageUrl: "https://images.unsplash.com/photo-1586899021945-72798540ad8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -175,6 +175,11 @@ const BahrainCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

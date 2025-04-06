@@ -21,7 +21,7 @@ const BosniaAndHerzegovinaCountry: React.FC = () => {
     timeZones: ["GMT+1 (CET)", "GMT+2 (CEST) - Summer"],
     callingCode: "+387",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1561891241-d4bd00a666c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2015/11/06/15/13/flag-1028137_1280.jpg",
     description: "Bosnia and Herzegovina is a heart-shaped country in the Balkan peninsula of Southeastern Europe. Known for its medieval villages, mountain landscapes, and a mix of Ottoman and Austro-Hungarian historical influences, it has become a tourist destination that blends natural beauty with rich cultural heritage and complex history.",
     whyVisit: "Bosnia and Herzegovina offers a compelling blend of stunning natural landscapes, fascinating history, and authentic cultural experiences that set it apart as a distinctly rewarding destination. Travelers are drawn to its dramatic mountains, emerald rivers, and medieval towns where different cultural influences—Ottoman, Austro-Hungarian, Yugoslav, and modern European—create a unique atmosphere unlike anywhere else in Europe. The country's tumultuous recent past has shaped a resilient population known for exceptional hospitality, while budget-friendly prices make even luxury experiences accessible. In cities like Sarajevo, visitors can explore streets where East literally meets West, with minarets and church spires defining a skyline that tells stories of coexistence across centuries. Beyond urban centers, pristine forests, spectacular waterfalls, and rugged mountains provide terrain for hiking, rafting, and winter sports without the crowds of more popular European destinations. Perhaps most compelling are the genuine interactions with locals eager to share their perspectives, creating travel memories centered on human connection rather than mere sightseeing.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const BosniaAndHerzegovinaCountry: React.FC = () => {
       {
         name: "Stari Most (Old Bridge), Mostar",
         description: "This iconic 16th-century Ottoman bridge spans the emerald waters of the Neretva River and stands as a powerful symbol of reconciliation after being destroyed in the 1990s conflict and meticulously reconstructed. The UNESCO-listed structure features a distinctive hump-backed silhouette made of local limestone. Visitors can watch traditional divers plunge 24 meters into the cold river below—a tradition going back over 400 years—explore historical exhibits in the towers at each end of the bridge, and wander through the surrounding Ottoman-style old town with its cobblestone streets, bazaars, and mosques.",
-        imageUrl: "https://images.unsplash.com/photo-1580835268949-de44d97b6559?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Sarajevo's Baščaršija",
         description: "The historic Ottoman heart of Sarajevo dates back to the 15th century and functions as both a living museum and vibrant commercial center. This pedestrianized network of narrow streets and small squares features the iconic Sebilj wooden fountain, coppersmith workshops where traditional coffee sets are still handcrafted, and numerous specialty shops selling handmade carpets, filigree jewelry, and wooden crafts. Visitors can explore historic caravanserais transformed into restaurants, numerous mosques including the 16th-century Gazi Husrev-beg Mosque complex, and experience the authentic atmosphere of traditional coffeehouses where Bosnian coffee is served in distinctive džezvas (copper pots) with rahat lokum (Turkish delight).",
-        imageUrl: "https://images.unsplash.com/photo-1603175745625-76b9160d3414?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Kravice Waterfalls",
         description: "This spectacular natural landmark on the Trebižat River features a broad, 25-meter high cascading waterfall system that stretches 120 meters across, creating a semicircular amphitheater of falls surrounded by lush Mediterranean vegetation. Crystal-clear turquoise pools form at the base of the falls, providing ideal swimming spots during summer months. Visitors can swim beneath the cascades, rent small boats to explore the wider water system, relax at nearby picnic areas, or hike trails offering panoramic viewpoints of the falls. The site remains relatively undeveloped compared to similar European attractions, preserving its natural beauty and tranquility.",
-        imageUrl: "https://images.unsplash.com/photo-1565760450214-d7d64740ee57?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Tunnel of Hope Museum, Sarajevo",
         description: "This powerful historical site preserves a section of the secret tunnel that served as a lifeline during the 1992-1995 Siege of Sarajevo—the longest capital city siege in modern warfare. The 800-meter tunnel, dug beneath the airport runway, provided the only connection between besieged Sarajevo and free Bosnian territory. Today, visitors can walk through a preserved 25-meter section of the original tunnel, view documentary footage and artifacts in the attached museum, and gain profound insights into civilian survival during the conflict through personal stories and exhibits. The house that concealed the tunnel entrance remains largely as it was during the war, complete with war damage, creating an immersive historical experience.",
-        imageUrl: "https://images.unsplash.com/photo-1563177078-4001d0b29995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Višegrad Bridge (Mehmed Paša Sokolović Bridge)",
         description: "This UNESCO-listed masterpiece of Ottoman architecture spans the emerald-green Drina River in eastern Bosnia. Completed in 1577 by the renowned Ottoman architect Mimar Sinan, the stone bridge features 11 wide arches and extends 179 meters in length. Made famous in Ivo Andrić's Nobel Prize-winning novel \"The Bridge on the Drina,\" it represents centuries of cultural exchange between East and West. Visitors can walk the entire length of the bridge, observe its perfect proportions from viewing points along the river, explore the small museum detailing its construction and historical significance, and visit nearby Andrićgrad, a cultural complex built by filmmaker Emir Kusturica that celebrates the region's heritage.",
-        imageUrl: "https://images.unsplash.com/photo-1663276017834-e43a633ef7f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -177,6 +177,11 @@ const BosniaAndHerzegovinaCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

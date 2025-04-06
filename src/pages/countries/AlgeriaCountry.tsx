@@ -22,7 +22,7 @@ const AlgeriaCountry: React.FC = () => {
     timeZones: ["GMT+1"],
     callingCode: "+213",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1631368231457-193a3cf7cf86?q=80&w=1000",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2013/07/12/15/32/flag-150112_1280.png",
     description: "Algeria, officially the People's Democratic Republic of Algeria, is the largest country in Africa by land area, situated in North Africa. With a Mediterranean coastline and vast Saharan desert interior, Algeria features diverse landscapes from coastal beaches to high mountain ranges and sand dunes. Its rich history spans Berber civilization, Phoenician and Roman rule, Arab conquest, Ottoman control, and French colonization before gaining independence in 1962.",
     whyVisit: "Algeria offers a blend of Mediterranean charm, Saharan adventure, and rich cultural heritage that remains largely unexplored by mass tourism. Visitors can explore well-preserved Roman ruins, wander through ancient kasbahs, trek across breathtaking desert landscapes, and experience authentic North African culture in bustling medinas. The country's relative lack of commercialization provides a more genuine cultural experience compared to some neighboring destinations.",
     bestTimeToVisit: {
@@ -68,27 +68,27 @@ const AlgeriaCountry: React.FC = () => {
       {
         name: "Tassili n'Ajjer",
         description: "A UNESCO World Heritage site in the Sahara featuring prehistoric rock art galleries with thousands of paintings and engravings dating back 6,000-12,000 years, as well as remarkable geological formations.",
-        imageUrl: "https://images.unsplash.com/photo-1574091443765-18b2981001f9?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Timgad",
         description: "An exceptionally well-preserved Roman colonial town founded in 100 CE, featuring a grid street plan, triumphal arch, library, and theater in an impressive state of preservation.",
-        imageUrl: "https://images.unsplash.com/photo-1580834341580-8c17a3a350f4?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Casbah of Algiers",
         description: "The historic heart of Algiers with its maze-like streets, Ottoman palaces, and traditional houses cascading down the hillside to the Mediterranean, recognized as a UNESCO World Heritage site.",
-        imageUrl: "https://images.unsplash.com/photo-1612908658119-04eb17530bd1?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Djémila",
         description: "A UNESCO-listed Roman ruins site set amid stunning mountains, featuring some of North Africa's best-preserved Berber-Roman architecture including temples, basilicas, and intricate mosaics.",
-        imageUrl: "https://images.unsplash.com/photo-1629113059829-dd5848e702e9?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Assekrem",
         description: "Located in the Hoggar Mountains, this high plateau offers stunning panoramic views of the Sahara Desert, especially at sunrise and sunset, with an accessible hermitage once used by Charles de Foucauld.",
-        imageUrl: "https://images.unsplash.com/photo-1550060448-2d3b836d7fcc?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -176,6 +176,11 @@ const AlgeriaCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

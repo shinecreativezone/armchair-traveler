@@ -21,7 +21,7 @@ const AustraliaCountry: React.FC = () => {
     timeZones: ["GMT+8 to GMT+10:30"],
     callingCode: "+61",
     drivingSide: "left" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?q=80&w=1000",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2016/01/29/17/49/banner-1168019_1280.jpg",
     description: "Australia is the world's sixth-largest country by total area and the largest in Oceania. With a diverse landscape spanning from arid outback to lush rainforests and iconic coastal regions, Australia offers extraordinary natural beauty and unique wildlife found nowhere else on Earth. Home to one of the world's oldest continuous cultures in indigenous Australians, as well as diverse communities from global migration, Australia blends ancient heritage with modern cosmopolitan cities.",
     whyVisit: "Australia offers travelers an unparalleled combination of natural wonders, pristine beaches, unique wildlife, and vibrant cities. From the iconic Sydney Opera House to the otherworldly landscapes of Uluru and the Great Barrier Reef—the world's largest coral reef system—Australia's diverse attractions cater to adventurers, nature lovers, and cultural enthusiasts alike. Visitors can experience Aboriginal cultural heritage dating back at least 65,000 years, explore world-class wine regions, encounter kangaroos and koalas in their natural habitats, and enjoy the laid-back yet sophisticated atmosphere of cities like Melbourne, Sydney, and Perth.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const AustraliaCountry: React.FC = () => {
       {
         name: "Great Barrier Reef",
         description: "The world's largest coral reef system comprising over 2,900 individual reefs and 900 islands stretching for 2,300 kilometers. This UNESCO World Heritage site offers unparalleled marine biodiversity with over 1,500 fish species, 400 coral types, and opportunities for snorkeling, diving, and glass-bottom boat tours.",
-        imageUrl: "https://images.unsplash.com/photo-1589007758669-c58c6f7d42ce?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Uluru-Kata Tjuta National Park",
         description: "Home to the iconic 348-meter-high sandstone monolith Uluru and the 36 red rock domes of Kata Tjuta (The Olgas). This UNESCO World Heritage site holds profound spiritual significance for indigenous Australians, with spectacular color changes at sunrise and sunset, and opportunities to learn about Aboriginal culture and ancient rock art.",
-        imageUrl: "https://images.unsplash.com/photo-1529108190281-9a4f620bc2d8?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Sydney Opera House",
         description: "A masterpiece of 20th-century architecture, this performing arts center features distinctive sail-shaped shells that have made it Australia's most recognizable building. Located at Sydney Harbour, it hosts over 1,500 performances annually across its multiple venues, and offers tours of its unique design and engineering.",
-        imageUrl: "https://images.unsplash.com/photo-1513315919434-fce931aecad5?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Twelve Apostles",
         description: "Magnificent limestone stacks rising dramatically from the Southern Ocean along Victoria's Great Ocean Road. Formed by erosion over millions of years, these towering formations (now numbering fewer than twelve) are best viewed at sunrise or sunset when the changing light creates spectacular visual effects.",
-        imageUrl: "https://images.unsplash.com/photo-1596241913242-b20b81d11e38?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Daintree Rainforest",
         description: "The world's oldest tropical rainforest, estimated to be over 180 million years old, located in Queensland. This UNESCO World Heritage site features extraordinary biodiversity with ancient plant species, unique wildlife including cassowaries and tree-kangaroos, pristine beaches where rainforest meets reef, and opportunities to experience indigenous culture.",
-        imageUrl: "https://images.unsplash.com/photo-1602517487505-4f3e9aab0cc2?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -176,6 +176,11 @@ const AustraliaCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

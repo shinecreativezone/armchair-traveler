@@ -21,7 +21,7 @@ const AustriaCountry: React.FC = () => {
     timeZones: ["GMT+1 (CET)", "GMT+2 (CEST) - Summer"],
     callingCode: "+43",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1516550893885-985c872c60da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2015/11/06/15/13/flag-1028137_1280.jpg",
     description: "Austria, officially the Republic of Austria, is a landlocked country in the southern part of Central Europe. Located in the Eastern Alps, it consists of nine federated states, including the capital Vienna. A country of striking natural beauty, rich cultural heritage, and remarkable historical significance, Austria combines Alpine landscapes with imperial grandeur.",
     whyVisit: "Austria offers an enchanting blend of natural splendor and cultural richness that appeals to almost every type of traveler. The majestic Eastern Alps provide a playground for outdoor enthusiasts, with world-class skiing in winter and spectacular hiking trails during summer months. Music lovers pilgrimage to Vienna, the classical music capital of the world, where the legacies of Mozart, Beethoven, and Strauss still resonate through concert halls housed in ornate baroque and art nouveau buildings. The country's imperial history has left an indelible mark on its cities, with magnificent palaces, grand boulevards, and opulent coffee houses where time seems to stand still. Austrian cuisine delights with its hearty Alpine fare, delicate pastries, and excellent wines from picturesque vineyard regions. The seamless blend of tradition and modernity is evident in its thriving contemporary art scene, innovative design districts, and cutting-edge architecture that complements historical landmarks. From the sophisticated urbanity of Vienna to the baroque splendor of Salzburg and the pristine alpine lakes of Salzkammergut, Austria packs an astonishing variety of experiences into a relatively compact space, making it an ideal destination for travelers seeking depth, beauty, and authentic European charm.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const AustriaCountry: React.FC = () => {
       {
         name: "Schönbrunn Palace",
         description: "This UNESCO World Heritage site served as the imperial summer residence for the Habsburg monarchs. The 1,441-room baroque palace is surrounded by meticulously landscaped gardens featuring fountains, sculptures, the world's oldest zoo, and the Gloriette viewpoint. Inside, the palace's state rooms showcase opulent rococo design with crystal chandeliers, frescoed ceilings, and gilded ornamentation. Guided tours reveal the daily lives and political machinations of Emperor Franz Joseph, Empress Elisabeth (Sisi), and other royal residents who shaped European history.",
-        imageUrl: "https://images.unsplash.com/photo-1603392711788-983129ba95a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Hallstatt Village and Lake",
         description: "This impossibly picturesque village nestled between mountains and a crystal-clear lake epitomizes Alpine beauty. The UNESCO-listed settlement features colorful 16th-century houses built on a narrow shore, with the world's oldest salt mine located above in the mountains. Visitors can explore prehistoric artifacts at the Hallstatt Museum, take boat trips on Lake Hallstatt, or admire panoramic views from the \"Five Fingers\" viewing platform. The nearby Dachstein Ice Cave and Mammoth Cave offer additional natural wonders, making this region a microcosm of Austria's alpine splendor.",
-        imageUrl: "https://images.unsplash.com/photo-1580777361964-27e9cdd2f838?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Belvedere Palace",
         description: "This baroque palace complex consists of two magnificent buildings—Upper and Lower Belvedere—connected by formal French gardens. Built as a summer residence for Prince Eugene of Savoy in the early 18th century, it now houses one of Austria's most important art collections. The Upper Belvedere showcases masterpieces including Gustav Klimt's \"The Kiss\" and works by Egon Schiele and Oskar Kokoschka, providing insight into Vienna's revolutionary art movements. The palace architecture itself, with its ornate interiors and reflective pools, represents Austrian baroque at its finest.",
-        imageUrl: "https://images.unsplash.com/photo-1620562423895-ad4924643d12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Grossglockner High Alpine Road",
         description: "This engineering marvel is Austria's highest paved mountain pass road, winding through the heart of Hohe Tauern National Park. The 48-kilometer scenic route features 36 hairpin turns, climbing to an altitude of 2,504 meters and offering unparalleled views of Alpine landscapes, including Austria's highest peak, the Grossglockner (3,798m). Wildlife viewing opportunities include marmots, ibex, and golden eagles, while the Pasterze Glacier visitor center explains the region's fragile alpine ecosystem. Open only from May to October, the road represents both natural splendor and human ingenuity.",
-        imageUrl: "https://images.unsplash.com/photo-1583322801509-d66694a49dbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Hofburg Imperial Palace",
         description: "The sprawling former principal imperial palace in Vienna's center served as the Habsburg dynasty's power base for over 600 years. This vast complex encompasses the Imperial Apartments, Sisi Museum, Spanish Riding School with its Lipizzaner stallions, Austrian National Library with its magnificent State Hall, and Imperial Treasury housing the crown jewels. The architectural styles span Gothic to Rococo to Neoclassical, reflecting centuries of additions. Today, it serves as the official residence of Austria's president while offering visitors a deep immersion into the country's imperial legacy.",
-        imageUrl: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -182,6 +182,11 @@ const AustriaCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

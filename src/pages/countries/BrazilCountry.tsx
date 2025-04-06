@@ -21,7 +21,7 @@ const BrazilCountry: React.FC = () => {
     timeZones: ["GMT-5 to GMT-2"],
     callingCode: "+55",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1518638150340-f706e86654de?q=80&w=1000",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2013/07/12/15/32/flag-150112_1280.png",
     description: "Brazil, the largest country in South America, occupies nearly half the continent and borders every South American nation except Chile and Ecuador. With its vast territory spanning tropical rainforests, wetlands, mountains, and thousands of kilometers of coastline, Brazil offers incredible geographic diversity. It's a place of vibrant cultural fusion where Indigenous, African, European, and Asian influences have created one of the world's most dynamic societies, known for its music, festivals, cuisine, and warmth of its people.",
     whyVisit: "Brazil offers travelers an unmatched combination of natural wonders, cultural vibrancy, and warm hospitality. From the mighty Amazon rainforest—home to the greatest biodiversity on Earth—to the thundering Iguaçu Falls and pristine beaches stretching along 7,500km of coastline, nature lovers will be captivated by Brazil's landscapes. Urban explorers can experience the pulsating energy of Rio de Janeiro, São Paulo's world-class cultural scene, and Salvador's colorful Afro-Brazilian heritage. Add to this the country's infectious music, delicious cuisine, iconic Carnival celebrations, and the famous Brazilian joie de vivre, and you have a destination that stimulates all the senses.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const BrazilCountry: React.FC = () => {
       {
         name: "Amazon Rainforest",
         description: "The world's largest tropical rainforest covers about 60% of Brazil and houses over 40,000 plant species, 1,300 bird species, and countless mammals, insects, and amphibians. Visitors can explore this incredible ecosystem through river cruises, jungle lodges, and guided tours from gateway cities like Manaus, experiencing indigenous communities, spotting pink river dolphins, and discovering the rich biodiversity.",
-        imageUrl: "https://images.unsplash.com/photo-1518182170546-07661fd94144?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Iguaçu Falls",
         description: "One of the world's most spectacular waterfall systems, consisting of 275 falls along 2.7 kilometers of the Iguaçu River. The Brazilian side offers panoramic views of these thundering cascades surrounded by rainforest, with the massive 'Devil's Throat' being particularly awe-inspiring. The surrounding national park is home to diverse wildlife including coatis, toucans, and butterflies.",
-        imageUrl: "https://images.unsplash.com/photo-1551017119-e89ba58edc27?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Christ the Redeemer & Sugarloaf Mountain",
         description: "Rio's iconic 30-meter Art Deco statue of Jesus Christ stands atop Corcovado Mountain, offering breathtaking panoramic views of the city. Nearby, the granite peak of Sugarloaf Mountain can be reached by cable car, providing another spectacular vantage point. Together, these landmarks showcase Rio's extraordinary setting between mountains, forests, and sea.",
-        imageUrl: "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Pantanal Wetlands",
         description: "The world's largest tropical wetland area offers Brazil's best wildlife viewing opportunities. Unlike the dense Amazon, the open landscapes of the Pantanal make it easier to spot animals like jaguars, capybaras, giant anteaters, and hundreds of bird species. Visitors can explore by boat, horseback, or safari vehicle, with the dry season (April to September) offering optimal wildlife viewing.",
-        imageUrl: "https://images.unsplash.com/photo-1598979713692-5f9e7d52533f?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Historic Salvador",
         description: "The colorful colonial center of Salvador (Pelourinho) features cobblestone streets, pastel-colored buildings, ornate churches, and lively squares. As Brazil's first capital and a major port for the slave trade, Salvador showcases the rich Afro-Brazilian culture through music, dance, cuisine, and religious practices. Don't miss the São Francisco Church with its spectacular gold-covered interior.",
-        imageUrl: "https://images.unsplash.com/photo-1518139223840-c3f45b424ebd?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -176,6 +176,11 @@ const BrazilCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

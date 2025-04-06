@@ -21,7 +21,7 @@ const CanadaCountry: React.FC = () => {
     timeZones: ["UTC-8 to UTC-3.5"],
     callingCode: "+1",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1569700946559-15e8d75cf0f1?q=80&w=1000",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2016/01/29/17/49/banner-1168019_1280.jpg",
     description: "Canada, the second-largest country in the world by total area, spans from the Atlantic to the Pacific and northward into the Arctic Ocean. Known for its vast wilderness, multicultural cities, and welcoming atmosphere, Canada offers a diverse landscape of mountains, forests, prairies, and coastlines. With a commitment to social welfare, healthcare, and education, Canada consistently ranks among the world's most livable countries. Its society is characterized by diversity, tolerance, and a strong emphasis on maintaining a balance between individual rights and collective responsibilities.",
     whyVisit: "Canada offers travelers an abundance of natural wonders, from the spectacular Rocky Mountains to the pristine lakes of the Muskoka region and the dramatic coastlines of Newfoundland. Its vibrant cities like Toronto, Vancouver, and Montreal blend cosmopolitan sophistication with old-world charm, providing world-class dining, arts, and culture. Adventure seekers can explore ancient forests, witness the Northern Lights, or encounter diverse wildlife including bears, moose, and whales. Indigenous tourism experiences offer insights into the rich cultures of First Nations, Inuit, and Métis peoples. With safe cities, excellent infrastructure, and four distinct seasons offering different experiences, Canada provides an ideal destination for all types of travelers.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const CanadaCountry: React.FC = () => {
       {
         name: "Banff National Park",
         description: "Canada's first national park offers some of North America's most spectacular mountain scenery. Located in the heart of the Rocky Mountains, Banff features turquoise glacial lakes including the iconic Lake Louise and Moraine Lake, towering peaks, abundant wildlife, and the charming townsite of Banff. Visitors can enjoy hiking, skiing, hot springs, and scenic drives along the Icefields Parkway, widely considered one of the world's most beautiful highways. The park's combination of accessibility and wilderness makes it Canada's most visited natural attraction.",
-        imageUrl: "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Niagara Falls",
         description: "The massive horseshoe-shaped waterfall on the Canada-US border is one of the world's most famous natural wonders. The Canadian side offers the most impressive views of all three falls (Horseshoe, American, and Bridal Veil), with 90% of the Niagara River flowing over the Canadian Horseshoe Falls. Beyond the breathtaking cascades, visitors can experience boat tours that venture close to the thundering waters, explore tunnels behind the falls, or enjoy the lively Clifton Hill entertainment district and numerous wineries in the surrounding Niagara region.",
-        imageUrl: "https://images.unsplash.com/photo-1524338198850-8a2ff63aaceb?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Old Quebec City",
         description: "The only fortified city north of Mexico, Old Quebec's remarkable preservation transports visitors back to New France. This UNESCO World Heritage site features 17th and 18th-century architecture, including the imposing Citadelle fortress, centuries-old churches, and the landmark Château Frontenac hotel. Visitors can walk along the 4.6 km of preserved ramparts, explore the charming Petit-Champlain district with its artisan shops, or dine in restaurants serving traditional Québécois cuisine. The district's European atmosphere and historical significance make it unlike anywhere else in North America.",
-        imageUrl: "https://images.unsplash.com/photo-1519181258491-889c2b001485?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Northern Lights in Yukon",
         description: "The Yukon Territory offers some of the world's best viewing of the Aurora Borealis, with its northern location, minimal light pollution, and clear winter skies. From August to April, visitors can witness the spectacular natural light show as it dances across the night sky in shades of green, pink, and purple. The area around Whitehorse provides comfortable accommodations and guided aurora viewing experiences, while more remote locations offer pristine wilderness settings for this magical phenomenon. The combination of the Northern Lights with snow-covered landscapes creates an unforgettable Arctic experience.",
-        imageUrl: "https://images.unsplash.com/photo-1483086431886-3590a88317fe?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Polar Bears in Churchill",
         description: "The small northern town of Churchill, Manitoba, is known as the 'Polar Bear Capital of the World,' offering unparalleled opportunities to observe these magnificent creatures in their natural habitat. Each fall, hundreds of polar bears gather along Hudson Bay, waiting for the water to freeze so they can hunt seals. Specialized tundra vehicles take visitors safely into the bears' territory, providing close encounters with the world's largest land predators. Beyond bears, Churchill also offers beluga whale watching in summer and exceptional Northern Lights viewing in winter, making it a prime destination for wildlife enthusiasts.",
-        imageUrl: "https://images.unsplash.com/photo-1589656966895-2f33e7653819?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -176,6 +176,11 @@ const CanadaCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

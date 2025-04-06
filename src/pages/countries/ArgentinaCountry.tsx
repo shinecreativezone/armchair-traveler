@@ -21,7 +21,7 @@ const ArgentinaCountry: React.FC = () => {
     timeZones: ["GMT-3"],
     callingCode: "+54",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1589909202802-8f4aadce1849?q=80&w=1000",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2017/01/31/14/43/flag-2024732_1280.png",
     description: "Argentina is a vast South American country with terrain encompassing the Andes mountains, glacial lakes, and Pampas grassland. The eighth-largest country in the world, it boasts a rich cultural heritage shaped by indigenous peoples, Spanish colonization, and waves of European immigration. From the subtropical north to the subpolar south, Argentina offers extraordinary geographic diversity paired with a passionate national character.",
     whyVisit: "Argentina offers travelers an extraordinary blend of cultural richness and natural wonders. The country is home to passionate tango dancers and world-class beef, vibrant Buenos Aires with its European architecture, and the untamed wilderness of Patagonia with its glaciers and mountains. Wine enthusiasts can explore Mendoza's vineyards, while adventure seekers can witness the thundering Iguazú Falls. With its diverse landscapes ranging from subtropical forests to subpolar regions, friendly locals, and incredible cuisine, Argentina provides unforgettable experiences for every type of traveler.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const ArgentinaCountry: React.FC = () => {
       {
         name: "Iguazú Falls",
         description: "A breathtaking system of 275 waterfalls on the Argentina-Brazil border. The Devil's Throat is the most impressive section, where water plunges 82 meters. The surrounding subtropical rainforest houses diverse wildlife including toucans, coatis, and butterflies.",
-        imageUrl: "https://images.unsplash.com/photo-1581461249918-c060f4571e4c?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Perito Moreno Glacier",
         description: "One of the few advancing glaciers in the world, located in Los Glaciares National Park. The 250 km² ice formation rises 74 meters above Lago Argentino and periodically creates spectacular ice collapses as it advances. Walkways allow visitors to view the glacier from different perspectives.",
-        imageUrl: "https://images.unsplash.com/photo-1551398659-42f98cc89b92?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Recoleta Cemetery",
         description: "Located in Buenos Aires' upscale Recoleta neighborhood, this extraordinary cemetery contains elaborate mausoleums of Argentina's notable figures. Most famous is Eva Perón's tomb, but the cemetery also impresses with its Art Deco, Art Nouveau, and Neo-Gothic architectural styles.",
-        imageUrl: "https://images.unsplash.com/photo-1589308155089-281d2360e56a?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Quebrada de Humahuaca",
         description: "A UNESCO World Heritage Site in northwest Argentina featuring a spectacular mountain valley with multicolored rock formations including the famous Hill of Seven Colors. The valley has been a crucial trade route for 10,000 years and contains pre-Hispanic settlements and colonial churches.",
-        imageUrl: "https://images.unsplash.com/photo-1589245891263-e31a8fb1440f?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Tierra del Fuego National Park",
         description: "Argentina's only coastal national park, located at the southern tip of the continent. Features dramatic scenery with mountains meeting the sea, subpolar forests, peat bogs, and diverse wildlife. The park is crossed by the historic End of the World Train and offers stunning hiking trails.",
-        imageUrl: "https://images.unsplash.com/photo-1609971757431-26db68fcaccb?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -176,6 +176,11 @@ const ArgentinaCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

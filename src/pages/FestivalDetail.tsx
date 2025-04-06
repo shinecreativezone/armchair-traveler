@@ -188,6 +188,11 @@ export default function FestivalDetail() {
                   Whether you're a seasoned festival-goer or experiencing it for the first time, the {festival.name} offers
                   an unforgettable journey into the heart of {festival.country}'s cultural identity.
                 </p>
+                
+                {/* GetYourGuide Widget */}
+                <div className="mt-6">
+                  <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+                </div>
               </div>
             </div>
             

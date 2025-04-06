@@ -21,7 +21,7 @@ const BahamasCountry: React.FC = () => {
     timeZones: ["GMT-5"],
     callingCode: "+1-242",
     drivingSide: "left" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1559033944-58f7b0239a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2013/07/12/15/32/flag-150112_1280.png",
     description: "The Bahamas is an archipelago of over 700 islands and 2,000 cays in the Atlantic Ocean, renowned for its crystal-clear waters, pristine beaches, and vibrant coral reefs. As a former British colony, it combines Caribbean and British influences in its culture and traditions.",
     whyVisit: "The Bahamas offers a paradise-like experience with some of the clearest waters in the world and extraordinary marine life. The archipelago caters to a wide range of interests, from luxury resorts on Nassau and Paradise Island to secluded getaways on the Out Islands. Visitors can swim with pigs at Big Major Cay, explore the world's deepest blue hole at Dean's Blue Hole, or dive among colorful coral reefs teeming with sea life. The islands are also rich in history, from pirate legends to colonial architecture. With each island offering its own unique character and attractions, the Bahamas provides an opportunity to experience multiple 'flavors' of Caribbean bliss in one country.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const BahamasCountry: React.FC = () => {
       {
         name: "Exuma Cays",
         description: "A chain of 365 islands and cays offering some of the most beautiful waters in the world. Famous for the swimming pigs at Big Major Cay, nurse sharks at Compass Cay, and the natural phenomenon of the Thunderball Grotto featured in James Bond films.",
-        imageUrl: "https://images.unsplash.com/photo-1577401239170-897942555fb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Pink Sands Beach",
         description: "Located on Harbour Island, this three-mile stretch of pink-hued sand derives its color from crushed red shells of foraminifera. The calm, turquoise waters make it perfect for swimming, and the beach is lined with palm trees providing natural shade.",
-        imageUrl: "https://images.unsplash.com/photo-1633008808000-6a19cbc9c884?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Atlantis Paradise Island",
         description: "A massive resort complex featuring water attractions, marine habitats with over 50,000 sea creatures, casino gaming, luxury shopping, and the iconic pink Royal Towers. The Aquaventure water park includes thrilling slides and a lazy river.",
-        imageUrl: "https://images.unsplash.com/photo-1544551763-92ab472cad5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Dean's Blue Hole",
         description: "Located on Long Island, this is the world's second-deepest known blue hole, plunging to a depth of 202 meters (663 feet). The clear waters and dramatic underwater formations make it a premier destination for free divers and snorkelers.",
-        imageUrl: "https://images.unsplash.com/photo-1545128834-24b6076fa148?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Lucayan National Park",
         description: "On Grand Bahama Island, this park protects one of the world's longest underwater cave systems. Visitors can explore Gold Rock Beach, mangrove swamps via boardwalks, and limestone caves filled with stalactites and stalagmites.",
-        imageUrl: "https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -178,6 +178,11 @@ const BahamasCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

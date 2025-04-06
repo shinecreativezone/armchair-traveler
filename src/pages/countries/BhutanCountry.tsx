@@ -21,7 +21,7 @@ const BhutanCountry: React.FC = () => {
     timeZones: ["GMT+6"],
     callingCode: "+975",
     drivingSide: "left" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1611272335903-a644043038ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1469&q=80",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2012/04/16/12/43/flag-35845_1280.png",
     description: "Bhutan, officially the Kingdom of Bhutan, is a landlocked country in the Eastern Himalayas between China and India. Known as 'Druk Yul' (Land of the Thunder Dragon), this Buddhist kingdom is renowned for measuring national happiness through its Gross National Happiness index rather than GDP and for its commitment to conservation and sustainable tourism.",
     whyVisit: "Bhutan offers an exceptional opportunity to experience a country that has prioritized cultural preservation, environmental conservation, and the pursuit of happiness over material development. Nestled in the Eastern Himalayas, this last remaining Buddhist kingdom features breathtaking mountain landscapes, ornate monasteries perched on cliff edges, and vibrant festivals where ancient mask dances bring mythology to life. Visitors can trek through pristine forests that cover over 70% of the country, encountering rare wildlife like the endangered black-necked crane or the elusive snow leopard. Bhutan's enlightened tourism policy of 'high value, low impact' means fewer crowds and more authentic experiences. The country's unique philosophical approach to development, measured through Gross National Happiness rather than GDP, has created a society where traditional values coexist harmoniously with necessary modernization. This mindful balance makes Bhutan not just a destination but a transformative experience that challenges Western notions of progress and success.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const BhutanCountry: React.FC = () => {
       {
         name: "Paro Taktsang (Tiger's Nest Monastery)",
         description: "Perched dramatically on a cliff 900 meters (3,000 feet) above the valley floor, this sacred Buddhist site is Bhutan's most recognized landmark. Legend claims that Guru Rinpoche flew here on a tigress to meditate in the 8th century, bringing Buddhism to Bhutan. The challenging 2-3 hour hike rewards visitors with magnificent views and access to a complex of white buildings with golden roofs housing temples, meditation caves, and religious art.",
-        imageUrl: "https://images.unsplash.com/photo-1580181584580-125435b91639?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Punakha Dzong",
         description: "Often described as the most beautiful fortress in Bhutan, this massive structure sits at the confluence of the Pho (male) and Mo (female) Rivers. Built in 1637, it serves as the winter residence for Bhutan's monastic body. The dzong showcases masterful craftsmanship with its towering whitewashed walls, intricate woodwork, and golden roofs. Inside, visitors find ornate courtyards, elaborate murals depicting Buddhist teachings, and the preserved remains of Zhabdrung Ngawang Namgyal, Bhutan's founder.",
-        imageUrl: "https://images.unsplash.com/photo-1547958336-fc26d1d398d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Dochula Pass",
         description: "Located on the road between Thimphu and Punakha at 3,100 meters (10,200 feet), this mountain pass offers breathtaking panoramic views of the Himalayan range on clear days. The site features 108 memorial chortens (stupas) known as Druk Wangyal Chortens, built in honor of Bhutanese soldiers who died fighting Indian insurgents in 2003. A nearby temple contains striking religious paintings and a meditation center. The rhododendron forests surrounding the pass burst with color during spring.",
-        imageUrl: "https://images.unsplash.com/photo-1556793101-9c246ac8dffd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1476&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Trongsa Dzong",
         description: "This massive fortress, often called 'the dragon on the mountain ridge,' is strategically positioned above the Mangde River gorge, commanding the east-west route through central Bhutan. Built in 1644, it was the ancestral home of Bhutan's monarchy, and all kings must serve as Trongsa governors before ascending the throne. The dzong's complex maze of courtyards, passages, and temples illustrates Bhutanese architectural ingenuity, while offering historical insights through its museum housed in the watchtower (Ta Dzong).",
-        imageUrl: "https://images.unsplash.com/photo-1592285896110-31fdb6074183?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Gangtey Valley (Phobjikha)",
         description: "This broad glacial valley at approximately 3,000 meters (9,840 feet) is one of Bhutan's most scenic landscapes and an important wildlife preserve. From late October to mid-February, it hosts around 500 endangered black-necked cranes that migrate from Tibet. The 17th-century Gangtey Monastery overlooks the valley, offering stunning views of the wetlands below. Nature trails wind through potato fields, pine forests, and farming villages, providing intimate glimpses of rural Bhutanese life.",
-        imageUrl: "https://images.unsplash.com/photo-1573048546389-33b9124e6a42?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -176,6 +176,11 @@ const BhutanCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

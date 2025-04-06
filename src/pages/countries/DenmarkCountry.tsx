@@ -21,7 +21,7 @@ const DenmarkCountry: React.FC = () => {
     timeZones: ["UTC+1 (CET), UTC+2 (CEST)"],
     callingCode: "+45",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?q=80&w=1000",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2012/04/16/12/43/flag-35845_1280.png",
     description: "Denmark, a Nordic country in Northern Europe, is renowned for its high quality of life, innovative design, and progressive social policies. Consisting of the Jutland Peninsula and numerous islands, this small nation combines historic charm with modern efficiency. Denmark is known for its bicycle culture, hygge (a concept of coziness and contentment), and as the birthplace of LEGO and fairy tale author Hans Christian Andersen.",
     whyVisit: "Denmark offers visitors a perfect blend of historic sites, cutting-edge design, and natural beauty. Copenhagen dazzles with its colorful harbor, world-class museums, and innovative culinary scene, while charming towns like Aarhus and Odense provide glimpses into the country's rich history. Nature lovers can explore pristine beaches, lush forests, and gentle rolling landscapes. The Danish emphasis on work-life balance has created a culture that values quality experiences, making it an ideal destination for travelers seeking authenticity, style, and relaxation in a country consistently ranked among the world's happiest.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const DenmarkCountry: React.FC = () => {
       {
         name: "Tivoli Gardens",
         description: "One of the world's oldest amusement parks, located in central Copenhagen. This enchanting attraction combines beautiful gardens, historic architecture, and thrilling rides. At night, thousands of lights create a magical atmosphere, while summer brings outdoor concerts and winter transforms the gardens into a festive Christmas market.",
-        imageUrl: "https://images.unsplash.com/photo-1564572490489-48c76777dc84?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Nyhavn",
         description: "Copenhagen's iconic 17th-century waterfront lined with brightly colored townhouses, restaurants, and bars. This picturesque canal was once a busy commercial port but now serves as one of the city's most popular gathering spots. Several houses along the canal were home to fairy tale author Hans Christian Andersen, and historic wooden ships add to the maritime atmosphere.",
-        imageUrl: "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Kronborg Castle",
         description: "This UNESCO World Heritage site in Helsingør (Elsinore) is known worldwide as the setting for Shakespeare's Hamlet. The impressive Renaissance fortress guards the narrow strait between Denmark and Sweden, featuring grand halls, a vast banquet room, extensive dungeons, and ramparts with panoramic views. Built in the 1420s and expanded in the 16th century, Kronborg has played a crucial role in Danish history as both a royal residence and strategic military fortress.",
-        imageUrl: "https://images.unsplash.com/photo-1605185702429-1cfa87b44927?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "The Little Mermaid",
         description: "This modest yet iconic bronze statue in Copenhagen harbor has become a symbol of Denmark. Created by Edvard Eriksen in 1913 and inspired by Hans Christian Andersen's fairy tale, the sculpture depicts a mermaid becoming human for love. Though smaller than many visitors expect (just 1.25 meters tall), the statue represents Denmark's maritime heritage and connection to Andersen's literary legacy. Despite having been vandalized several times throughout its history, the Little Mermaid remains Denmark's most photographed attraction.",
-        imageUrl: "https://images.unsplash.com/photo-1608366072428-05d7a132c5f3?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "ARoS Aarhus Art Museum",
         description: "One of Scandinavia's largest art museums features a stunning rooftop installation called 'Your Rainbow Panorama' by Olafur Eliasson - a 150-meter circular walkway with glass in every color of the spectrum offering spectacular views of Aarhus through different colored filters. The museum's impressive collection spans from the Golden Age of Danish Painting to contemporary installations, including the dramatic 'Boy' sculpture by Australian artist Ron Mueck. The building itself represents modern Danish architecture at its finest.",
-        imageUrl: "https://images.unsplash.com/photo-1559468335-d8204e2f5855?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -176,6 +176,11 @@ const DenmarkCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

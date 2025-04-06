@@ -21,7 +21,7 @@ const FranceCountry: React.FC = () => {
     timeZones: ["UTC+1 (CET), UTC+2 (CEST)"],
     callingCode: "+33",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1000",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2015/11/06/15/13/flag-1028137_1280.jpg",
     description: "France, located in Western Europe, is one of the world's most visited countries, renowned for its exquisite cuisine, rich cultural heritage, and iconic landmarks. From the romantic allure of Paris to the sun-drenched beaches of the Riviera, the snow-capped Alps, and the pastoral landscapes of Provence, France offers remarkable geographical diversity. Its contributions to art, literature, philosophy, fashion, and gastronomy have shaped global culture, while its historical significance as a political and economic power continues to influence international affairs.",
     whyVisit: "France captivates visitors with a perfect blend of history, culture, and sensory pleasures. Art enthusiasts can marvel at masterpieces in the Louvre and impressionist works in Musée d'Orsay, while architecture lovers can admire Gothic cathedrals, Renaissance châteaux, and modernist landmarks. Culinary travelers will delight in regional specialties, world-class wines, and the ritual of café culture. Beyond Paris, each region offers distinct experiences: from the lavender fields of Provence and the vineyards of Bordeaux to the alpine resorts of Chamonix and the prehistoric caves of Dordogne. With its emphasis on the art of living well ('l'art de vivre'), France invites visitors to slow down and savor life's pleasures.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const FranceCountry: React.FC = () => {
       {
         name: "Eiffel Tower",
         description: "This wrought-iron lattice tower on the Champ de Mars in Paris has become the global icon of France. Completed in 1889 for the World's Fair, the structure initially faced criticism but now stands as one of the world's most recognizable landmarks. Visitors can ascend to three different levels, with the top offering panoramic views extending 70 kilometers on clear days. The tower is particularly magical at night when its 20,000 bulbs create a sparkling light show every hour.",
-        imageUrl: "https://images.unsplash.com/photo-1543349689-9a4d426bee8e?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Palace of Versailles",
         description: "The former royal residence located just outside Paris epitomizes the grandeur of the French monarchy. Built by Louis XIV, the 'Sun King,' this UNESCO World Heritage site features the opulent palace with the famous Hall of Mirrors, where the Treaty of Versailles was signed ending World War I. The estate includes meticulously manicured formal gardens designed by André Le Nôtre, the Grand and Petit Trianon palaces, and Marie Antoinette's rustic hamlet. The palace's 2,300 rooms display remarkable craftsmanship and historical artifacts.",
-        imageUrl: "https://images.unsplash.com/photo-1548115184-bc6544d06a58?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Mont Saint-Michel",
         description: "This medieval abbey perched on a rocky tidal island off the Normandy coast creates one of France's most spectacular sights. Connected to the mainland by a causeway, the UNESCO-listed Mont Saint-Michel appears to rise mystically from the sea during high tide. The abbey itself represents a masterpiece of medieval architecture, with spiraling streets below filled with shops and restaurants. Visiting at different tide levels offers completely different perspectives of this remarkable site that has served as both a fortress and a spiritual center over its thousand-year history.",
-        imageUrl: "https://images.unsplash.com/photo-1596394723269-b2cbca4e6463?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Louvre Museum",
         description: "Housed in a former royal palace in central Paris, the Louvre is the world's most-visited museum and home to thousands of works of art spanning human civilization. While many visitors come to see Leonardo da Vinci's Mona Lisa, the collection includes countless other masterpieces like the Venus de Milo, Winged Victory of Samothrace, Liberty Leading the People, and treasures from ancient Egypt, Greece, and Rome. The museum's striking glass pyramid entrance, designed by I.M. Pei, has become an iconic landmark in its own right, symbolizing the blend of historical and contemporary that characterizes Paris.",
-        imageUrl: "https://images.unsplash.com/photo-1591728625957-373b30b12eec?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "French Riviera (Côte d'Azur)",
         description: "The Mediterranean coastline stretching from Cassis to the Italian border represents the epitome of glamorous seaside living. Names like Saint-Tropez, Cannes, and Monaco evoke images of luxury yachts, film festivals, and celebrity sightings, but the region also offers authentic fishing villages, ancient towns, and secluded beaches. Visitors can explore the artistic heritage of towns like Antibes and Saint-Paul-de-Vence, hike along stunning coastal paths, or simply enjoy the region's perfect combination of sophisticated cuisine, crystalline waters, and abundant sunshine that has attracted travelers for centuries.",
-        imageUrl: "https://images.unsplash.com/photo-1511184117514-a1e34a6e3276?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -176,6 +176,11 @@ const FranceCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

@@ -21,7 +21,7 @@ const BruneiCountry: React.FC = () => {
     timeZones: ["GMT+8 (Brunei Time)"],
     callingCode: "+673",
     drivingSide: "left" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1588416499018-d8c23c516542?ixlib=rb-4.0.3&auto=format&fit=crop&w=1476&q=80",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2015/11/06/15/13/flag-1028137_1280.jpg",
     description: "Brunei is a small, oil-rich sultanate on the island of Borneo in Southeast Asia. Known for its pristine rainforests, opulent Islamic architecture, and wealthy, conservative society, Brunei offers visitors a glimpse into a unique blend of traditional Malay culture and modern Islamic values under the world's longest-reigning current monarch.",
     whyVisit: "Brunei presents travelers with a fascinating glimpse into a prosperous Islamic monarchy where centuries-old traditions blend seamlessly with oil-funded modernization. Unlike its more developed Southeast Asian neighbors, Brunei remains refreshingly authentic with pristine rainforests covering 70% of its territory, offering rare wildlife encounters without the crowds. The country's strict Islamic governance has preserved its cultural identity and created a remarkably safe, clean environment where gold-domed mosques and water villages contrast with modern infrastructure. Visitors can explore one of the world's largest residential palaces, witness traditional water village life virtually unchanged for centuries, and experience some of Borneo's most accessible primary rainforest. The absence of alcohol and nightlife creates a family-friendly destination focused on natural beauty, cultural heritage, and culinary exploration. With excellent infrastructure, widespread English fluency, and relatively few tourists, Brunei rewards travelers seeking alternative Southeast Asian experiences with meaningful cultural exchanges and natural wonders without the commercialization found elsewhere in the region.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const BruneiCountry: React.FC = () => {
       {
         name: "Sultan Omar Ali Saifuddien Mosque",
         description: "This architectural masterpiece represents the heart of Brunei's Islamic identity and stands as one of Southeast Asia's most magnificent mosques. Completed in 1958, the mosque features a gleaming golden dome, white marble exterior, and Italian marble floors complemented by English chandeliers and Arabian carpets. Surrounded by an artificial lagoon that enhances its beauty through mirror-like reflections, the mosque also features a ceremonial stone boat in the lagoon—a replica of a 16th-century royal barge. Rising 52 meters, the main minaret blends Mughal and Italian architectural influences while incorporating geometric Islamic patterns. The interior accommodates 3,000 worshippers with spaces divided for men and women according to Islamic tradition. At night, carefully designed lighting transforms the mosque into an ethereal landmark visible throughout the capital. While non-Muslims cannot enter during prayer times, visitors are welcome outside these hours if modestly dressed, offering a glimpse into Brunei's religious devotion and architectural achievement.",
-        imageUrl: "https://images.unsplash.com/photo-1596162335416-74f07743b664?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Kampong Ayer",
         description: "Known as the 'Venice of the East,' Kampong Ayer is the world's largest water village where approximately 13,000 people maintain a traditional lifestyle in houses built on stilts over the Brunei River. This network of 42 interconnected villages stretches for 8 kilometers and has existed for over 1,000 years, representing the historical heart of Brunei's civilization before land reclamation expanded the modern capital. The settlement features fully functioning infrastructure including schools, mosques, police stations, and fire departments—all built over water and connected by a network of wooden walkways and water taxi services. Traditional wooden homes painted in vibrant colors stand alongside modern structures with satellite dishes and air conditioning, demonstrating how residents blend traditional living with contemporary comforts. Visitors can explore the village via water taxi tours or wander the walkways, visit the cultural and tourism gallery showcasing traditional crafts, observe local boatbuilders practicing ancient techniques, and even arrange homestays with local families for an immersive experience of this unique community that has maintained its identity despite rapid modernization elsewhere in Brunei.",
-        imageUrl: "https://images.unsplash.com/photo-1592463542781-11a1b53a7c13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Ulu Temburong National Park",
         description: "Often called the 'Green Jewel of Brunei,' this pristine national park protects 50,000 hectares of untouched primary rainforest in Brunei's eastern Temburong District. Accessible only by boat and completely separated from the main part of Brunei by Malaysia's Limbang region, the park offers Borneo's most accessible virgin rainforest experience. The journey itself is part of the adventure—travelers take longboat rides through winding rivers lined with nipah palms and mangroves before hiking to the park's centerpiece: a 50-meter-high canopy walkway providing breathtaking views over unbroken jungle stretching to distant mountains. The park boasts extraordinary biodiversity including 400 butterfly species, numerous primates including rare proboscis monkeys and gibbons, and over 400 tree species within a single hectare. Visitors can experience refreshing waterfalls with natural pools perfect for swimming, guided night walks revealing nocturnal creatures, and scientific research facilities where international botanists study one of Earth's oldest rainforest ecosystems. As it requires advanced arrangements and can only accommodate limited numbers daily, Ulu Temburong offers an uncrowded, authentic wilderness experience increasingly rare in Southeast Asia.",
-        imageUrl: "https://images.unsplash.com/photo-1577717908446-6fea18fbb75e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Jame'Asr Hassanil Bolkiah Mosque",
         description: "Built to commemorate the 25th anniversary of the current Sultan's reign, this magnificent mosque is Brunei's largest and among the most impressive in Southeast Asia. Completed in 1994, the structure features 29 golden domes representing Brunei's rulers and four towering minarets rising 58 meters above meticulously landscaped gardens. The mosque accommodates 5,000 worshippers inside spaces adorned with Italian marble, hand-crafted mosaics, and intricate calligraphy, while exterior walls incorporate geometric patterns symbolizing Islamic mathematical traditions. Twenty-nine domes covered in 24-carat gold leaf create a stunning visual display especially at sunset when they glow brilliantly against the darkening sky. Surrounding the mosque, carefully designed gardens feature fountains, reflecting pools, and ceremonial walkways used during royal religious events. At night, sophisticated lighting transforms the structure into a luminous landmark visible throughout the city. The mosque welcomes non-Muslim visitors outside prayer times, providing traditional attire for those not dressed appropriately, offering a glimpse into both Brunei's religious devotion and its oil-funded architectural achievements.",
-        imageUrl: "https://images.unsplash.com/photo-1621274221366-d6d1801c713d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Royal Regalia Museum",
         description: "Housed in a distinctive domed building in central Bandar Seri Begawan, this museum showcases the extraordinary wealth and royal traditions of Brunei's monarchy. The centerpiece is a detailed recreation of the Sultan's 1968 coronation, complete with the original golden chariot that carried him through the streets, ceremonial regalia, and jewel-encrusted crowns. Another gallery displays extravagant gifts presented to the Sultan by world leaders and dignitaries, ranging from solid gold models of petroleum platforms to intricate crystal works and ceremonial weapons, offering insight into international diplomatic relations. The Constitutional History Gallery documents Brunei's evolution from British protectorate to independent sultanate through historical photographs, documents, and interactive displays. A special collection showcases the current Sultan's life through personal items, photographs from state occasions, and displays of royal ceremonial attire featuring gold thread embroidery and precious stones. The museum provides complimentary guided tours in English, and visitors must remove shoes before entering the main galleries, where photography is prohibited to protect the valuable collections that represent Brunei's royal heritage and modern identity as a wealthy Islamic monarchy.",
-        imageUrl: "https://images.unsplash.com/photo-1607309843948-749e3f1a517f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -176,6 +176,11 @@ const BruneiCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

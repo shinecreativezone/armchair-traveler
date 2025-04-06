@@ -21,7 +21,7 @@ const GermanyCountry: React.FC = () => {
     timeZones: ["UTC+1 (CET), UTC+2 (CEST)"],
     callingCode: "+49",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1527866512907-a35a62a0f6c5?q=80&w=1000",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2016/01/29/17/49/banner-1168019_1280.jpg",
     description: "Germany, situated in the heart of Europe, is a country of diverse landscapes, from the mountains of Bavaria to the coastal plains of the north. As Europe's largest economy and most populous nation, it combines cutting-edge innovation with rich historical heritage. Known for its precision engineering, cultural contributions, and influential role in European politics, Germany has emerged from a tumultuous 20th century to become a global leader in renewable energy, technological advancement, and social welfare.",
     whyVisit: "Germany offers visitors an appealing blend of cultural depth, natural beauty, and modern efficiency. History enthusiasts can explore everything from medieval castles and baroque palaces to poignant World War II memorials. The country's artistic legacy is evident in world-class museums, concert halls, and the homes of renowned composers and thinkers. Nature lovers can discover the Black Forest, Alpine lakes, and pristine Baltic beaches, while urban explorers will appreciate the distinct character of cities like Berlin, Munich, and Hamburg. Add to this the famous German hospitality, excellent public transportation, regional culinary specialties, and celebrated beer culture, and you have a destination that rewards repeat visits across different regions and seasons.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const GermanyCountry: React.FC = () => {
       {
         name: "Neuschwanstein Castle",
         description: "This 19th-century Romanesque Revival palace in Bavaria has become an iconic symbol of Germany. Built by King Ludwig II as an idealized vision of a medieval knight's castle, it later inspired Walt Disney's Sleeping Beauty Castle. Perched dramatically on a rugged hill above the village of Hohenschwangau, its fairy-tale towers and ornate interiors attract over 1.4 million visitors annually. The castle's lavish rooms feature Byzantine, Romanesque, and Gothic influences, with murals depicting scenes from Wagner's operas, reflecting Ludwig's admiration for the composer.",
-        imageUrl: "https://images.unsplash.com/photo-1515735543535-12664d2453cf?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Brandenburg Gate",
         description: "This 18th-century neoclassical monument in Berlin has witnessed crucial moments in German history and now symbolizes unity and peace. Originally built as a city gate marking the start of the road to Brandenburg an der Havel, it later served as a potent symbol during the Cold War when the Berlin Wall isolated it in the no-man's land between East and West. After Germany's reunification, the restored gate became a national symbol of unity. The structure features twelve Doric columns forming five passageways and is topped by the Quadriga sculpture depicting the goddess of victory.",
-        imageUrl: "https://images.unsplash.com/photo-1566404791232-af9fe8eecce6?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Cologne Cathedral",
         description: "This masterpiece of Gothic architecture took over 600 years to complete and stands as Germany's most visited landmark. The UNESCO World Heritage site features the largest facade of any church in the world, soaring twin spires reaching 157 meters, and remarkable medieval stained glass. Construction began in 1248 but wasn't completed until 1880, following the original medieval plans. The cathedral houses important religious treasures, including the gilded Shrine of the Three Kings, believed to contain the remains of the Biblical Magi, making it an important pilgrimage site.",
-        imageUrl: "https://images.unsplash.com/photo-1534331581384-63efc38504ac?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Romantic Road",
         description: "This 350-kilometer scenic route through southern Germany connects charming medieval towns and fairy-tale castles through Bavaria and Baden-Württemberg. Created in the 1950s to revive tourism, the route follows an ancient trade path, featuring perfectly preserved walled towns like Rothenburg ob der Tauber, historic Würzburg with its magnificent Residence Palace, and the Alpine splendor around Füssen. Though designed as a tourist attraction, the Romantic Road genuinely showcases Germany's picturesque countryside, cultural richness, and historical depth.",
-        imageUrl: "https://images.unsplash.com/photo-1501618554800-8a0a11215848?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Museum Island",
         description: "This UNESCO-listed complex in the heart of Berlin houses five world-class museums built between 1830 and 1930 on a small island in the Spree River. The ensemble includes the Pergamon Museum with its monumental Middle Eastern antiquities, the Neues Museum housing the famous bust of Nefertiti, the Altes Museum's classical antiquities, the National Gallery's 19th-century art, and the Bode Museum's sculpture collections. Recently renovated with the addition of the underground Archaeological Promenade connecting the buildings, Museum Island represents one of the world's most ambitious cultural projects.",
-        imageUrl: "https://images.unsplash.com/photo-1599946347371-68eb71b16afc?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -176,6 +176,11 @@ const GermanyCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

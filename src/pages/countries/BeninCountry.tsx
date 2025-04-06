@@ -21,7 +21,7 @@ const BeninCountry: React.FC = () => {
     timeZones: ["GMT+1"],
     callingCode: "+229",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2016/01/29/17/49/banner-1168019_1280.jpg",
     description: "Benin, formerly known as Dahomey, is a West African nation bordered by Togo, Nigeria, Burkina Faso, and Niger. With a rich cultural heritage as the birthplace of Vodun (voodoo), vibrant traditions, and a complex history that includes the infamous slave trade route, Benin offers travelers an authentic glimpse into African history and contemporary life.",
     whyVisit: "Benin offers a fascinating blend of history, culture, and natural beauty that remains relatively untouched by mass tourism. The country's most compelling draw is its profound historical significance as the birthplace of Vodun (voodoo) religion, which continues to influence daily life and celebrations. Ouidah's Sacred Forest and the Python Temple provide insight into these spiritual traditions, while the Route des Esclaves (Slave Route) and Door of No Return memorial offer powerful reflections on the transatlantic slave trade. In northern Benin, Pendjari National Park presents one of West Africa's best wildlife viewing opportunities, with elephants, lions, and numerous other species. The remarkable stilt village of Ganvié, built entirely over Lake Nokoué, showcases human adaptation and unique living traditions. Architecture enthusiasts will appreciate the Royal Palaces of Abomey (a UNESCO World Heritage site), while the vibrant markets and friendly locals throughout the country provide cultural immersion without the crowds found in more popular African destinations.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const BeninCountry: React.FC = () => {
       {
         name: "Royal Palaces of Abomey",
         description: "This UNESCO World Heritage site consists of twelve royal palaces built by different kings of the powerful Dahomey Kingdom between 1625 and 1900. Spread across 40 hectares, the complex features impressive earthen walls, bas-reliefs depicting battle scenes, and symbolic imagery. Today, the site functions as a historical museum displaying royal artifacts, thrones, and weapons, offering insight into the kingdom that once dominated the region.",
-        imageUrl: "https://images.unsplash.com/photo-1593269058840-7e04de5bba97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Ganvié Stilt Village",
         description: "Often called the 'Venice of Africa,' this remarkable village built entirely on stilts over Lake Nokoué is home to over 20,000 Tofinu people. Created in the 16th-17th centuries as a refuge from slave traders, the inhabitants have developed a unique way of life centered around the water. Visitors travel by pirogue (dugout canoe) to see the stilt houses, floating market, and daily activities conducted entirely by boat.",
-        imageUrl: "https://images.unsplash.com/photo-1559036108-efaa92b0b28b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Door of No Return",
         description: "Located on Ouidah's beach, this poignant monument marks the final point where enslaved Africans were forced onto ships bound for the Americas. Part of the Route des Esclaves (Slave Route), a 4 km path lined with sculptures and memorials, it commemorates the estimated one million people trafficked from this coast. The annual Vodun festival on January 10th includes ceremonies at this site to honor ancestors.",
-        imageUrl: "https://images.unsplash.com/photo-1563300988-41b0839c6db0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Pendjari National Park",
         description: "Part of the larger W-Arly-Pendjari complex spanning three countries, this biodiverse park covers 2,755 square kilometers and represents one of the last intact ecosystems in West Africa. Visitors can spot elephants, lions, cheetahs, hippos, various antelope species, and over 300 bird species. The park's dramatic landscapes include waterfalls, plains, and the Atakora Mountains, with the best wildlife viewing during the dry season when animals gather around water sources.",
-        imageUrl: "https://images.unsplash.com/photo-1535353788628-01c784328bf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1476&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Sacred Forest and Python Temple of Ouidah",
         description: "These two related sites offer insight into Vodun spiritual traditions. The Sacred Forest houses numerous vodun deities represented by sculptures and is still used for ceremonies and initiations. Nearby, the Temple of Pythons contains dozens of living royal pythons considered sacred in Vodun belief. Visitors can handle the docile snakes, which are regularly released into the community and returned by devotees, symbolizing the harmony between humans and these revered creatures.",
-        imageUrl: "https://images.unsplash.com/photo-1467811884194-ae868cd3b74e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -178,6 +178,11 @@ const BeninCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

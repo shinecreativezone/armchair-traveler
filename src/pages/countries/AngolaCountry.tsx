@@ -22,7 +22,7 @@ const AngolaCountry: React.FC = () => {
     timeZones: ["GMT+1 (WAT)"],
     callingCode: "+244",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1591039929544-bc8c3e44a0a9?q=80&w=1000",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2013/07/12/15/32/flag-150112_1280.png",
     description: "Angola, officially the Republic of Angola, is a country on the western Atlantic coast of Southern Africa. It is the seventh-largest country in Africa, bordered by Namibia to the south, the Democratic Republic of the Congo to the north, Zambia to the east, and the Atlantic Ocean to the west. Angola has a rich cultural heritage, diverse landscapes ranging from Atlantic beaches to highlands and savanna, and abundant natural resources including oil and diamonds.",
     whyVisit: "Angola offers an authentic African experience away from mainstream tourism routes. The country features stunning natural attractions including pristine beaches along its 1,600 km coastline, dramatic highlands, diverse wildlife, and the magnificent Kalandula Falls—one of Africa's largest waterfalls. Cultural travelers will appreciate Angola's vibrant music scene, particularly semba (which influenced Brazilian samba), traditional crafts, and colonial Portuguese architecture. History enthusiasts can explore the country's complex past from ancient kingdoms to the struggle for independence.",
     bestTimeToVisit: {
@@ -68,27 +68,27 @@ const AngolaCountry: React.FC = () => {
       {
         name: "Kalandula Falls",
         description: "One of Africa's largest waterfalls, created by the Lucala River plunging 105 meters across a width of about 400 meters. The horseshoe-shaped falls are particularly impressive during the rainy season.",
-        imageUrl: "https://images.unsplash.com/photo-1567815153638-83bfe71cad4d?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Kissama (Quiçama) National Park",
         description: "Angola's most accessible national park, located just south of Luanda. The park is part of a wildlife conservation effort to restore populations affected by the civil war, featuring elephants, antelope, and diverse bird species.",
-        imageUrl: "https://images.unsplash.com/photo-1541722239171-bd333ba0133a?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Miradouro da Lua (Moon Viewpoint)",
         description: "A striking lunar-like landscape created by erosion along the road south of Luanda, featuring multi-colored rock formations that change hues throughout the day and are particularly beautiful at sunset.",
-        imageUrl: "https://images.unsplash.com/photo-1517944951351-01c465057163?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Tunda Vala Gorge",
         description: "A dramatic escarpment near Lubango with a 1,000-meter drop offering breathtaking views of the plains below. The site has become a symbol of the Huíla province and is popular for photography and picnics.",
-        imageUrl: "https://images.unsplash.com/photo-1617940185024-97f69e4e9e9a?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Ilha do Cabo (Cape Island)",
         description: "A narrow, 5-km long peninsula in Luanda featuring beautiful beaches, seafood restaurants, bars, and clubs. This popular strip offers views of the Luanda skyline across the bay and is the social heart of the capital.",
-        imageUrl: "https://images.unsplash.com/photo-1582027835766-f52657bb6ccb?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -176,6 +176,11 @@ const AngolaCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

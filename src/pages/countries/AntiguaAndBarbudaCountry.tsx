@@ -22,7 +22,7 @@ const AntiguaAndBarbudaCountry: React.FC = () => {
     timeZones: ["GMT-4"],
     callingCode: "+1-268",
     drivingSide: "left" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1590080669911-3e3d1466177a?q=80&w=1000",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2012/04/16/12/43/flag-35845_1280.png",
     description: "Antigua and Barbuda is a twin-island nation in the Eastern Caribbean, known for its stunning beaches, crystal-clear waters, and rich naval history. Antigua boasts 365 beaches—'one for each day of the year'—while the smaller, less-developed Barbuda offers pink sand beaches and a large frigate bird sanctuary. The country gained independence from Britain in 1981 but maintains strong British influences alongside its vibrant Caribbean culture.",
     whyVisit: "Antigua and Barbuda offers pristine Caribbean beaches without the crowds of more commercialized islands. History enthusiasts can explore Nelson's Dockyard, the only remaining Georgian dockyard in the world. Sailing enthusiasts flock to the annual Antigua Sailing Week, while nature lovers can experience the remarkable frigate bird sanctuary in Barbuda. With excellent snorkeling, diving, and a relaxed island atmosphere, it's perfect for travelers seeking authentic Caribbean charm with exceptional natural beauty.",
     bestTimeToVisit: {
@@ -68,27 +68,27 @@ const AntiguaAndBarbudaCountry: React.FC = () => {
       {
         name: "Nelson's Dockyard",
         description: "A UNESCO World Heritage site featuring perfectly restored colonial-era buildings where Admiral Horatio Nelson was stationed in the 1780s. Now a working dockyard filled with yachts, shops, hotels, and restaurants.",
-        imageUrl: "https://images.unsplash.com/photo-1605482431749-80dd4d1a0a43?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Shirley Heights",
         description: "A restored military lookout and gun battery with panoramic views over English Harbour. Famous for its Sunday sunset parties featuring barbecue, rum punch, and live steel drum and reggae music.",
-        imageUrl: "https://images.unsplash.com/photo-1605482798845-fd1332035a53?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "17 Mile Beach (Barbuda)",
         description: "An uninterrupted stretch of pristine pink-tinged sand on Barbuda's western coast. Its remote nature ensures it's rarely crowded, offering a truly secluded Caribbean beach experience.",
-        imageUrl: "https://images.unsplash.com/photo-1617972882562-5ad7f9e8ae9b?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Devil's Bridge",
         description: "A natural limestone arch formed by Atlantic waves crashing against the coastline over thousands of years. Located at Indian Town National Park, it offers dramatic water spouts as waves crash beneath the bridge.",
-        imageUrl: "https://images.unsplash.com/photo-1602142750792-62bc054d4ab2?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Frigate Bird Sanctuary",
         description: "Located in Barbuda's Codrington Lagoon, this protected area hosts over 5,000 frigate birds—the largest colony in the Western Hemisphere. Accessible only by boat, visitors can witness these remarkable birds with their distinctive red throats during mating season.",
-        imageUrl: "https://images.unsplash.com/photo-1555519266-69c1c73d5273?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -176,6 +176,11 @@ const AntiguaAndBarbudaCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

@@ -22,7 +22,7 @@ const AfghanistanCountry: React.FC = () => {
     timeZones: ["GMT+4:30"],
     callingCode: "+93",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1567602753427-5baa728c0e3e?q=80&w=1000",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2017/01/31/14/43/flag-2024732_1280.png",
     description: "Afghanistan is a landlocked country located at the crossroads of Central and South Asia. Known for its rugged mountain landscapes and deep valleys, the country has a rich history spanning over 2,500 years with influences from various empires including Persian, Greek, and Mongol. Its strategic location along the Silk Road connected it to cultures across Asia and Europe.",
     whyVisit: "Afghanistan offers dramatic landscapes of the Hindu Kush mountains, ancient historical sites including Buddhist relics, and resilient cultural traditions. While security concerns have limited tourism in recent decades, the country's hospitality traditions, unique cuisine, and untouched natural beauty continue to intrigue adventurous travelers.",
     bestTimeToVisit: {
@@ -68,27 +68,27 @@ const AfghanistanCountry: React.FC = () => {
       {
         name: "Band-e-Amir Lakes",
         description: "A series of six deep blue lakes separated by natural dams of travertine in the Hindu Kush mountains, forming Afghanistan's first national park.",
-        imageUrl: "https://images.unsplash.com/photo-1566094210657-c435876d90bc?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Bamiyan Valley",
         description: "A historic valley that once contained two monumental Buddha statues carved into the cliff face (destroyed in 2001). The surrounding caves feature ancient Buddhist paintings.",
-        imageUrl: "https://images.unsplash.com/photo-1527367817777-67d467b9b36d?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Minaret of Jam",
         description: "A 65-meter tall minaret built in the 12th century, intricately decorated with elaborate brickwork and blue tile inscriptions of Quranic verses.",
-        imageUrl: "https://images.unsplash.com/photo-1597588582897-cf63484999b0?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Gardens of Babur",
         description: "A historic park in Kabul that houses the tomb of Mughal emperor Babur, featuring terraced gardens, a caravanserai, and a marble mosque.",
-        imageUrl: "https://images.unsplash.com/photo-1516649170053-0c0bbc65144a?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Friday Mosque of Herat",
         description: "One of Afghanistan's oldest mosques, featuring stunning tilework, mosaics, and intricate architectural details spanning many centuries of additions and renovations.",
-        imageUrl: "https://images.unsplash.com/photo-1535153147657-5f39ab985736?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -175,6 +175,11 @@ const AfghanistanCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

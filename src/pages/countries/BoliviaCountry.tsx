@@ -21,7 +21,7 @@ const BoliviaCountry: React.FC = () => {
     timeZones: ["GMT-4 (BOT - Bolivia Time)"],
     callingCode: "+591",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1534891652460-5624a32d1d23?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2016/01/29/17/49/banner-1168019_1280.jpg",
     description: "Bolivia, officially the Plurinational State of Bolivia, is a landlocked country located in western-central South America. With its diverse geography spanning Andean mountains, high altitude plateaus, and Amazonian rainforests, Bolivia is known for its extraordinary natural beauty, rich indigenous cultures, and complex history. It is one of the most biodiverse countries in the world and has the highest percentage of indigenous population in South America.",
     whyVisit: "Bolivia offers an authentic South American experience that combines breathtaking natural wonders with profound cultural heritage. The country's dramatically diverse landscapes range from the surreal salt flats of Salar de Uyuni—the world's largest salt flat that transforms into a perfect mirror during the rainy season—to the towering peaks of the Andes Mountains, the otherworldly Moon Valley near La Paz, and the lush Amazon Basin teeming with wildlife. Culturally, Bolivia stands out for its strong indigenous identity, with traditional ways of life still thriving alongside modern developments. Visitors can explore colorful markets where ancestral trading practices continue, witness vibrant festivals blending pre-Columbian traditions with Catholic influences, and experience the unique cosmology of Andean peoples. The country's colonial history is preserved in the UNESCO-listed architecture of cities like Sucre and Potosí, while the modern cable car system of La Paz offers a contemporary contrast. For adventure seekers, opportunities abound—from trekking ancient Inca trails to cycling down the famous Death Road or exploring the mysterious waters of Lake Titicaca. All this comes with significantly lower costs than neighboring countries, making Bolivia an unparalleled value for travelers seeking authentic experiences off the beaten path.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const BoliviaCountry: React.FC = () => {
       {
         name: "Salar de Uyuni",
         description: "The world's largest salt flat spans 10,582 square kilometers of blindingly white crystalline salt hexagons. During the rainy season (December-April), a thin layer of water transforms the surface into the world's largest mirror, creating surreal reflections of the sky. The flats contain extraordinary geological features including Incahuasi Island—a cactus-covered outcrop with ancient coral formations revealing the area's prehistoric origins as a lake. Scattered across this otherworldly landscape are primitive salt hotels, salt extraction operations worked by local communities, and colorful mineral-rich lakes where rare flamingo species feed. At night, the absolute flatness and high altitude create unparalleled stargazing opportunities, with the Milky Way reflected perfectly in the wet season.",
-        imageUrl: "https://images.unsplash.com/photo-1551799517-eb8f03cb5e6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1473&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Lake Titicaca",
         description: "Straddling the border between Bolivia and Peru at 3,812 meters above sea level, Lake Titicaca is the highest navigable lake in the world and considered the birthplace of the Inca civilization. The Bolivian side features the tranquil town of Copacabana with its 16th-century shrine, magnificent sunsets, and access to the sacred Isla del Sol (Island of the Sun), where Andean creation myths locate the emergence of the sun god. The island contains important Inca ruins including the Chincana labyrinth complex and the Sacred Rock. Traditional communities along the shores and on islands maintain ancient agricultural practices on pre-Incan terraced fields, while the deep blue waters and surrounding snow-capped mountains create a landscape of breathtaking beauty and spiritual significance.",
-        imageUrl: "https://images.unsplash.com/photo-1569874256647-c04b62810e58?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Madidi National Park",
         description: "One of the world's most biodiverse protected areas, spanning an extraordinary elevation range from 180 to 5,500 meters and encompassing numerous ecosystems from Amazonian rainforest to Andean highlands. This vast wilderness covering 18,958 square kilometers is home to over 1,000 bird species (11% of all known bird species globally), 272 mammal species including jaguars and pink river dolphins, and thousands of plant species, many still undocumented. Indigenous communities manage ecotourism initiatives offering authentic jungle expeditions with opportunities to stay in sustainable lodges, observe wildlife from canopy towers, participate in nocturnal animal spotting, and learn about forest medicine from native guides whose ancestral knowledge spans generations. The park represents Bolivia's commitment to conservation while balancing indigenous land rights and development needs.",
-        imageUrl: "https://images.unsplash.com/photo-1599719611293-c096597dd944?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Tiwanaku",
         description: "This UNESCO World Heritage archaeological site contains the mysterious remains of a pre-Incan civilization that dominated the region between 300-1000 CE, predating the Inca Empire by several centuries. Located near Lake Titicaca at 3,850 meters elevation, the site features monumental stone structures built with engineering precision that still puzzles archaeologists today. The complex includes the iconic Sun Gate (Puerta del Sol) carved from a single stone block, the semi-subterranean temple with unique stone heads embedded in the walls, and massive monoliths including the 7.3-meter tall Bennett Monolith. The on-site museums house remarkable artifacts including ceramics, textiles, and metal objects that reveal the sophisticated artistic and technological achievements of this enigmatic civilization whose influence spread throughout the southern Andes.",
-        imageUrl: "https://images.unsplash.com/photo-1591671916072-b31a4f749100?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Valle de la Luna (Moon Valley)",
         description: "Located just 10 kilometers from La Paz, this surreal landscape resembles a miniature badlands where centuries of erosion have shaped bizarre formations from clay and sandstone. The maze of pinnacles, canyons, and stalagmite-like spires creates an otherworldly atmosphere that earned the valley its lunar nickname. Distinct minerals in the soil produce various color striations from beige to purple, enhanced by changing light throughout the day. Marked trails wind through the formations, offering multiple viewpoints of the ever-changing perspectives, while the contrasting cacti and desert plants add an element of life to the barren terrain. The valley provides a striking reminder of geological forces at work and offers easily accessible adventure from the capital city, with panoramic views of La Paz and the surrounding mountains on clear days.",
-        imageUrl: "https://images.unsplash.com/photo-1572053675669-36a017d77e48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -179,6 +179,11 @@ const BoliviaCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

@@ -21,7 +21,7 @@ const BelizeCountry: React.FC = () => {
     timeZones: ["GMT-6"],
     callingCode: "+501",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1605137911290-e0e9d6226505?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2017/01/31/14/43/flag-2024732_1280.png",
     description: "Belize is a small nation on the eastern coast of Central America, bordered by Mexico, Guatemala, and the Caribbean Sea. Known for its remarkable biodiversity, ancient Mayan ruins, and the world's second-largest barrier reef, this tropical paradise offers adventure and natural beauty at every turn.",
     whyVisit: "Belize offers an exceptional blend of natural wonders and cultural experiences in a compact, English-speaking country. Its barrier reef system, a UNESCO World Heritage site, provides world-class diving and snorkeling opportunities with vibrant coral formations, the famous Great Blue Hole, and abundant marine life including whale sharks. The lush interior rainforests house ancient Mayan archaeological sites like Caracol and Xunantunich, where visitors can climb pyramids with far fewer crowds than at similar sites in neighboring countries. Adventure seekers can explore extensive cave systems, zip-line through jungle canopies, or tube through subterranean rivers. The cultural diversity—with influences from Maya, Garifuna, Creole, and Mennonite communities—creates a rich tapestry of traditions, music, and cuisine. With English as the official language, a stable political climate, and an emphasis on eco-tourism, Belize remains one of Central America's most accessible yet authentic destinations.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const BelizeCountry: React.FC = () => {
       {
         name: "Great Blue Hole",
         description: "This perfectly circular marine sinkhole measures 300 meters (984 feet) across and 124 meters (407 feet) deep. Made famous by Jacques Cousteau, who declared it one of the top ten scuba diving sites in the world, it features limestone formations, stalactites, and diverse marine life. The sapphire blue color contrasting with the surrounding turquoise waters creates a mesmerizing sight from above.",
-        imageUrl: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Xunantunich",
         description: "This impressive Maya archaeological site features 'El Castillo,' a pyramid standing 130 feet tall with intricate frieze decorations. Visitors can climb to the top for panoramic views of the Mopan River Valley and into neighboring Guatemala. The site, meaning 'Stone Woman' in Maya, is accessed by a hand-cranked ferry crossing the Mopan River.",
-        imageUrl: "https://images.unsplash.com/photo-1518638150340-f706e86654de?ixlib=rb-4.0.3&auto=format&fit=crop&w=1467&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Actun Tunichil Muknal (ATM) Cave",
         description: "This sacred Maya cave contains ceremonial chambers with well-preserved pottery, artifacts, and skeletal remains, including the famous 'Crystal Maiden.' The adventure begins with jungle hiking and river crossings, followed by swimming into the cave entrance and climbing through dramatic chambers with stalactites and stalagmites.",
-        imageUrl: "https://images.unsplash.com/photo-1496275068113-fff8c90750d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Caye Caulker",
         description: "This small limestone coral island embodies the 'Go Slow' philosophy with its car-free sandy streets, colorful buildings, and relaxed atmosphere. The Split, a narrow channel dividing the island, serves as a popular swimming spot. Visitors enjoy snorkeling at the nearby Hol Chan Marine Reserve and Shark Ray Alley, kayaking, or simply hammock lounging.",
-        imageUrl: "https://images.unsplash.com/photo-1510253525557-cd9bdfe4ff77?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Cockscomb Basin Wildlife Sanctuary",
         description: "This world's first jaguar preserve spans 150 square miles of tropical forest, protecting an impressive diversity of wildlife. While jaguars are rarely spotted, visitors explore waterfall-dotted hiking trails, swim in natural pools, and potentially see other cats, tapirs, monkeys, and over 300 bird species. Victoria Peak, Belize's second-highest mountain, is accessible through a challenging multi-day trek.",
-        imageUrl: "https://images.unsplash.com/photo-1548263594-a71ea65a8598?ixlib=rb-4.0.3&auto=format&fit=crop&w=1476&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -176,6 +176,11 @@ const BelizeCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

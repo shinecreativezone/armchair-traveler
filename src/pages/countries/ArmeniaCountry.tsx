@@ -21,7 +21,7 @@ const ArmeniaCountry: React.FC = () => {
     timeZones: ["GMT+4"],
     callingCode: "+374",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1589229489458-7ffb68c425cf?q=80&w=1000",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2015/11/06/15/13/flag-1028137_1280.jpg",
     description: "Armenia is a mountainous, landlocked country located at the crossroads of Western Asia and Eastern Europe. One of the oldest Christian nations in the world, Armenia has a rich cultural heritage that spans over 3,000 years. Its dramatic landscapes include soaring mountains, ancient monasteries perched on cliffsides, pristine forests, and mineral-rich hot springs that have drawn visitors since antiquity.",
     whyVisit: "Armenia offers travelers an authentic and off-the-beaten-path experience with its striking monastery complexes, spectacular mountain vistas, and one of the world's oldest continuous wine traditions. The country's capital, Yerevan, combines ancient history with Soviet-era architecture and modern amenities, while the warm hospitality of Armenians creates unforgettable cultural exchanges. Visitors can explore UNESCO World Heritage sites, hike through dramatic gorges, enjoy mineral hot springs, and experience a culinary tradition that reflects Armenia's position at the crossroads of East and West.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const ArmeniaCountry: React.FC = () => {
       {
         name: "Monastery of Geghard",
         description: "A UNESCO World Heritage Site partially carved into the adjacent mountain, featuring remarkable rock-cut churches and tombs from the 4th to 13th centuries. Known for its spectacular acoustics and spiritual atmosphere.",
-        imageUrl: "https://images.unsplash.com/photo-1563499797412-8b7248ce6a72?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Khor Virap Monastery",
         description: "A pilgrimage site with the most iconic view in Armenia—the monastery with Mount Ararat as backdrop. Historically significant as the place where Saint Gregory the Illuminator was imprisoned before converting Armenia to Christianity.",
-        imageUrl: "https://images.unsplash.com/photo-1605396591139-6dfd75d6b1a2?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Temple of Garni",
         description: "The only standing Greco-Roman colonnaded building in Armenia, built in the 1st century CE. This pagan temple dedicated to the sun god Mihr survived Christianization and offers excellent views of the Azat River Gorge.",
-        imageUrl: "https://images.unsplash.com/photo-1580207683252-e265d8221b1c?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Tatev Monastery",
         description: "A 9th-century monastery complex perched on the edge of a deep gorge, accessible via the 'Wings of Tatev'—the world's longest non-stop double-track cable car. Once a major medieval university and spiritual center.",
-        imageUrl: "https://images.unsplash.com/photo-1539089875484-ac9fbb6fb199?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Lake Sevan",
         description: "A vast high-altitude freshwater lake covering 5% of Armenia's territory, surrounded by mountains. Features the picturesque Sevanavank Monastery on a peninsula, beaches, water sports, and is a popular summer retreat.",
-        imageUrl: "https://images.unsplash.com/photo-1590068232592-23ad4fea9cd9?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -175,6 +175,11 @@ const ArmeniaCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

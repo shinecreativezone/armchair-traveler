@@ -175,6 +175,11 @@ export default function ExperiencePage() {
                       <li>Taste authentic local cuisine</li>
                       <li>Create unforgettable memories</li>
                     </ul>
+                    
+                    {/* GetYourGuide Widget */}
+                    <div className="mt-6">
+                      <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>

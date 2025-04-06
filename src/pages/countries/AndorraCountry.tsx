@@ -22,7 +22,7 @@ const AndorraCountry: React.FC = () => {
     timeZones: ["GMT+1 (CET)", "GMT+2 (CEST) in summer"],
     callingCode: "+376",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1581944906228-0a238db3048e?q=80&w=1000",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2015/11/06/15/13/flag-1028137_1280.jpg",
     description: "Andorra is a tiny, independent principality nestled between France and Spain in the Pyrenees mountains. Despite being one of Europe's smallest states, Andorra offers dramatic mountain scenery, excellent skiing, duty-free shopping, and a unique cultural blend of Catalan, French, and Spanish influences.",
     whyVisit: "Andorra attracts visitors with its world-class ski resorts, stunning mountain landscapes, duty-free shopping, and Romanesque architecture. The country offers excellent hiking and mountain biking opportunities during summer, while winter transforms it into a snow sports paradise. With its relaxed atmosphere, welcoming locals, and combination of natural beauty and cultural heritage, Andorra makes an appealing destination year-round.",
     bestTimeToVisit: {
@@ -68,27 +68,27 @@ const AndorraCountry: React.FC = () => {
       {
         name: "Caldea Thermal Spa",
         description: "Europe's largest thermal spa complex, featuring an iconic glass pyramid design and offering a wide range of thermal waters and treatments in a spectacular mountain setting.",
-        imageUrl: "https://images.unsplash.com/photo-1599579139548-d3552a9fd5e3?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Vallnord Ski Resort",
         description: "A major ski area comprising several sectors including Pal, Arinsal, and Arcalis, offering varied terrain for all skiing abilities and excellent snowboarding facilities.",
-        imageUrl: "https://images.unsplash.com/photo-1565992441121-4367c2967103?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Casa de la Vall",
         description: "A 16th-century stone mansion that served as Andorra's parliamentary house from 1702 to 2011, offering guided tours of its assembly halls, courts, and historic rooms.",
-        imageUrl: "https://images.unsplash.com/photo-1593107701002-892f9fd1fbd0?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Madriu-Perafita-Claror Valley",
         description: "A UNESCO World Heritage site covering 9% of Andorra's territory, featuring pristine glacial landscapes, traditional stone farmhouses, and excellent hiking trails.",
-        imageUrl: "https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Sanctuary of Our Lady of Meritxell",
         description: "A modern basilica rebuilt after a fire destroyed the original Romanesque chapel, dedicated to Andorra's patron saint and combining traditional and innovative architectural elements.",
-        imageUrl: "https://images.unsplash.com/photo-1529732833479-ed0120211574?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -176,6 +176,11 @@ const AndorraCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

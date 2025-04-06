@@ -22,7 +22,7 @@ const AlbaniaCountry: React.FC = () => {
     timeZones: ["GMT+1 (CET)", "GMT+2 (CEST) in summer"],
     callingCode: "+355",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1601145949372-5f4e7d4de37f?q=80&w=1000",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2013/07/12/15/32/flag-150112_1280.png",
     description: "Albania is a small country in Southeastern Europe with a long Adriatic and Ionian coastline. Despite its compact size, Albania offers rugged mountain landscapes, pristine beaches, ancient archaeological sites, and a unique culture that reflects its complex history of isolation and various influences.",
     whyVisit: "Albania combines Mediterranean charm with Balkan character at a fraction of the price of its neighbors. Visitors will discover untouched beaches along the Albanian Riviera, UNESCO World Heritage sites, impressive mountain ranges, and warm hospitality from locals eager to share their previously isolated country.",
     bestTimeToVisit: {
@@ -68,27 +68,27 @@ const AlbaniaCountry: React.FC = () => {
       {
         name: "Butrint Ancient City",
         description: "A UNESCO World Heritage Site featuring well-preserved Greek, Roman, Byzantine, and Venetian ruins in a beautiful setting overlooking the Ionian Sea.",
-        imageUrl: "https://images.unsplash.com/photo-1566838318049-b6541c4bfc31?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Berat Old Town",
         description: "The 'City of a Thousand Windows' with its cascading white Ottoman houses, Byzantine churches, and 13th-century castle offering panoramic views.",
-        imageUrl: "https://images.unsplash.com/photo-1639847089433-240267108376?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Blue Eye (Syri i Kaltër)",
         description: "A natural spring where crystal clear water bubbles from a stunning blue pool that's more than 50 meters deep, creating a mesmerizing natural phenomenon.",
-        imageUrl: "https://images.unsplash.com/photo-1590579241454-7b870f859f9e?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Theth National Park",
         description: "A remote mountain village and valley in the Albanian Alps with stunning hiking trails, traditional stone houses, and the iconic Theth Church and Lock-in Tower.",
-        imageUrl: "https://images.unsplash.com/photo-1582470628398-3cc1da1d2142?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Kruja Castle and Skanderbeg Museum",
         description: "A hilltop castle and national complex dedicated to Albania's national hero who resisted Ottoman rule, along with a picturesque old bazaar selling traditional crafts.",
-        imageUrl: "https://images.unsplash.com/photo-1571661286290-41deac88a6b6?q=80&w=1000"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -176,6 +176,11 @@ const AlbaniaCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

@@ -21,7 +21,7 @@ const BarbadosCountry: React.FC = () => {
     timeZones: ["GMT-4"],
     callingCode: "+1-246",
     drivingSide: "left" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1635527677717-9feaa46588e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2016/01/29/17/49/banner-1168019_1280.jpg",
     description: "Barbados is an eastern Caribbean island and an independent British Commonwealth nation. Known as the 'Little England' of the Caribbean, it blends British traditions with West African roots, creating a distinctive Bajan culture known for its hospitality and vibrant lifestyle.",
     whyVisit: "Barbados offers a perfect blend of Caribbean relaxation and British refinement, making it unique among its island neighbors. The island is renowned for its pristine beaches, with the western 'Platinum Coast' featuring calm turquoise waters and the eastern Atlantic coast offering dramatic landscapes and world-class surfing at Soup Bowl. Beyond beaches, visitors can explore well-preserved colonial architecture in Bridgetown (a UNESCO World Heritage site), tour historic sugar plantations, and visit the iconic St. Nicholas Abbey. The island's mature tourism infrastructure ensures comfort without sacrificing authenticity, while the friendly Bajan people, delicious rum traditions, and vibrant festivals like Crop Over provide cultural depth. With year-round sunshine, a strong culinary scene, and excellent public transportation, Barbados is both accessible and rewarding for travelers.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const BarbadosCountry: React.FC = () => {
       {
         name: "Harrison's Cave",
         description: "This crystallized limestone cavern features flowing streams, deep pools, towering columns, and dramatic formations. Visitors tour the cave system on electric trams, stopping at highlights like the Great Hall chamber (15 meters high) and witnessing the cascading waters of the White Flow waterfall.",
-        imageUrl: "https://images.unsplash.com/photo-1594398096321-a369420060d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Hunte's Gardens",
         description: "Created by horticulturist Anthony Hunte in a collapsed cave gully, these lush, multi-level gardens showcase an incredible variety of tropical plants in a surprisingly compact space. Classical music plays throughout the gardens, and visitors can enjoy refreshments on the veranda of Mr. Hunte's house built into the cliff face.",
-        imageUrl: "https://images.unsplash.com/photo-1597075359616-989849ffd433?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "St. Nicholas Abbey",
         description: "One of only three genuine Jacobean mansions in the Western Hemisphere, built in 1658. This historic plantation house features Dutch gables and offers rum production tours, tastings, and a chance to see a steam mill in operation during crop season. The property includes beautiful gardens and a Cherry Tree Hill viewpoint.",
-        imageUrl: "https://images.unsplash.com/photo-1605547079314-d3a76e7d8c18?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Carlisle Bay",
         description: "A crescent-shaped bay near Bridgetown with calm, crystal-clear waters ideal for swimming and water sports. The bay is home to several shipwrecks that create an artificial reef system, making it a popular snorkeling and scuba diving location to observe marine life including sea turtles.",
-        imageUrl: "https://images.unsplash.com/photo-1590523278191-025be417be10?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Animal Flower Cave",
         description: "Located at the northernmost point of Barbados, this sea cave gets its name from the sea anemones found in its pools. Visitors can swim in the natural rock pools with views of the ocean through the cave openings. The cliff-top restaurant offers panoramic views of the Caribbean Sea and Atlantic Ocean meeting.",
-        imageUrl: "https://images.unsplash.com/photo-1589883661923-6476cb0ae9f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -177,6 +177,11 @@ const BarbadosCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

@@ -21,7 +21,7 @@ const AzerbaijanCountry: React.FC = () => {
     timeZones: ["GMT+4"],
     callingCode: "+994",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1579282240633-f4b24eb74921?ixlib=rb-4.0.3&auto=format&fit=crop&w=1392&q=80",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2012/04/16/12/43/flag-35845_1280.png",
     description: "Azerbaijan, officially the Republic of Azerbaijan, is a country located at the boundary of Eastern Europe and Western Asia. It is a part of the Caucasus region, situated at the crossroads of Eastern Europe and Western Asia. Known as the 'Land of Fire,' Azerbaijan combines ancient cultural heritage with rapidly modernizing cities, stunning landscapes, and rich oil resources.",
     whyVisit: "Azerbaijan offers a fascinating blend of ancient traditions and forward-looking modernity that's still relatively undiscovered by mass tourism. The capital Baku presents a striking juxtaposition of ultramodern architecture—exemplified by the iconic Flame Towers and Heydar Aliyev Center—alongside the UNESCO-listed medieval Old City with its narrow streets and ancient structures. Beyond the capital, travelers can explore mysterious fire phenomena that have earned the country its 'Land of Fire' moniker, including Yanar Dag (Burning Mountain) where natural gas seeps create perpetual flames, and the ancient Zoroastrian fire temple Ateshgah. The country's diverse landscapes range from the lush Caucasus Mountains—perfect for hiking and nature exploration—to the shores of the Caspian Sea with beaches that remain largely untouched by international visitors. Cultural enthusiasts will appreciate the rich tapestry of traditions, distinctive cuisine that blends Central Asian, Middle Eastern, and Eastern European influences, and the remarkable hospitality of Azerbaijani people. With improving tourism infrastructure but still fewer crowds than many other destinations, Azerbaijan offers authentic experiences and the excitement of exploring a destination that remains off the beaten path for most Western travelers.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const AzerbaijanCountry: React.FC = () => {
       {
         name: "Icherisheher (Old City)",
         description: "This UNESCO World Heritage site in Baku comprises a medieval walled city dating back to the 12th century. Narrow cobblestone streets wind past ancient sandstone buildings housing workshops, cafes, and residences. Key landmarks include the iconic Maiden Tower with its mysterious origins and stunning city views, the ornate Palace of the Shirvanshahs complex showcasing Azerbaijani architecture, and numerous historic hamams (bathhouses), mosques, and caravanserais. The contrast between this preserved medieval district and the ultra-modern skyline surrounding it creates a fascinating visual juxtaposition.",
-        imageUrl: "https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Gobustan National Park",
         description: "Located about 60km south of Baku, this UNESCO-listed archaeological preserve contains more than 6,000 rock engravings dating back 40,000 years. These petroglyphs depict prehistoric life including hunting scenes, rituals, and wildlife, offering remarkable insights into human civilization during the Mesolithic period. The park also features strange musical stones that produce different notes when struck and impressive mud volcanoes that bubble and occasionally erupt with cold mud due to subterranean gas pressure. The landscape itself is dramatically barren, creating an otherworldly atmosphere for exploring these ancient human traces.",
-        imageUrl: "https://images.unsplash.com/photo-1617414529875-6939752e3de6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Heydar Aliyev Center",
         description: "Designed by renowned architect Zaha Hadid, this architectural masterpiece has become a symbol of modern Baku with its flowing, curved lines and absence of sharp angles. The building's innovative design represents a break from the rigid Soviet architecture of the past. Housing exhibition spaces, a conference hall, and a museum, the center hosts cultural events while showcasing Azerbaijan's contemporary ambitions. The interior is equally impressive with soaring ceilings and fluid spaces, while the surrounding plaza features artistic installations and landscaped grounds that make it a popular gathering place for both tourists and locals.",
-        imageUrl: "https://images.unsplash.com/photo-1582729754855-ffd75914f6bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Sheki Khan's Palace",
         description: "This exquisite summer palace in Sheki was built in 1762 without using a single nail. Its most remarkable feature is the shebeke - intricate stained glass windows created by fitting thousands of colored glass pieces into wooden latticework without nails or glue. The palace interior showcases elaborate frescoes depicting hunting scenes, battles, and floral patterns, with each room displaying a different artistic style. Set within a walled garden with cherry trees and surrounded by mulberry groves that once supported Sheki's silk industry, the UNESCO-listed palace exemplifies the artistic heights of Azerbaijan's architectural heritage.",
-        imageUrl: "https://images.unsplash.com/photo-1588263849137-529952d9c6e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Yanar Dag (Burning Mountain)",
         description: "This natural phenomenon features a hillside that has been continuously burning for centuries, fed by natural gas seeping through the porous sandstone. The flames, which reach up to 3 meters in height, are particularly impressive at night or during winter when they contrast with darkness or snow. Unlike many other fire sites in Azerbaijan that have been extinguished, Yanar Dag has burned without interruption, giving visitors a glimpse into why ancient Zoroastrians considered the region sacred and why Azerbaijan is known as the 'Land of Fire.' The site now includes a small tearoom where visitors can contemplate the eternal flames over traditional Azerbaijani tea served from samovars.",
-        imageUrl: "https://images.unsplash.com/photo-1578744791439-b6971a29c78d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -179,6 +179,11 @@ const AzerbaijanCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

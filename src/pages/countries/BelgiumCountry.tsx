@@ -21,7 +21,7 @@ const BelgiumCountry: React.FC = () => {
     timeZones: ["GMT+1"],
     callingCode: "+32",
     drivingSide: "right" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1525894929916-e54840198a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=870&q=80",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2012/04/16/12/43/flag-35845_1280.png",
     description: "Belgium is a small yet diverse Western European country known for its medieval towns, Renaissance architecture, and as the headquarters of the European Union and NATO. Despite its compact size, Belgium offers a rich cultural tapestry with distinct linguistic regions, world-renowned cuisine, and a complex history that has shaped modern Europe.",
     whyVisit: "Belgium offers travelers an enticing blend of historical depth and modern European culture in a compact, accessible package. The country's medieval cities like Bruges and Ghent seem frozen in time with their cobblestone streets and Gothic architecture, while Brussels balances historic grandeur with its role as the administrative capital of the EU. Food enthusiasts are drawn to Belgium for its culinary contributions - from world-famous chocolates and waffles to over 1,500 varieties of beer and the original french fries with mayonnaise. Art lovers can explore the legacy of Flemish masters like Rubens and Van Eyck in world-class museums, while history buffs can visit poignant WWI and WWII sites. Belgium's central location and excellent rail network make it perfect for both a dedicated visit or as part of a broader European itinerary, with its small size allowing visitors to experience diverse regions - from the Dutch-speaking Flanders to French-speaking Wallonia - all within easy reach.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const BelgiumCountry: React.FC = () => {
       {
         name: "Grand Place (Brussels)",
         description: "This UNESCO World Heritage central square is considered one of the most beautiful in Europe, surrounded by opulent guild houses, the Brussels City Museum, and the Gothic Town Hall. The square is particularly spectacular during the biennial Flower Carpet event and the winter light show that transforms the buildings with colorful projections.",
-        imageUrl: "https://images.unsplash.com/photo-1605112793658-33acd1ad6ae9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Historic Centre of Bruges",
         description: "This entire medieval city center is a UNESCO World Heritage site, featuring a network of canals, cobblestone streets, and well-preserved Gothic buildings. Highlights include the Markt with its colorful guild houses, the Belfry offering panoramic views, the Burg square with the Basilica of the Holy Blood, and scenic canal boat tours to see the city from the water.",
-        imageUrl: "https://images.unsplash.com/photo-1491557345352-5929e343eb89?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Atomium (Brussels)",
         description: "Built for the 1958 Brussels World Expo, this iconic 102-meter tall structure represents an iron crystal magnified 165 billion times. Visitors can explore the nine interconnected spheres containing exhibition spaces, with the top sphere offering a panoramic restaurant and views across Brussels. The surrounding park includes Mini-Europe, a miniature park featuring models of European monuments.",
-        imageUrl: "https://images.unsplash.com/photo-1569868385904-4dba664e997c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1511&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Cathedral of Saint Bavo (Ghent)",
         description: "This Gothic cathedral houses the Ghent Altarpiece (The Adoration of the Mystic Lamb), a masterpiece by the Van Eyck brothers considered one of the most important works in European art history. The cathedral itself features impressive architecture, including the Baroque high altar, a Romanesque crypt, and a collection of significant paintings and religious artifacts.",
-        imageUrl: "https://images.unsplash.com/photo-1595841696677-6489ff3f8cd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Battlefields of Flanders",
         description: "The Flanders region contains numerous WWI sites commemorating one of history's most devastating conflicts. Key locations include the In Flanders Fields Museum in Ypres, the Menin Gate Memorial where the Last Post is played nightly, Tyne Cot Cemetery (the largest Commonwealth war cemetery), and preserved trenches at sites like Hill 60 and Sanctuary Wood, offering profound insights into the Great War.",
-        imageUrl: "https://images.unsplash.com/photo-1559149247-c57c650e0928?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -179,6 +179,11 @@ const BelgiumCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

@@ -21,7 +21,7 @@ const BangladeshCountry: React.FC = () => {
     timeZones: ["GMT+6"],
     callingCode: "+880",
     drivingSide: "left" as const,
-    flagImageUrl: "https://images.unsplash.com/photo-1630417886118-bdda58f2aec3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    flagImageUrl: "https://cdn.pixabay.com/photo/2013/07/12/15/32/flag-150112_1280.png",
     description: "Bangladesh, officially the People's Republic of Bangladesh, is a densely populated country in South Asia bordered by India and Myanmar. Despite facing challenges like natural disasters and poverty, Bangladesh has made remarkable strides in economic growth and human development in recent decades.",
     whyVisit: "Bangladesh offers an authentic cultural experience away from well-trodden tourist paths. The country is known for its warm hospitality, with locals often inviting visitors into their homes for a meal or tea. Nature lovers will find diverse ecosystems, from the world's largest mangrove forest (the Sundarbans) to rolling tea plantations in Sylhet and pristine beaches in Cox's Bazar. History enthusiasts can explore ancient Buddhist ruins, ornate mosques, and colonial-era buildings. The vibrant capital Dhaka presents a sensory feast with its colorful rickshaws, bustling markets, and aromatic street food. As tourism is still developing, visitors can experience a South Asian country that maintains its authentic character without the commercial trappings found in more popular destinations.",
     bestTimeToVisit: {
@@ -67,27 +67,27 @@ const BangladeshCountry: React.FC = () => {
       {
         name: "Sundarbans National Park",
         description: "This UNESCO World Heritage Site is the world's largest mangrove forest, home to the famous Royal Bengal Tigers, spotted deer, crocodiles, and hundreds of bird species. Visitors can explore the labyrinthine waterways by boat safaris, where they might spot wildlife while experiencing this unique ecosystem.",
-        imageUrl: "https://images.unsplash.com/photo-1610466922843-493e3b7b1997?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Cox's Bazar Beach",
         description: "The world's longest natural sandy beach stretches an unbroken 120 kilometers along the Bay of Bengal. The beach town offers various activities like surfing and beach sports, while the sunrises and sunsets over the ocean provide spectacular views. Nearby attractions include Himchari National Park and Inani Beach.",
-        imageUrl: "https://images.unsplash.com/photo-1580893246395-52aead8960dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1474&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Somapura Mahavihara",
         description: "Located in Paharpur, this UNESCO World Heritage Site is one of the largest Buddhist monasteries south of the Himalayas. Dating back to the 8th century, the vast complex features a central temple with intricate terracotta plaques depicting Buddhist stories, surrounded by 177 monks' cells.",
-        imageUrl: "https://images.unsplash.com/photo-1586273243345-1bed5eee54cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Srimangal Tea Gardens",
         description: "Known as the 'Tea Capital of Bangladesh,' this area in Sylhet division features rolling hills covered with lush green tea bushes. Visitors can tour tea estates, watch the tea-making process, and sample the famous seven-layer tea, a local specialty. The region also offers nature attractions like Lawachara National Park.",
-        imageUrl: "https://images.unsplash.com/photo-1566321343730-4e86169c8206?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       },
       {
         name: "Ahsan Manzil (Pink Palace)",
         description: "This striking pink palace in Dhaka was the official residence of the Nawab family of Dhaka. Now a museum, it showcases the opulent lifestyle of the Nawabs with period furniture, photographs, and artifacts. The palace's architecture blends British and Mughal styles, featuring a grand dome visible from miles away.",
-        imageUrl: "https://images.unsplash.com/photo-1599074914978-2946b69e5a5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80"
+        imageUrl: "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
       }
     ],
     localCuisine: {
@@ -176,6 +176,11 @@ const BangladeshCountry: React.FC = () => {
                   </Link>
                 ))}
               </div>
+              {/* GetYourGuide Widget */}
+              <div className="mt-6">
+                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
+              </div>
+
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
+import LazyGetYourGuideWidget from "@/components/LazyGetYourGuideWidget";
 
 const SpainCountry: React.FC = () => {
   // Real country data
@@ -178,9 +179,7 @@ const SpainCountry: React.FC = () => {
               </div>
               
               {/* GetYourGuide Widget */}
-              <div className="mt-6">
-                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
-              </div>
+              <LazyGetYourGuideWidget />
             </div>
             
             <Tabs defaultValue="attractions" className="mb-8">

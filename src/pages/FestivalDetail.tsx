@@ -9,6 +9,9 @@ import { Calendar, MapPin, Globe, Users, ArrowLeft, Share2 } from "lucide-react"
 import { Skeleton } from "@/components/ui/skeleton";
 import { Card, CardContent } from "@/components/ui/card";
 import { toast } from "sonner";
+import { format } from "date-fns";
+import { CalendarDaysIcon, CalendarIcon, HeartIcon, MapPinIcon, ShareIcon } from "lucide-react";
+import LazyGetYourGuideWidget from "@/components/LazyGetYourGuideWidget";
 
 export default function FestivalDetail() {
   const { festivalId } = useParams();
@@ -178,21 +181,15 @@ export default function FestivalDetail() {
               
               <div className="space-y-4">
                 <h2 className="text-2xl font-semibold">About the Festival</h2>
-                <p className="text-gray-700">{festival.description}</p>
-                <p className="text-gray-700">
-                  This vibrant celebration brings together locals and visitors from around the world to experience
-                  the unique cultural heritage and traditions of {festival.country}. The festival features colorful
-                  displays, traditional music and dance performances, culinary delights, and a welcoming atmosphere.
-                </p>
-                <p className="text-gray-700">
-                  Whether you're a seasoned festival-goer or experiencing it for the first time, the {festival.name} offers
-                  an unforgettable journey into the heart of {festival.country}'s cultural identity.
-                </p>
+                <div className="my-6">
+                  <h2 className="text-2xl font-bold mb-3">About the Festival</h2>
+                  <div className="prose max-w-none">
+                    <p>{festival.description}</p>
+                  </div>
+                </div>
                 
                 {/* GetYourGuide Widget */}
-                <div className="mt-6">
-                  <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
-                </div>
+                <LazyGetYourGuideWidget />
               </div>
             </div>
             

@@ -7,6 +7,8 @@ import { MapPinIcon, CalendarIcon, Clock, Users, Star, Info } from "lucide-react
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import { HeartIcon, ShareIcon } from "lucide-react";
+import LazyGetYourGuideWidget from "@/components/LazyGetYourGuideWidget";
 
 export default function ExperiencePage() {
   const { experienceId } = useParams<{ experienceId: string }>();
@@ -162,52 +164,20 @@ export default function ExperiencePage() {
               </Card>
               
               {/* What to Expect */}
-              <Card>
-                <CardContent className="p-6">
-                  <h2 className="text-2xl font-bold mb-4">What to Expect</h2>
-                  <div className="space-y-4">
-                    <p>Fusce dapibus tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-                    <p>Curabitur blandit tempus porttitor. Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-                    <ul className="list-disc pl-5 space-y-2">
-                      <li>Experience the local culture and traditions</li>
-                      <li>Interact with friendly locals</li>
-                      <li>Discover hidden spots not found in typical guidebooks</li>
-                      <li>Taste authentic local cuisine</li>
-                      <li>Create unforgettable memories</li>
-                    </ul>
-                    
-                    {/* GetYourGuide Widget */}
-                    <div className="mt-6">
-                      <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <section className="mt-8">
+                <h2 className="text-2xl font-bold mb-4">What to Expect</h2>
+                <div className="prose max-w-none">
+                  <p>Experience the local culture and traditions with this unique adventure. Interact with friendly locals, discover hidden spots not found in typical guidebooks, taste authentic local cuisine, and create unforgettable memories.</p>
+                </div>
+              </section>
               
-              {/* Practical Information */}
-              <Card>
-                <CardContent className="p-6">
-                  <h2 className="text-2xl font-bold mb-4">Practical Information</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2">Getting There</h3>
-                      <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2">Accommodation</h3>
-                      <p>Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.</p>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2">Local Transport</h3>
-                      <p>Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2">Essential Tips</h3>
-                      <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              {/* GetYourGuide Widget */}
+              <LazyGetYourGuideWidget />
+
+              {/* Reviews */}
+              <section className="mt-8">
+                {/* Implementation of reviews section */}
+              </section>
             </div>
             
             <div className="space-y-8">

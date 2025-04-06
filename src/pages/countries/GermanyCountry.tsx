@@ -177,9 +177,7 @@ const GermanyCountry: React.FC = () => {
                 ))}
               </div>
               {/* GetYourGuide Widget */}
-              <div className="mt-6">
-                <div data-gyg-widget="auto" data-gyg-partner-id="DHU8TI0"></div>
-              </div>
+              <LazyGetYourGuideWidget />
 
             </div>
             
